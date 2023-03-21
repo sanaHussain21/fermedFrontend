@@ -8,70 +8,42 @@
                 <h1 class="text-center">Register Here!!</h1>
                
                 <!--FOR TESTING PURPOSE ONLY-->
-                   <!--{{doctorDTO | json}}--> 
-                <form (ngSubmit)="formSubmit()">
-                    <!-- Name field  [] -->
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Name</mat-label>
-                        <input
-                        [(ngModel)]= "doctorDTO.name" name="name"
-                         matInput placeholder="Enter Name">
-                      </mat-form-field>
+                  {{doctorDTO | json}}
+                <form [formGroup]="doctorDTO" (ngSubmit)="formSubmit()">
+                    <!-- Name field  []    [(ngModel)]= "doctorDTO.name"-->
+                   
 
 
-                        <!-- Surname field  [] -->
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Surname</mat-label>
-                        <input   [(ngModel)]= "doctorDTO.surname" name="surname"
-                        matInput placeholder="Enter Surname">
-                      </mat-form-field>
 
 
-                        <!--Gender field   []-->
-                   <!-- <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Gender</mat-label>
-                        <input 
-                        [(ngModel)]= "doctorDTO.gender" name="gender"
-                         matInput placeholder="Enter Gender">
-                      </mat-form-field>-->
-
-                       <!--Gender field   []-->
-                    <div class="row">
-                        <div class="col-md-5">
-                          <div class="m-1">Gender</div>
-                            <div class="form-check form-check-outline"></div>
-                               <input [(ngModel)]= "doctorDTO.gender" name="gender" type="radio" class="form-check-input" value="male" id="male">
-                               <label class="form-check-lable" for="male">Male</label>
-
-                               <div class="form-check form-check-outline"></div>
-                               <input [(ngModel)]= "doctorDTO.gender" name="gender" type="radio" class="form-check-input" value="female" id="female">
-                               <label class="form-check-lable" for="female">Female</label>
-                       </div>
-                    </div>
 
 
-                       <!--Email field []-->
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input   [(ngModel)]= "doctorDTO.email" name="email"
-                        type="email" matInput placeholder="Enter Email">
-                      </mat-form-field>
 
 
-                       <!--Password field   []-->
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label >Password</mat-label>
-                        <input   [(ngModel)]= "doctorDTO.password" name="password"
-                         type="password" matInput placeholder="Enter Password">
-                      </mat-form-field>
 
 
-                       <!--Username field   []-->
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Username</mat-label>
-                        <input   [(ngModel)]= "doctorDTO.username" name="username"
-                         matInput placeholder="Enter Username">
-                    </mat-form-field>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
                       
                         <!--Button for reset-->
                       <div class="container text-center">

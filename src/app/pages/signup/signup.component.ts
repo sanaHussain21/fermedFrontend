@@ -1,6 +1,6 @@
 import { DoctorService } from './../../services/doctor.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -12,23 +12,24 @@ export class SignupComponent implements OnInit {
 
   constructor(private doctorService: DoctorService) { }
 
-  public doctorDTO = {
-    name:'' ,
-    surname: '',
-    gender: '' ,
-    email:'' ,
-    password: '',
-    username: '',
-  };
-
+   public doctorDTO = new FormGroup( {
+    name: new FormControl(""),
+    surname: new FormControl(""),
+    gender: new FormControl("") ,
+    email:new FormControl(""),
+    password: new FormControl(""),
+    username: new FormControl(""),
+ });
 
   ngOnInit(): void { }
   
 
+
     formSubmit(){
       console.log(this.doctorDTO);
    
-  
+
+     
   //createDoctor: coming from doctorSerivce
     this.doctorService.addDoctor(this.doctorDTO).subscribe(
       (data) => {
@@ -44,5 +45,8 @@ export class SignupComponent implements OnInit {
     )
     
  }
-  
+   get Name():FormControl{
+        return this.doctorDTO.get("name") as FormControl;
+      }
+ 
 }
