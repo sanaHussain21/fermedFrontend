@@ -13,9 +13,9 @@ export class SignupComponent implements OnInit {
   constructor(private doctorService: DoctorService) { }
 
    public doctorDTO = new FormGroup( {
-    name: new FormControl(""),
-    surname: new FormControl(""),
-    gender: new FormControl("") ,
+    name: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
+    surname: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
+    gender: new FormControl(""),
     email:new FormControl(""),
     password: new FormControl(""),
     username: new FormControl(""),
@@ -44,9 +44,30 @@ export class SignupComponent implements OnInit {
       }
     )
     
- }
-   get Name():FormControl{
+    }
+  
+   get Name(): FormControl {
         return this.doctorDTO.get("name") as FormControl;
-      }
+   }
+  
+   get Surname(): FormControl {
+    return this.doctorDTO.get("surname") as FormControl;
+   }
+  
+   get Gender(): FormControl {
+    return this.doctorDTO.get("gender") as FormControl;
+   }
+  
+   get Email(): FormControl {
+    return this.doctorDTO.get("email") as FormControl;
+   }
+  
+   get Password(): FormControl {
+    return this.doctorDTO.get("password") as FormControl;
+   }
+  
+   get Username(): FormControl {
+    return this.doctorDTO.get("username") as FormControl;
+  }
  
 }

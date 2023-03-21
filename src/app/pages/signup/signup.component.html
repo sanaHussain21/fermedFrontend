@@ -8,42 +8,80 @@
                 <h1 class="text-center">Register Here!!</h1>
                
                 <!--FOR TESTING PURPOSE ONLY-->
-                  {{doctorDTO | json}}
+                  <!--{{doctorDTO | json}}-->
                 <form [formGroup]="doctorDTO" (ngSubmit)="formSubmit()">
-                    <!-- Name field  []    [(ngModel)]= "doctorDTO.name"-->
                    
+                    <!-- Name field  []    [(ngModel)]= "doctorDTO.name"-->
+                    <div class="row">
+                        <div class="col mb-5">
+                            <label for="name" class="form-lable">Name</label>
+                            <input  type="text" class="form-control" id="name" formControlName="name">
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
+                                Name field should not be empty!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty)">
+                                Name must contain minimum 4 characters!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
+                                Name should not start with number!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['maxlength'] && (Name.touched || Name.dirty)">
+                                Name must contain maximum 15 characters!!!
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--Surname field-->
+                    <div class="row">
+                        <div class="col mb-5">
+                            <label for="surname" class="form-lable">Surname</label>
+                            <input  type="text" class="form-control" id="surname" formControlName="surname">
+                            <div class="form-text text-danger" style="color: red" *ngIf="Surname.errors?.['required'] && (Surname.touched || Surname.dirty)">
+                                Surname field should not be empty!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Surname.errors?.['minlength'] && (Surname.touched || Surname.dirty)">
+                                Surname must contain minimum 4 characters!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Surname.errors?.['pattern'] && (Surname.touched || Surname.dirty)">
+                                Surname should not start with number!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Surname.errors?.['maxlength'] && (Surname.touched || Surname.dirty)">
+                                Surname must contain maximum 15 characters!!!
+                            </div>
+                        </div>
+                    </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <!--Gneder field-->
                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                       
                         <!--Button for reset-->
                       <div class="container text-center">
