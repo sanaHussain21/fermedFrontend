@@ -27,12 +27,39 @@
                       </mat-form-field>
 
 
+
                         <!--Gender field   []-->
-                    <mat-form-field class="full-width" appearance="outline">
+                   <!-- <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Gender</mat-label>
-                        <input   [(ngModel)]= "doctorDTO.gender" name="gender"
+                        <input 
+                        [(ngModel)]= "doctorDTO.gender" name="gender"
                          matInput placeholder="Enter Gender">
-                      </mat-form-field>
+                      </mat-form-field>-->
+
+
+                    <div class="row">
+                        <div class="col-md-5">
+                          <div class="m-1">Gender</div>
+                            <div class="form-check form-check-outline"></div>
+                               <input [(ngModel)]= "doctorDTO.gender" name="gender" type="radio" class="form-check-input" value="male" id="male">
+                               <label class="form-check-lable" for="male">Male</label>
+
+                               <div class="form-check form-check-outline"></div>
+                               <input [(ngModel)]= "doctorDTO.gender" name="gender" type="radio" class="form-check-input" value="female" id="female">
+                               <label class="form-check-lable" for="female">Female</label>
+                       </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
 
                        <!--Email field []-->
                     <mat-form-field class="full-width" appearance="outline">
