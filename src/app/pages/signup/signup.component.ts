@@ -1,5 +1,6 @@
 import { DoctorService } from './../../services/doctor.service';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -12,10 +13,10 @@ export class SignupComponent implements OnInit {
   constructor(private doctorService: DoctorService) { }
 
   public doctorDTO = {
-    name: '',
+    name:'' ,
     surname: '',
-    gender: '',
-    email: '',
+    gender: '' ,
+    email:'' ,
     password: '',
     username: '',
   };
