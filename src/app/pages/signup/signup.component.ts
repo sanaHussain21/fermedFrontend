@@ -2,7 +2,7 @@ import { environment } from './../../../environments/environment';
 import { DoctorService } from './../../services/doctor.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-signup',
@@ -36,13 +36,14 @@ export class SignupComponent implements OnInit {
       (data) => {
       
         console.log(data);
-        alert('success');
+        Swal.fire('Success', 'doctor is registered', 'success');
      },
     
       (error) => {
         //error
         console.log(this.doctorDTO.value)
-        alert('Something went wrong' + error);
+        //alert('Something went wrong');
+        Swal.fire('Error', 'Something went wrong','error')
       }
     )
     }
