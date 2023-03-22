@@ -27,24 +27,18 @@ export class SignupComponent implements OnInit {
   
 
 
+
+
     formSubmit(){
-      console.log(this.doctorDTO);
-   
-
-     
+        
   //createDoctor: coming from doctorSerivce
-    this.doctorService.addDoctor(this.doctorDTO).subscribe(
-      //(data) => {
-        //success
-       // console.log(data);
-        //alert('success');
-     // },
-      (sendData) => {
-       
-        console.log(this.doctorDTO.value);
-         alert('Success');
-
-      },
+    this.doctorService.addDoctor(this.doctorDTO.value).subscribe(
+      (data) => {
+      
+        console.log(data);
+        alert('success');
+     },
+    
       (error) => {
         //error
         console.log(this.doctorDTO.value)
@@ -52,6 +46,9 @@ export class SignupComponent implements OnInit {
       }
     )
     }
+  
+  
+  
   
    get Name(): FormControl {
         return this.doctorDTO.get("name") as FormControl;
