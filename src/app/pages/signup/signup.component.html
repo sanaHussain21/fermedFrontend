@@ -1,6 +1,6 @@
 <div class="bootstrap-wrapper">
     <div class="container">
-        <div class="row" style="margin-top: 20px;">
+        <div class="row" style="margin-top: 30px;">
             <div class="col-md-6 offset-md-3">
                 <div class="container text-center">
                     <img src="../../../assets/logo.png" height="90" alt="">
@@ -78,14 +78,15 @@
 
 
                     <!--Email field-->
-
-                   
                     <div class="row">
                         <div class="col mb-5">
                             <label for="name" class="form-lable">Email</label>
                             <input  type="text" class="form-control" id="email" formControlName="email">
                             <div class="form-text text-danger" style="color: red" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
                                 Email field should not be empty!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+                                Email is invalid!!!
                             </div>
                         </div>
                     </div>
