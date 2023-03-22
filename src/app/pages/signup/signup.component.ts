@@ -1,6 +1,8 @@
+import { environment } from './../../../environments/environment';
 import { DoctorService } from './../../services/doctor.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-signup',
@@ -12,13 +14,13 @@ export class SignupComponent implements OnInit {
 
   constructor(private doctorService: DoctorService) { }
 
-   public doctorDTO = new FormGroup( {
+    doctorDTO = new FormGroup( {
     name: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
     surname: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
     gender: new FormControl("",Validators.required),
     email:new FormControl("", [Validators.required, Validators.email]),
-    password: new FormControl(""),
-    username: new FormControl(""),
+    password: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{4,15}$")]),
+    username: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
  });
 
   ngOnInit(): void { }
@@ -32,18 +34,23 @@ export class SignupComponent implements OnInit {
      
   //createDoctor: coming from doctorSerivce
     this.doctorService.addDoctor(this.doctorDTO).subscribe(
-      (data) => {
+      //(data) => {
         //success
-        console.log(data);
-        alert('success');
+       // console.log(data);
+        //alert('success');
+     // },
+      (sendData) => {
+       
+        console.log(this.doctorDTO.value);
+         alert('Success');
+
       },
       (error) => {
         //error
-        console.log(error)
-        alert('Something went wrong');
+        console.log(this.doctorDTO.value)
+        alert('Something went wrong' + error);
       }
     )
-    
     }
   
    get Name(): FormControl {
@@ -70,4 +77,13 @@ export class SignupComponent implements OnInit {
     return this.doctorDTO.get("username") as FormControl;
   }
  
+  Space(event: any) {
+    if (event.target.selectionStart === 0 && event.code === "Space") {
+      event.preventDefault();
+    }
+  }
+
+
+
+
 }
