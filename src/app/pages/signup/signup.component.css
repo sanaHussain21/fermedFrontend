@@ -24,12 +24,12 @@ input[type=text], select {
   
   
 .form-group{
-  position: relative;
+  position: static;
   width: 250px;
 }
 
-.form-group input{
-  width: 545px;
+input[type=password], select {
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;

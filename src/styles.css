@@ -5,3 +5,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text-center{
     text-align: center;
 }
+
+.marginleft20{
+ margin-left: 20px !important;
+}
+.marginright20{
+    margin-right: 20px !important;
+   }
+.margintop20{
+    margin-top: 20px !important;
+   }
+.marginbottom20{
+    margin-bottom: 20px !important;
+   }
+
+
+
+.marginleft10{
+    margin-left: 10px !important;
+   }
+.marginright10{
+       margin-right: 10px !important;
+      }
+.margintop10{
+       margin-top: 10px !important;
+}
+.marginbottom10{
+       margin-bottom: 10px !important;
+      }

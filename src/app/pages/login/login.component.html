@@ -2,10 +2,38 @@
     <div class="container">
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-6 offset-md-3">
+                <mat-card>
                 <div class="container text-center">
                     <img src="../../../assets/logo.png" height="90" alt="">
                 </div>
                 <h1 class="text-center">Login Here!!</h1>
+
+                <form action="">
+
+                    <!--Username field-->
+                    <div class="row">
+                        <div class="col mb-5">
+                            <label for="username" class="form-lable">Username</label>
+                            <input   type="text" id="username" placeholder="Enter Username" (keydown)="Space($event)">
+                        </div>
+                    </div>
+                 
+                     <!--Password field-->
+                    <div class="row">
+                        <div class="col mb-5">
+                            <label for="password" class="form-lable">Password</label>
+                            <input  type="password" id="password" placeholder="Enter Password" (keydown)="Space($event)"  formControlName="password">
+                        </div>
+                    </div>
+
+
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+                    </div>
+
+                </form>
+            </mat-card>
             </div>
         </div>
     </div>
