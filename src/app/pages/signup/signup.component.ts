@@ -15,8 +15,8 @@ export class SignupComponent implements OnInit {
    public doctorDTO = new FormGroup( {
     name: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
     surname: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
-    gender: new FormControl(""),
-    email:new FormControl(""),
+    gender: new FormControl("",Validators.required),
+    email:new FormControl("",Validators.required),
     password: new FormControl(""),
     username: new FormControl(""),
  });

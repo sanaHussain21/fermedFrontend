@@ -55,16 +55,40 @@
 
 
                     <!--Gneder field-->
-                    
+                <div class="row">
+                    <div  class="col ps-5 mb-3">
+                        <div class="m-1">Gender</div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" value="male" id="male" formControlName="gender">
+                            <label class="form-check-lable" for="male">Male</label>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Gender.errors?.['required'] && (Gender.touched || Gender.dirty)">
+                                Gender field should not be empty!!!
+                            </div>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" value="female" id="female" formControlName="gender">
+                            <label class="form-check-lable" for="female">Female</label>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Gender.errors?.['required'] && (Gender.touched || Gender.dirty)">
+                                Gender field should not be empty!!!
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
+                    <!--Email field-->
 
-
-
-
-
-
-
+                   
+                    <div class="row">
+                        <div class="col mb-5">
+                            <label for="name" class="form-lable">Email</label>
+                            <input  type="text" class="form-control" id="email" formControlName="email">
+                            <div class="form-text text-danger" style="color: red" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+                                Email field should not be empty!!!
+                            </div>
+                        </div>
+                    </div>
 
 
 
