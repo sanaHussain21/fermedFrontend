@@ -18,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { MultiusersComponent } from './pages/multiusers/multiusers.component';
 
 
 
@@ -29,6 +30,7 @@ import {MatIconModule} from '@angular/material/icon';
     SignupComponent,
     LoginComponent,
     HomeComponent,
+    MultiusersComponent,
 
   ],
   imports: [
