@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { MultiusersComponent } from './pages/multiusers/multiusers.component';
+import { PatientSignupComponent } from './pages/patient-signup/patient-signup.component';
 
 
 
@@ -31,6 +32,7 @@ import { MultiusersComponent } from './pages/multiusers/multiusers.component';
     LoginComponent,
     HomeComponent,
     MultiusersComponent,
+    PatientSignupComponent,
 
   ],
   imports: [

@@ -4,6 +4,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import {  MultiusersComponent} from './pages/multiusers/multiusers.component'
+import { PatientSignupComponent } from './pages/patient-signup/patient-signup.component';
 
 const routes: Routes = [
 
@@ -28,7 +29,12 @@ const routes: Routes = [
     path: 'multiuser',
     component: MultiusersComponent,
     pathMatch:'full',
-  }
+  },
+  {
+    path: 'patientSignup',
+    component: PatientSignupComponent,
+    pathMatch: 'full',
+  },
 
 ];
 
