@@ -19,7 +19,7 @@ export class SignupComponent implements OnInit {
     surname: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
     gender: new FormControl("",Validators.required),
     email:new FormControl("", [Validators.required, Validators.email]),
-    password: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{4,15}$")]),
+    password: new FormControl("", [Validators.required, Validators.minLength(8),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{4,15}$")]),
     username: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
  });
 

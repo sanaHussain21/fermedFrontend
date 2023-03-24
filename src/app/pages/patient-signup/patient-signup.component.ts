@@ -17,12 +17,12 @@ export class PatientSignupComponent implements OnInit {
   patientDTO = new FormGroup({
     name: new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(15), Validators.pattern("[a-zA-z].*")]),
     surname: new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(15), Validators.pattern("[a-zA-z].*")]),
-    codice_fiscale: new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(15),
-                    Validators.pattern("/^(?:[A-Z][AEIOU][AEIOUX]|[AEIOU]X{2}|[B-DF-HJ-NP-TV-Z]{2}[A-Z]){2}(?:[\dLMNP-V]{2}(?:[A-EHLMPR-T](?:[04LQ][1-9MNP-V]|[15MR][\dLMNP-V]|[26NS][0-8LMNP-U])|[DHPS][37PT][0L]|[ACELMRT][37PT][01LM]|[AC-EHLMPR-T][26NS][9V])|(?:[02468LNQSU][048LQU]|[13579MPRTV][26NS])B[26NS][9V])(?:[A-MZ][1-9MNP-V][\dLMNP-V]{2}|[A-M][0L](?:[1-9MNP-V][\dLMNP-V]|[0L][1-9MNP-V]))[A-Z]$/i")]),
+    codice_fiscale: new FormControl("", [Validators.required, Validators.minLength(16), Validators.maxLength(16),
+                    Validators.pattern("^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$")]),
     
     telephone_number: new FormControl("",[Validators.required, Validators.pattern("(^$|[0-9]{10})")]),
     username: new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(15), Validators.pattern("[a-zA-z].*")]),
-    password: new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{4,15}$")]),
+    password: new FormControl("", [Validators.required, Validators.minLength(8), Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{4,15}$")]),
     email:new FormControl("", [Validators.required, Validators.email]),
   });
 
@@ -71,7 +71,7 @@ get Codice_Fiscale(): FormControl {
   return this.patientDTO.get("codice_fiscale") as FormControl;
   }
 
-  get Telephone_number(): FormControl {
+  get Telephone_Number(): FormControl {
     return this.patientDTO.get("telephone_number") as FormControl;
     }
 
@@ -88,4 +88,10 @@ get Codice_Fiscale(): FormControl {
       }
 
 
+      Space(event: any) {
+        if (event.target.selectionStart === 0 && event.code === "Space") {
+          event.preventDefault();
+        }
+      }
+    
 }
