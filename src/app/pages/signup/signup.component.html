@@ -58,18 +58,14 @@
                 <div class="row">
                     <div  class="col ps-5 mb-3">
                         <div class="m-1">Gender</div>
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" value="male" id="male" formControlName="gender">
-                            <label class="form-check-lable" for="male">Male</label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" value="female" id="female" formControlName="gender">
-                            <label class="form-check-lable" for="female">Female</label>
-                            
-                        </div>
+                        
+                            <select name="gender" id="gender" formControlName="gender">
+                                 <option  value="male" selected>Male</option>
+                                <option value="female">Female</option>
+                            </select>
                     </div>
                 </div>
+
 
 
                     <!--Email field-->
