@@ -7,6 +7,54 @@
                     <img src="../../../assets/logo.png" height="90" alt="">
                 </div>
                 <h1 class="text-center">Register Here</h1>
+
+                     <!--FOR TESTING PURPOSE ONLY-->
+                  <!--{{doctorDTO | json}}-->
+                <form [formGroup]="patientDTO" (ngSubmit)="formSubmit()">
+
+
+                      <!-- Name field  []    [(ngModel)]= "patientDTO.name"-->
+
+
+                      <div class="row">
+                        <div class="col mb-5">
+                            <label for="name" class="form-lable">Name</label>
+                            <input  type="text" class="form-control" id="name" placeholder="Enter Name" (keydown)="Space($event)"  formControlName="name">
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
+                                Name field should not be empty!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty)">
+                                Name must contain minimum 4 characters!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
+                                Name should not start with number!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['maxlength'] && (Name.touched || Name.dirty)">
+                                Name must contain maximum 15 characters!!!
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </form>
                 </mat-card>
             </div>
         </div>
