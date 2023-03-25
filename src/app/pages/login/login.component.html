@@ -11,11 +11,11 @@
 
                 <form action="">
 
-                    <!--Username field-->
+                    <!--Email field-->
                     <div class="row">
                         <div class="col mb-5">
-                            <label for="username" class="form-lable">Username</label>
-                            <input   type="text" id="username" placeholder="Enter Username" (keydown)="Space($event)">
+                            <label for="email" class="form-lable">Email</label>
+                            <input   type="text" id="email" placeholder="Enter Email" (keydown)="Space($event)">
                         </div>
                     </div>
                  
@@ -32,8 +32,8 @@
                         <button type="submit" mat-raised-button color="primary">Login</button>
                         <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
                     </div>
-
-                    <h5>Are you already registered?&nbsp;&nbsp;<a routerLink="/signup">Signup here</a></h5>
+                    <br>
+                    <h5>Aren't you already registered?&nbsp;&nbsp;<a routerLink="/signup">Signup here</a></h5>
 
                 </form>
             </mat-card>
