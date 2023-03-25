@@ -1,16 +1,36 @@
 * {
     box-sizing: border-box;
+    
 }
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    width: 190px;
+
+
+.bootstrap-wrapper{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-  }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+    text-align: center;
+    
+}
+
+
+.container{
+    height: 50%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.box{
+    height: 200px;
+    color: #000;
+    border: 1px solid #5ed46c;
+    position: relative;
+    width: 350px;
+}
  
+.image-resize{
+    object-fit: cover;
+}
