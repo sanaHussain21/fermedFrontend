@@ -16,12 +16,8 @@
                         <div class="col mb-5">
                             <label for="email" class="form-lable">Email</label>
                             <input  type="text" class="form-control"  placeholder="Enter Email" id="email" formControlName="email">
-                            <div class="form-text text-danger" style="color: red" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
-                                Email field should not be empty!!!
-                            </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
-                                Email is invalid!!!
-                            </div>
+                            
+                            
                         </div>
                     </div>
 
@@ -33,18 +29,7 @@
                         <div class="col mb-5">
                             <label for="password" class="form-lable">Password</label>
                             <input  type="password" class="form-control" id="password" placeholder="Enter Password" (keydown)="Space($event)"  formControlName="password">
-                            <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">
-                                Password field should not be empty!!!
-                            </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['minlength'] && (Password.touched || Password.dirty)">
-                                Password must contain minimum 4 characters!!!
-                            </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['maxlength'] && (Password.touched || Password.dirty)">
-                                Password must contain maximum 15 characters!!!
-                            </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['pattern'] && (Password.touched || Password.dirty)">
-                             Allowed characters [-,_]
-                            </div>        
+                              
                         </div>
                     </div>
 
@@ -56,6 +41,7 @@
                     <br>
                     <h5>Aren't you already registered?&nbsp;&nbsp;<a routerLink="/signup">Signup here</a></h5>
 
+                    
                 </form>
             </mat-card>
             </div>
