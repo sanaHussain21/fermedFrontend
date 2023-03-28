@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DoctorHomeComponent } from './pages/doctor-home/doctor-home.component';
 import {  MultiusersComponent} from './pages/multiusers/multiusers.component'
 import { PatientSignupComponent } from './pages/patient-signup/patient-signup.component';
 
@@ -33,6 +34,11 @@ const routes: Routes = [
   {
     path: 'patientSignup',
     component: PatientSignupComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'doctorHome',
+    component: DoctorHomeComponent,
     pathMatch: 'full',
   },
 

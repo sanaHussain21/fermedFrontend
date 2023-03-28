@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DoctorService } from 'src/app/services/doctor.service';
 import Swal from 'sweetalert2'
 
 @Component({
@@ -9,16 +10,35 @@ import Swal from 'sweetalert2'
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private doctorService: DoctorService) { }
 
-  
+  doctorLoginDTO = new FormGroup({
+    email:new FormControl("", [Validators.required, Validators.email]),
+    password: new FormControl("", [Validators.required, Validators.minLength(8),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{8,15}$")]),
+  })
   
 
 
   ngOnInit(): void {
   }
 
-
+  //to impletement
+  loginSubmit() { 
+    this.doctorService.loginDoctor(this.doctorLoginDTO).subscribe(
+      (data) => {
+      
+        console.log(data);
+        Swal.fire('Success', 'Doctor is Logged in', 'success');
+     },
+    
+      (error) => {
+        //error
+        console.log(this.doctorLoginDTO.value)
+        //alert('Something went wrong');
+        Swal.fire('Error', 'Something went wrong','error')
+      }
+    )
+  }
 
   
   Space(event: any) {
@@ -26,5 +46,15 @@ export class LoginComponent implements OnInit {
       event.preventDefault();
     }
   }
+
+
+
+  get Email(): FormControl {
+    return this.doctorLoginDTO.get("email") as FormControl;
+   }
+  
+   get Password(): FormControl {
+    return this.doctorLoginDTO.get("password") as FormControl;
+   }
 
 }
