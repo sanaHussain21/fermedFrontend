@@ -1,6 +1,7 @@
-import { PatientService } from './../patient-services/patient-service';
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PatientService } from 'src/app/patient-service/patient.service';
 import Swal from 'sweetalert2'
 
 @Component({

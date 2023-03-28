@@ -71,8 +71,8 @@
                     <!--Email field-->
                     <div class="row">
                         <div class="col mb-5">
-                            <label for="email" class="form-lable">Email</label>
-                            <input  type="text" class="form-control"  placeholder="Enter Email" id="email" formControlName="email">
+                            <label for="email" class="form-lable">Email</label> 
+                            <input  type="text" class="form-control"  placeholder="Enter Email" (keydown)="Space($event)" id="email" formControlName="email">
                             <div class="form-text text-danger" style="color: red" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
                                 Email field should not be empty!!!
                             </div>
