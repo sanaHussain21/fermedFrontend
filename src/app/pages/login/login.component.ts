@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DoctorService } from 'src/app/services/doctor.service';
 import Swal from 'sweetalert2'
 
@@ -10,7 +11,7 @@ import Swal from 'sweetalert2'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private doctorService: DoctorService) { }
+  constructor(private doctorService: DoctorService , private router: Router) { }
 
   doctorLoginDTO = new FormGroup({
     email:new FormControl("", [Validators.required, Validators.email]),
@@ -24,11 +25,12 @@ export class LoginComponent implements OnInit {
 
   //to impletement
   loginSubmit() { 
-    this.doctorService.loginDoctor(this.doctorLoginDTO).subscribe(
+    this.doctorService.loginDoctor(this.doctorLoginDTO.value).subscribe(
       (data) => {
       
         console.log(data);
         Swal.fire('Success', 'Doctor is Logged in', 'success');
+        this.router.navigate(['/doctorHome']);
      },
     
       (error) => {

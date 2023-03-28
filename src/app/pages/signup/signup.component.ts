@@ -1,3 +1,4 @@
+import { Router, Routes } from '@angular/router';
 import { environment } from './../../../environments/environment';
 import { DoctorService } from './../../services/doctor.service';
 import { Component, OnInit } from '@angular/core';
@@ -8,7 +9,8 @@ import Swal from 'sweetalert2'
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
- 
+
+  //[]
 })
 export class SignupComponent implements OnInit {
 
@@ -37,6 +39,7 @@ export class SignupComponent implements OnInit {
       
         console.log(data);
         Swal.fire('Success', 'doctor is registered', 'success');
+       
      },
     
       (error) => {
