@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
         //error
         console.log(this.doctorLoginDTO.value)
         //alert('Something went wrong');
-        Swal.fire('Error', 'Something went wrong','error')
+        Swal.fire('Error', 'Something went wrong', 'error')
+        this.router.navigate(['/login']);
       }
     )
   }
