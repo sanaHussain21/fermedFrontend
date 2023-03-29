@@ -1,3 +1,4 @@
+import { group } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,16 +11,21 @@ import Swal from 'sweetalert2'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  ////for testing purpose should be removed
+  doctorLoginDTO: any = FormGroup;
+  
+ 
   //for testing purpose should be removed
+  doctorsList: any = [];
+  formGroup: any;
 
   constructor(private doctorService: DoctorService , private router: Router) { }
 
 
-    doctorLoginDTO = new FormGroup({
-    email:new FormControl("", [Validators.required, Validators.email]),
-    password: new FormControl("", [Validators.required, Validators.minLength(8),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{8,15}$")]),
-  })
+    //doctorLoginDTO = new FormGroup({
+    //email:new FormControl("", [Validators.required, Validators.email]),
+    //password: new FormControl("", [Validators.required, Validators.minLength(8),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{8,15}$")]),
+  //})
   
 
 
@@ -29,8 +35,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     //for testing should be removed
     //with this function we get all doctor list
+
+    this.doctorLoginDTO = new this.formGroup({
+      email: new FormControl("", [Validators.required, Validators.email]),
+      password: new FormControl("", [Validators.required, Validators.minLength(8), Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{8,15}$")]),
+    })
+
+
     this.doctorService.getDoctorList().subscribe((data: any) => { 
-      console.log(data);
+      this.doctorsList = data;
     })
 
   }
@@ -45,25 +58,19 @@ export class LoginComponent implements OnInit {
 
 
   //to impletement
-  loginSubmit() { 
-    this.doctorService.loginDoctor(this.doctorLoginDTO.value).subscribe(
-      (data) => {
-
-
-        //for testing purpose
-        Swal.fire('Success', 'Doctor is Logged in', 'success');
-        this.router.navigate(['/doctorHome']);
-        console.log(data);
-     },
+  loginSubmit(data: any) { 
+    if (data.email) { 
+      this.doctorsList.forEach((item:any) => {
+        if (item.email === data.email && item.password === data.password) {
+          console.log("Doctor email and password are valid");
+        }
+        else { 
+          console.log("Doctor email and password are invalid");
+        }
+      });
+    }
     
-      (error) => {
-        
-        console.log(this.doctorLoginDTO.value)
-       
-        Swal.fire('Error', 'Something went wrong', 'error');
-        this.router.navigate(['/login']);
-      }
-    )}
+    }
 
 
 
