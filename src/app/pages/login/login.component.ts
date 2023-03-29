@@ -13,12 +13,13 @@ export class LoginComponent implements OnInit {
 
   constructor(private doctorService: DoctorService , private router: Router) { }
 
+
   doctorLoginDTO = new FormGroup({
     email:new FormControl("", [Validators.required, Validators.email]),
     password: new FormControl("", [Validators.required, Validators.minLength(8),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{8,15}$")]),
   })
   
-
+  
 
   ngOnInit(): void {
   }
@@ -37,7 +38,7 @@ export class LoginComponent implements OnInit {
         //error
         console.log(this.doctorLoginDTO.value)
         //alert('Something went wrong');
-        Swal.fire('Error', 'Something went wrong', 'error')
+        Swal.fire('Error', 'Something went wrong', 'error');
         this.router.navigate(['/login']);
       }
     )

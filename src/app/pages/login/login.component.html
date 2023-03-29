@@ -37,7 +37,7 @@
                                 Password field should not be empty!!!
                             </div>
                             <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['minlength'] && (Password.touched || Password.dirty)">
-                                Password must contain minimum 4 characters!!!
+                                Password must contain minimum 8 characters!!!
                             </div>
                             <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['maxlength'] && (Password.touched || Password.dirty)">
                                 Password must contain maximum 15 characters!!!
