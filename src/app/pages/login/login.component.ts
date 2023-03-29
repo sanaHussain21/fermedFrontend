@@ -56,14 +56,13 @@ export class LoginComponent implements OnInit {
       this.doctorsList.forEach((item:any) => {
         if (item.email === data.email && item.password === data.password) {
 
-
-          localStorage.setItem("isLoggedIn", "true");
-          this.router.navigate(['doctorHome']);
+         
+           localStorage.setItem("isLoggedIn", "true");
+           this.router.navigate(['doctorHome']);
         }
         else {
-          console.log("Invalid credential");
-          localStorage.clear();
          
+          localStorage.clear();
         }
       });
     }
