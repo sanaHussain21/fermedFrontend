@@ -8,7 +8,9 @@ import baseUrl from './helper';
 })
 export class DoctorService {
 
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
+  
+  
 
   //add doctor
   public addDoctor(doctor: any) {
@@ -17,7 +19,14 @@ export class DoctorService {
 
 
   //login doctor
-  public loginDoctor(doctor: any) {
-    return this.http.post(`${baseUrl}/doctor/doctorLogin`, doctor)
+  public loginDoctor(doctor1: any) {
+    return this.http.post(`${baseUrl}/doctor/doctorLogin`, doctor1)
   }
+
+
+  //get doctor list for testing should be removed
+  public getDoctorList() { 
+    return this.http.get(`${baseUrl}/home/`)
+  }
+
 }
