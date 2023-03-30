@@ -21,8 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { MultiusersComponent } from './pages/multiusers/multiusers.component';
 import { PatientSignupComponent } from './pages/patient-signup/patient-signup.component';
 import { DoctorHomeComponent } from './pages/doctor-home/doctor-home.component';
-
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,10 @@ import { DoctorHomeComponent } from './pages/doctor-home/doctor-home.component';
     MatRadioModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { AuthGuard } from './../../guardAuth/auth.guard';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,16 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authGruard: AuthGuard) { }
 
   ngOnInit(): void {
   }
 
-  logout() {
-    localStorage.clear();
-    this.router.navigate(['login']);
-    console.log("Logout from the doctor home");
-    
-    
+  onLogout() {
+    this.authGruard.logout();
+    this.authGruard.isLoggedIn = false;
   }
 }
