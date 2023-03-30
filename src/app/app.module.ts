@@ -23,6 +23,8 @@ import { PatientSignupComponent } from './pages/patient-signup/patient-signup.co
 import { DoctorHomeComponent } from './pages/doctor-home/doctor-home.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
+import { PatientLoginComponent } from './pages/patient-login/patient-login.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { MatListModule } from '@angular/material/list';
     MultiusersComponent,
     PatientSignupComponent,
     DoctorHomeComponent,
+    PatientDashboardComponent,
+    PatientLoginComponent,
 
   ],
   imports: [
