@@ -1,3 +1,4 @@
+import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -43,6 +44,11 @@ const routes: Routes = [
     component: DoctorHomeComponent, canActivate:[AuthGuard],
     pathMatch: 'full',
   },
+  {
+    path: 'patientDashboard',
+    component: PatientDashboardComponent,
+    pathMatch: 'full'
+  }
 
 ];
 
