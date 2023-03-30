@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
    //to check if the user is logged in
    
-    if (localStorage.getItem("isLoggedIn") === "true") { 
+    if (localStorage.getItem("isLoggedIn") === "false") { 
       this.router.navigate(['login']);
       return false;
     }
@@ -27,6 +27,7 @@ export class AuthGuard implements CanActivate {
 
   logout() {
     localStorage.clear();
+    //might delete : this.isLoggedIn = false;
     this.isLoggedIn = false;
     console.log("Doctor logout");
   }
