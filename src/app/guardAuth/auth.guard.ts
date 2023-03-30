@@ -6,8 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-
-  constructor(private router: Router) {
+  //for testing 30-03-2023
+  isLoggedIn = true;
+  constructor( private router: Router) {
     
   }
 
@@ -15,15 +16,15 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
    //to check if the user is logged in
-    if (!(localStorage.getItem("isLoggedIn") === "true")) { 
+   
+    if (localStorage.getItem("isLoggedIn") === "true") { 
       this.router.navigate(['login']);
       return false;
     }
    
-   
-   
-   
     return true;
   }
+
+  
   
 }

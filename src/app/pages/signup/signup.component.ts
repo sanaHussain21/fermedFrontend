@@ -41,7 +41,7 @@ export class SignupComponent implements OnInit {
         Swal.fire('Success', 'doctor is registered', 'success');
        
      },
-    
+    //logout to be implemented
       (error) => {
         //error
         console.log(this.doctorDTO.value)
