@@ -1,3 +1,5 @@
+import  Swal  from 'sweetalert2';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -57,7 +59,8 @@ import { PatientLoginComponent } from './pages/patient-login/patient-login.compo
     MatIconModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]
