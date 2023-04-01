@@ -1,3 +1,4 @@
+import { PatientLoginComponent } from './pages/patient-login/patient-login.component';
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 
 import { NgModule, Component } from '@angular/core';
@@ -47,6 +48,11 @@ const routes: Routes = [
   {
     path: 'patientDashboard',
     component: PatientDashboardComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'patientLogin',
+    component: PatientLoginComponent,
     pathMatch: 'full'
   }
 
