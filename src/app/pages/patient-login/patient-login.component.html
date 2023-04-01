@@ -9,13 +9,14 @@
                 </div>
                 <h1 class="text-center">Patient Login Here!!</h1>
 
-                <form (ngSubmit)="loginPatient()">
+                <form  (ngSubmit)="loginPatient()">
                     
                     <!--Email field-->                     
                      <div class="row">                       
                         <div class="col mb-5">                           
                             <label for="email" class="form-lable">Email</label>                            
                             <input  type="text"   [(ngModel)]="patient.email" class="form-control"  (keydown)="Space($event)"  placeholder="Enter Email" id="email" name="email">                                       
+                           
                         </div>
                     </div>
 
@@ -36,7 +37,7 @@
 
 
                     <div class="container text-center">
-                        <button type="submit" mat-raised-button color="primary">Login</button>
+                        <button type="submit"  mat-raised-button color="primary">Login</button>
                         <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
                     </div>
                     <br>

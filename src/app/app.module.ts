@@ -27,7 +27,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 import { PatientLoginComponent } from './pages/patient-login/patient-login.component';
-import { DoctorClassComponent } from './doctor-class/doctor-class.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { DoctorClassComponent } from './doctor-class/doctor-class.component';
     DoctorHomeComponent,
     PatientDashboardComponent,
     PatientLoginComponent,
-    DoctorClassComponent,
+  
 
   ],
   imports: [
