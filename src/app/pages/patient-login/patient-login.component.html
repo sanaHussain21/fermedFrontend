@@ -22,10 +22,12 @@
                             (keydown)="Space($event)"  
                             placeholder="Enter Email" 
                             name="email"
-                            required>                                       
+                            required
+                            >                                       
                         </div>
                         <!--VALIDATING EMAIL FOR LOGIN-->
-                        <div class="error" style="color: red" *ngIf="email.invalid && (email.touched || email.dirty)">Email field should not be empty!!!</div>
+                        <div class="error"  *ngIf="!email.valid && (email.touched || email.dirty)">Email field should not be empty!!!</div>
+                        <div class="error"  *ngIf="email.invalid && (email.touched || email.dirty)">Email is not valid!!!</div>
                        </div>
 
 
@@ -40,9 +42,16 @@
                             class="form-control" 
                             id="password" 
                             name="password" 
+                            #password="ngModel"
                             (keydown)="Space($event)"  
-                            placeholder="Enter Password">
-                                  
+                            placeholder="Enter Password"
+                            required
+                            minlength="8"
+                            maxlength="15"
+                            pattern="^(?=.*[-,_]).{8,15}$">
+                            
+                            <div class="error"  *ngIf="!password.valid && (password.touched || password.dirty)">Password field should not be empty!!!</div>
+                            <div class="error"  *ngIf="!password.minlength && (password.touched || password.dirty)">Password must contain minimun 8 characters!!!</div>
                         </div>
                     </div>
 
