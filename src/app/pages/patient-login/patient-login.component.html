@@ -21,17 +21,12 @@
                             class="form-control"  
                             (keydown)="Space($event)"  
                             placeholder="Enter Email" 
-                            id="email" 
                             name="email"
                             required>                                       
                         </div>
                         <!--VALIDATING EMAIL FOR LOGIN-->
-                        <div class="form-text" style="color: red" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
-                           <div class="invalid-feedback">
-                             Email field should not be empty!!!
-                           </div>                          
-                        </div>
-                    </div>
+                        <div class="error" style="color: red" *ngIf="email.invalid && (email.touched || email.dirty)">Email field should not be empty!!!</div>
+                       </div>
 
 
                   
