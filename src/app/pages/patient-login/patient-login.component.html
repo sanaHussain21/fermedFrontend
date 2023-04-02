@@ -15,8 +15,21 @@
                      <div class="row">                       
                         <div class="col mb-5">                           
                             <label for="email" class="form-lable">Email</label>                            
-                            <input  type="text"   [(ngModel)]="patient.email" class="form-control"  (keydown)="Space($event)"  placeholder="Enter Email" id="email" name="email">                                       
-                           
+                            <input  type="text"
+                            [(ngModel)]="patient.email" 
+                            #email="ngModel"
+                            class="form-control"  
+                            (keydown)="Space($event)"  
+                            placeholder="Enter Email" 
+                            id="email" 
+                            name="email"
+                            required>                                       
+                        </div>
+                        <!--VALIDATING EMAIL FOR LOGIN-->
+                        <div class="form-text" style="color: red" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
+                           <div class="invalid-feedback">
+                             Email field should not be empty!!!
+                           </div>                          
                         </div>
                     </div>
 
@@ -27,7 +40,13 @@
                     <div class="row">
                         <div class="col mb-5">
                             <label for="password" class="form-lable">Password</label>
-                            <input  type="password"   [(ngModel)]="patient.password" class="form-control" id="password" name="password" (keydown)="Space($event)"  placeholder="Enter Password">
+                            <input  type="password"   
+                            [(ngModel)]="patient.password" 
+                            class="form-control" 
+                            id="password" 
+                            name="password" 
+                            (keydown)="Space($event)"  
+                            placeholder="Enter Password">
                                   
                         </div>
                     </div>
