@@ -18,11 +18,6 @@ export class PatientLoginComponent implements OnInit {
 
   constructor(private patientService: PatientService, private router: Router) { }
 
-  
-
-
-
-
 
   ngOnInit(): void {
   }

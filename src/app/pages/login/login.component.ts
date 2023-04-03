@@ -1,9 +1,10 @@
+import { DoctorService } from './../../services/doctor.service';
 import { group } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DoctorService } from 'src/app/services/doctor.service';
 import Swal from 'sweetalert2'
+import { Doctor } from '../doctor-class/doctor';
 
 @Component({
   selector: 'app-login',
@@ -11,81 +12,34 @@ import Swal from 'sweetalert2'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  ////for testing purpose should be removed
-  doctorLoginDTO: any = FormGroup;
-  
- 
-  //for testing purpose should be removed
-  doctorsList: any = [];
- 
+
+ //creating the object for doctor []
+ doctor: Doctor = new Doctor();
   
 
-  constructor(private formBuilder: FormBuilder, private doctorService: DoctorService , private router: Router) { }
-
-
-    //doctorLoginDTO = new FormGroup({
-    //email:new FormControl("", [Validators.required, Validators.email]),
-    //password: new FormControl("", [Validators.required, Validators.minLength(8),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{8,15}$")]),
-  //})
   
 
+  constructor(private doctorService: DoctorService, private router: Router) { }
 
-
-  
 
   ngOnInit(): void {
-    //for testing should be removed
-    //with this function we get all doctor list
-
-    this.doctorLoginDTO = this.formBuilder.group({
-      email: new FormControl("", [Validators.required, Validators.email]),
-      password: new FormControl("", [Validators.required, Validators.minLength(8), Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{8,15}$")]),
-    })
-
-
-    this.doctorService.getDoctorList().subscribe((data: any) => { 
-      this.doctorsList = data;
-    })
-
   }
 
-  
-  //to impletement
-  loginSubmit(data: any) { 
-    if (data.email) { 
-      this.doctorsList.forEach((item:any) => {
-        if (item.email === data.email && item.password === data.password) {
-
-          console.log("valid credential");
-           localStorage.setItem("isLoggedIn", "true");
-           this.router.navigate(['doctorHome']);
-        }
-        else {
-          
-          localStorage.clear();
-          
-        }
-      });
-    }
-    
-    }
-
-
+  loginDoctor(){
+    console.log(this.doctor);
+    this.doctorService.loginDoctor(this.doctor).subscribe(data => {
+      
+      Swal.fire('Success', 'Doctor is Logged in', 'success');
+      this.router.navigate(['/doctorHome'])
+    },
+      error => Swal.fire('Error', 'Sorry, insert the correct email and password', 'error'));
+      
+}
 
   Space(event: any) {
     if (event.target.selectionStart === 0 && event.code === "Space") {
       event.preventDefault();
     }
   }
-
-
-
-  get Email(): FormControl {
-    return this.doctorLoginDTO.get("email") as FormControl;
-   }
-  
-   get Password(): FormControl {
-    return this.doctorLoginDTO.get("password") as FormControl;
-   }
 
 }

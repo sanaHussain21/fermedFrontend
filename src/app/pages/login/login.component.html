@@ -7,16 +7,16 @@
                 <div class="container text-center">
                     <img src="../../../assets/logo.png" height="90" alt="">
                 </div>
-                <h1 class="text-center">Patient Login Here!!</h1>
+                <h1 class="text-center">Doctor Login Here!!</h1>
 
-                <form  (ngSubmit)="loginPatient()">
+                <form  (ngSubmit)="loginDoctor()">
                     
                     <!--Email field-->                     
                      <div class="row">                       
                         <div class="col mb-5">                           
                             <label for="email" class="form-lable">Email</label>                            
                             <input  type="text"
-                            [(ngModel)]="patient.email" 
+                            [(ngModel)]="doctor.email" 
                             #email="ngModel"
                             class="form-control"  
                             (keydown)="Space($event)"  
@@ -43,7 +43,7 @@
                         <div class="col mb-5">
                             <label for="password" class="form-lable">Password</label>
                             <input  type="password"   
-                            [(ngModel)]="patient.password" 
+                            [(ngModel)]="doctor.password" 
                             class="form-control" 
                             id="password" 
                             name="password" 
