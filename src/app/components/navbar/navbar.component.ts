@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router, private authGruard: AuthGuard) { }
+  constructor(private router: Router, private authGuard: AuthGuard) { }
 
   ngOnInit(): void {
   }
 
   onLogout() {
-    this.authGruard.logout();
-    this.authGruard.isLoggedIn = false;
+    this.authGuard.logout();
+    this.authGuard.isLoggedIn = false;
   }
 }
