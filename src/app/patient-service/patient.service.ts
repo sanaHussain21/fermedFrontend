@@ -8,6 +8,7 @@ import baseUrl from './helper';
   providedIn: 'root'
 })
 export class PatientService {
+  patient: any;
 
   constructor(private http: HttpClient) { }
   
