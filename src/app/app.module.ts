@@ -64,7 +64,9 @@ import { PatientLoginComponent } from './pages/patient-login/patient-login.compo
     MatListModule,
  
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

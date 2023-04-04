@@ -1,9 +1,8 @@
 import { PatientLoginComponent } from './pages/patient-login/patient-login.component';
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
-
+import { SignupComponent } from './pages/signup/signup.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DoctorHomeComponent } from './pages/doctor-home/doctor-home.component';
