@@ -1,6 +1,6 @@
 import { Router, Routes } from '@angular/router';
-import { environment } from './../../../environments/environment';
-import { DoctorService } from './../../services/doctor.service';
+import { environment } from '../../../environments/environment';
+import { DoctorService } from '../../services/doctor.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'

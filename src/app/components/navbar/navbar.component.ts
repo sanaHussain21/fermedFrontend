@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router, private authGuard: AuthGuard) { }
+  constructor(private router: Router, public authGuard: AuthGuard) { }
 
   ngOnInit(): void {
   }

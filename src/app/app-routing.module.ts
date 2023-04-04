@@ -52,7 +52,7 @@ const routes: Routes = [
   },
   {
     path: 'patientLogin',
-    component: PatientLoginComponent,
+    component: PatientLoginComponent,  canActivate:[AuthGuard],
     pathMatch: 'full'
   }
 
