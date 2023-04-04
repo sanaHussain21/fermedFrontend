@@ -9,7 +9,7 @@
                 </div>
                 <h1 class="text-center">Patient Login Here!!</h1>
 
-                <form  (ngSubmit)="loginPatient()">
+                <form #patientLoginForm="ngForm" (ngSubmit)="loginPatient(patientLoginForm)">
                     
                     <!--Email field-->                     
                      <div class="row">                       
@@ -70,7 +70,7 @@
 
 
                     <div class="container text-center">
-                        <button    type="submit"  mat-raised-button color="primary">Login</button>;
+                        <button    type="submit"  mat-raised-button color="primary">Login</button>
                         <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
                     </div>
                     <br>
