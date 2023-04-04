@@ -18,7 +18,8 @@ export class PatientService {
 
   //calling the patient login controller from spring boot
 
-  public patientLogin(patient: Patient):Observable<object> {
+  // public patientLogin(patient: any):Observable<object>
+  public patientLogin(patient: any) {
     return this.http.post(`${baseUrl}/patient/patientLogin`,patient)
   }
 

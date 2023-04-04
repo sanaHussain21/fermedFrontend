@@ -24,13 +24,17 @@ export class PatientLoginComponent implements OnInit {
 
   loginPatient(){
     console.log(this.patient);
+    
+  
+
+ 
     this.patientService.patientLogin(this.patient).subscribe(data => {
       
       Swal.fire('Success', 'Patient is Logged in', 'success');
       this.router.navigate(['/patientDashboard'])
     },
       error => Swal.fire('Error', 'Sorry, insert the correct email and password', 'error'));
-      
+     
 }
 
   Space(event: any) {

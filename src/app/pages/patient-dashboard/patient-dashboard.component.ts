@@ -1,3 +1,4 @@
+import { Patient } from './../patient-class/patient';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientDashboardComponent implements OnInit {
 
+  patinet = new Patient();
   
   constructor() { }
 
