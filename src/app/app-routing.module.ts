@@ -9,7 +9,9 @@ import { DoctorHomeComponent } from './pages/doctor-home/doctor-home.component';
 import {  MultiusersComponent} from './pages/multiusers/multiusers.component'
 import { PatientSignupComponent } from './pages/patient-signup/patient-signup.component';
 import { AuthGuard } from './guardAuth/auth.guard';
-import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doctor-profile.component';
+import { DoctorProfileComponent } from './pages/doctor-profile/doctor-profile/doctor-profile.component';
+
+
 
 const routes: Routes = [
 
@@ -44,6 +46,7 @@ const routes: Routes = [
     path: 'doctorHome',
     component: DoctorHomeComponent, canActivate:[AuthGuard],
     pathMatch: 'full',
+    
   },
   {
     path: 'patientDashboard',
@@ -60,6 +63,7 @@ const routes: Routes = [
     component: DoctorProfileComponent,
     pathMatch: 'full'
   },
+  /*
   //to implemented
   {
     path: 'doctorAppointmentDetails',
@@ -78,7 +82,7 @@ const routes: Routes = [
     component: DoctorProfileComponent,
     pathMatch: 'full'
   },
-
+*/
 
 
 ];
