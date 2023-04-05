@@ -9,6 +9,7 @@ import { DoctorHomeComponent } from './pages/doctor-home/doctor-home.component';
 import {  MultiusersComponent} from './pages/multiusers/multiusers.component'
 import { PatientSignupComponent } from './pages/patient-signup/patient-signup.component';
 import { AuthGuard } from './guardAuth/auth.guard';
+import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doctor-profile.component';
 
 const routes: Routes = [
 
@@ -53,7 +54,32 @@ const routes: Routes = [
     path: 'patientLogin',
     component: PatientLoginComponent,
     pathMatch: 'full'
-  }
+  },
+  {
+    path: 'doctorProfile',
+    component: DoctorProfileComponent,
+    pathMatch: 'full'
+  },
+  //to implemented
+  {
+    path: 'doctorAppointmentDetails',
+    component: DoctorProfileComponent,
+    pathMatch: 'full'
+  },
+    //to implemented
+  {
+    path: 'doctorAbout',
+    component: DoctorProfileComponent,
+    pathMatch: 'full'
+  },
+    //to implemented
+  {
+    path: 'doctorHelp',
+    component: DoctorProfileComponent,
+    pathMatch: 'full'
+  },
+
+
 
 ];
 
