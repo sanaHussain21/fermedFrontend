@@ -3,7 +3,16 @@
     <img src="../../../assets/health.png" height="30" alt="">
   </div>-->
   
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+        close
+    </mat-icon>
+   </button> 
 
+  <!--Website name and an icon-->
   <a 
   routerLink="/"
   mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
