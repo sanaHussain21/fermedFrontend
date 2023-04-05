@@ -13,8 +13,9 @@ import { Component, OnInit } from '@angular/core';
 export class PatientLoginComponent implements OnInit {
 
   //creating the object for patient []
-  patient: Patient = new Patient();
+  patient: any = new Patient();
 
+  
 
   constructor(private patientService: PatientService, private router: Router) { }
 
@@ -25,9 +26,8 @@ export class PatientLoginComponent implements OnInit {
   loginPatient(){
     console.log(this.patient);
     this.patientService.patientLogin(this.patient).subscribe(data => {
-      
-      localStorage.setItem('data', this.patient)
-      
+
+      localStorage.setItem('data', JSON.stringify(this.patient))
       Swal.fire('Success', 'Patient is Logged in', 'success');
       
       this.router.navigate(['/patientDashboard'])

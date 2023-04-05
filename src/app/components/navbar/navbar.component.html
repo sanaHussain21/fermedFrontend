@@ -23,6 +23,6 @@
 
     <!--this third redirect us to the multiuser page as we logout-->
     <!--(click)="onLogout()"-->
-    <a routerLink="/multiuser"  mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"><p>Logout</p></a>
+    <a routerLink="/multiuser"  (click)="onLogout()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"><p>Logout</p></a>
 
   </mat-toolbar>
