@@ -29,11 +29,6 @@ export class AuthGuard implements CanActivate {
     return true;
   }
 
-  logout() {
-    localStorage.clear();
-    //might delete : this.isLoggedIn = false;
-    this.isLoggedIn = false;
-    console.log("Doctor logout");
-  }
+
   
 }

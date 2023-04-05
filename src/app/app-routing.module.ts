@@ -46,12 +46,12 @@ const routes: Routes = [
   },
   {
     path: 'patientDashboard',
-    component: PatientDashboardComponent,
+    component: PatientDashboardComponent, canActivate:[AuthGuard],
     pathMatch: 'full'
   },
   {
     path: 'patientLogin',
-    component: PatientLoginComponent,  canActivate:[AuthGuard],
+    component: PatientLoginComponent,
     pathMatch: 'full'
   }
 

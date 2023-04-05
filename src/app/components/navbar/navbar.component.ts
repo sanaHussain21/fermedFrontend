@@ -15,9 +15,6 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  onLogout() {
-    this.authGuard.logout();
-    this.authGuard.isLoggedIn = false;
-  }
+  
 
 }
