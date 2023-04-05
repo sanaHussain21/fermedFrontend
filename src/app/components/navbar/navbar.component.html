@@ -1,24 +1,23 @@
 <mat-toolbar color="primary">
   <!--<div class="container">
     <img src="../../../assets/health.png" height="30" alt="">
-  </div>-->
-  
-  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+  </div>
+  <a mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened">
-      menu
+      eco
     </mat-icon>
     <mat-icon *ngIf="sidenav.opened">
         close
     </mat-icon>
-   </button> 
+   </a> 
+-->
 
   <!--Website name and an icon-->
-  <a 
-  routerLink="/"
-  mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
-    <mat-icon>eco</mat-icon>
+    <a 
+    routerLink="/"
+    mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
     <span>Fermed</span>
-   </a>
+    </a>
 
     
 

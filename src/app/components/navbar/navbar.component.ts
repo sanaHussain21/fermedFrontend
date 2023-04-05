@@ -10,15 +10,16 @@ import { BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
+  //@ViewChild(MatSidenav)
+  //sidenav!: MatSidenav;
+  //private observer: BreakpointObserver
 
-  constructor(private router: Router, private observer: BreakpointObserver) { }
-
-
-
+  constructor(private router: Router) { }
 
 
+
+
+/*
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
       if (res.matches) {
@@ -31,7 +32,7 @@ export class NavbarComponent implements OnInit {
     });
 }
 
-
+*/
 
 
   ngOnInit(): void {

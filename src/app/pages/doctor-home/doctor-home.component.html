@@ -1,15 +1,5 @@
-
-   <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-    <mat-icon *ngIf="!sidenav.opened">
-       menu
-    </mat-icon>
-    <mat-icon *ngIf="sidenav.opened">
-        close
-    </mat-icon>
-   </button> 
-
-    <mat-sidenav-container>
-    <mat-sidenav #sidenav="matSidenav">
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
         <h4>Menu</h4>
 
         <!--Doctor avatar and naming-->
