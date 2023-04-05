@@ -1,3 +1,4 @@
+import { NavbarComponent } from './../../components/navbar/navbar.component';
 import { Router } from '@angular/router';
 import  Swal  from 'sweetalert2';
 import { PatientService } from 'src/app/patient-service/patient.service';
@@ -17,7 +18,7 @@ export class PatientLoginComponent implements OnInit {
 
   
 
-  constructor(private patientService: PatientService, private router: Router) { }
+  constructor(private patientService: PatientService, private router: Router ) { }
 
 
   ngOnInit(): void {
@@ -34,7 +35,9 @@ export class PatientLoginComponent implements OnInit {
     },
       error => Swal.fire('Error', 'Sorry, insert the correct email and password', 'error'));
       
-}
+  }
+  
+  
 
   Space(event: any) {
     if (event.target.selectionStart === 0 && event.code === "Space") {

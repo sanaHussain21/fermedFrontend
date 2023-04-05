@@ -1,6 +1,6 @@
-import { AuthGuard } from './../../guardAuth/auth.guard';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Patient } from 'src/app/pages/patient-class/patient';
 
 @Component({
   selector: 'app-navbar',
@@ -9,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router, public authGuard: AuthGuard) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
 
   onLogout() {
-    
+    localStorage.removeItem('data')
   }
 
 }
