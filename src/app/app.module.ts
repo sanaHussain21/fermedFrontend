@@ -27,7 +27,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 import { PatientLoginComponent } from './pages/patient-login/patient-login.component';
-import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doctor-profile.component';
+import { DoctorProfileComponent } from './pages/doctor-profile/doctor-profile/doctor-profile.component';
+
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doc
     DoctorHomeComponent,
     PatientDashboardComponent,
     PatientLoginComponent,
-    DoctorProfileComponent,
+ DoctorProfileComponent
   
 
   ],

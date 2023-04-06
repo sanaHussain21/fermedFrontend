@@ -11,10 +11,11 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 })
 export class DoctorHomeComponent implements OnInit {
   
-  @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver) { 
+
+  loggedinDoctor!: string;
+
+  constructor() { 
     
   }
 
