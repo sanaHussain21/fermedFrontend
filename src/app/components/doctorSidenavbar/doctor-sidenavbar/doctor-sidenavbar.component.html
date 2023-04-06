@@ -10,11 +10,19 @@
         <mat-divider></mat-divider>
        
        
+         <!--Home button-->
+         <a 
+         routerLink="/doctorHome"
+         mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
+           <mat-icon>home</mat-icon>
+           <span>Home</span>
+            
+          </a>
       
  
-            <!--Home button-->
+            <!--Profile button-->
             <a 
-            routerLink="/doctorProfile"
+            routerLink="/doctorHome/doctorProfile"
             mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
               <mat-icon>person</mat-icon>
               <span>Profile</span>
@@ -75,10 +83,16 @@
 
 
     </mat-sidenav>
-    <mat-sidenav-content>
+    <!--
+
+<mat-sidenav-content>
         <div class="content mat-elevation-z4">
             Main content will be here
 
         </div>
     </mat-sidenav-content>
+
+
+    -->
+    
 </mat-sidenav-container>

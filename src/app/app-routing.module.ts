@@ -47,7 +47,13 @@ const routes: Routes = [
   {
     path: 'doctorHome',
     component: DoctorHomeComponent, canActivate:[AuthGuard],
-    pathMatch: 'full',
+  
+    children: [
+      {
+        path: 'doctorProfile',
+        component: DoctorProfileComponent,
+      }
+    ]
     
   },
   {
@@ -60,13 +66,23 @@ const routes: Routes = [
     component: PatientLoginComponent,
     pathMatch: 'full'
   },
-  {
+ 
+ 
+  /*
+
+
+
+ {
     path: 'doctorProfile',
     component: DoctorProfileComponent,
     pathMatch: 'full'
   }
- 
-  /*
+
+
+
+
+
+
   //to implemented
   {
     path: 'doctorAppointmentDetails',

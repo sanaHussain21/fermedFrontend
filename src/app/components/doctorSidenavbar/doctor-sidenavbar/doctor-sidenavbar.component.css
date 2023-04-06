@@ -1,6 +1,7 @@
 mat-sidenav{
-    margin: 16px;
+    margin: 1px;
     width: 200px;
+
     border-right: none;
     background: green;
     color: white;
