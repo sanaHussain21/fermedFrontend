@@ -29,6 +29,7 @@ import { PatientDashboardComponent } from './pages/patient-dashboard/patient-das
 import { PatientLoginComponent } from './pages/patient-login/patient-login.component';
 import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doctor-profile.component';
 import { DoctorSidenavbarComponent } from './components/doctorSidenavbar/doctor-sidenavbar/doctor-sidenavbar.component';
+import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcome-page/doctor-welcome-page.component';
 
 
 
@@ -49,6 +50,7 @@ import { DoctorSidenavbarComponent } from './components/doctorSidenavbar/doctor-
     PatientLoginComponent,
     DoctorProfileComponent,
     DoctorSidenavbarComponent,
+    DoctorWelcomePageComponent,
    
 
   
