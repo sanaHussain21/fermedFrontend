@@ -1,0 +1,84 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+        <h4>Menu</h4>
+
+        <!--Doctor avatar and naming-->
+        <img class="avatar" image-size src="../../../assets/doctorAvatar.png">
+        <h4 class="name">Maria Begum</h4>
+        
+
+        <mat-divider></mat-divider>
+       
+       
+      
+ 
+            <!--Home button-->
+            <a 
+            routerLink="/doctorProfile"
+            mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
+              <mat-icon>person</mat-icon>
+              <span>Profile</span>
+               
+             </a>
+      
+             
+
+
+
+
+<!--Get all appointments button
+            <button mat-button class="menu-button">
+            <mat-icon>receipt_long</mat-icon>
+            <span>Appointments</span>
+            </button>
+-->
+
+        <a 
+        routerLink="/doctorProfile"
+        mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
+        <mat-icon>receipt_long</mat-icon>
+        <span>Appointments</span>
+        </a>
+       
+
+
+
+         <mat-divider></mat-divider>
+         <!--About button
+        <button mat-button class="menu-button">
+         <mat-icon>info</mat-icon>
+         <span>About</span>
+        </button>
+        -->
+        <a 
+        routerLink="/doctorProfile"
+        mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+        </a>
+
+        
+
+          <!--Help button
+         <button mat-button class="menu-button">
+          <mat-icon>help</mat-icon>
+          <span>Help</span>
+            </button>
+        -->
+        <a 
+        routerLink="/doctorProfile"
+        mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
+        <mat-icon>help</mat-icon>
+        <span>Help</span>
+        </a>
+
+
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z4">
+            Main content will be here
+
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

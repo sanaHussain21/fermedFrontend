@@ -28,6 +28,7 @@ import { MatListModule } from '@angular/material/list';
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 import { PatientLoginComponent } from './pages/patient-login/patient-login.component';
 import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doctor-profile.component';
+import { DoctorSidenavbarComponent } from './components/doctorSidenavbar/doctor-sidenavbar/doctor-sidenavbar.component';
 
 
 
@@ -47,6 +48,7 @@ import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doc
     PatientDashboardComponent,
     PatientLoginComponent,
     DoctorProfileComponent,
+    DoctorSidenavbarComponent,
    
 
   
