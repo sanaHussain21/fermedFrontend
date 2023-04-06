@@ -30,7 +30,7 @@ import { PatientLoginComponent } from './pages/patient-login/patient-login.compo
 import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doctor-profile.component';
 import { DoctorSidenavbarComponent } from './components/doctorSidenavbar/doctor-sidenavbar/doctor-sidenavbar.component';
 import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcome-page/doctor-welcome-page.component';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -73,6 +73,7 @@ import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcom
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
  
   ],
   providers: [
