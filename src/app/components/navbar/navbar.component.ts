@@ -10,9 +10,13 @@ import { BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  loggedinDoctor!: string | null;
   //@ViewChild(MatSidenav)
   //sidenav!: MatSidenav;
   //private observer: BreakpointObserver
+
+
+  
 
   constructor(private router: Router) { }
 
@@ -39,11 +43,12 @@ export class NavbarComponent implements OnInit {
   }
 
 
-
-
-
-
-
+  //this loggindin function is needed to render the logout button visible only if the doctor is logged in
+  loggedin() {
+    this.loggedinDoctor = localStorage.getItem('data');
+    return this.loggedinDoctor;
+    
+  }
 
   onLogout() {
     localStorage.removeItem('data')
