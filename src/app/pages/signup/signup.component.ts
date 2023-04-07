@@ -47,7 +47,7 @@ export class SignupComponent implements OnInit {
 
         this.doctor = Object.assign(this.doctor, this.doctorDTO.value);
         localStorage.setItem('Doctors', JSON.stringify(this.doctor));
-        this.addDoctor(this.doctor);
+        this.doctorService.addingDoctor(this.doctor);
      },
    
       (error) => {
@@ -59,17 +59,6 @@ export class SignupComponent implements OnInit {
     )
     }
   
-  addDoctor(doctor: any) {
-    let doctors = [];
-    if (localStorage.getItem('Doctors')) {
-      doctors = JSON.parse(localStorage.getItem('Doctors')!);
-      doctors = [doctor, ...doctors];
-    } else {
-      doctors = [doctor];
-    }
-
-    localStorage.setItem('Doctors', JSON.stringify(doctors));
-  }
   
   
   

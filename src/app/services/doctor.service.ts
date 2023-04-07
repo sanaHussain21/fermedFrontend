@@ -29,4 +29,17 @@ export class DoctorService {
     return this.http.get(`${baseUrl}/home/`)
   }
 
+
+  addingDoctor(doctor: any) {
+    let doctors = [];
+    if (localStorage.getItem('Doctors')) {
+      doctors = JSON.parse(localStorage.getItem('Doctors')!);
+      doctors = [doctor, ...doctors];
+    } else {
+      doctors = [doctor];
+    }
+
+    localStorage.setItem('Doctors', JSON.stringify(doctors));
+  }
+
 }
