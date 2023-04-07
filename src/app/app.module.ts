@@ -32,6 +32,7 @@ import { DoctorSidenavbarComponent } from './components/doctorSidenavbar/doctor-
 import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcome-page/doctor-welcome-page.component';
 import {MatTableModule} from '@angular/material/table';
 import { DoctorService } from './services/doctor.service';
+import { DoctorAppointmentComponent } from './pages/doctorAppointment/doctor-appointment/doctor-appointment.component';
 
 
 
@@ -52,6 +53,7 @@ import { DoctorService } from './services/doctor.service';
     DoctorProfileComponent,
     DoctorSidenavbarComponent,
     DoctorWelcomePageComponent,
+    DoctorAppointmentComponent,
    
 
   
