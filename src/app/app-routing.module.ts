@@ -13,6 +13,7 @@ import { AuthGuard } from './guardAuth/auth.guard';
 import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doctor-profile.component';
 import { DoctorSidenavbarComponent } from './components/doctorSidenavbar/doctor-sidenavbar/doctor-sidenavbar.component';
 import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcome-page/doctor-welcome-page.component';
+import { DoctorAppointmentComponent } from './pages/doctorAppointment/doctor-appointment/doctor-appointment.component';
 
 
 
@@ -58,6 +59,10 @@ const routes: Routes = [
       {
         path: 'doctorProfile',
         component: DoctorProfileComponent,
+      },
+      {
+        path: 'doctorAppointment',
+        component: DoctorAppointmentComponent,
       },
       
     ],
