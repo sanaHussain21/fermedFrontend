@@ -1,3 +1,4 @@
+import { Doctor } from './../doctor-class/doctor';
 import { Router, Routes } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { DoctorService } from '../../services/doctor.service';
@@ -14,7 +15,11 @@ import Swal from 'sweetalert2'
 })
 export class SignupComponent implements OnInit {
 
+  doctor: any = {}; //we are gonna store form information in this variable
+
   constructor(private doctorService: DoctorService) { }
+
+  
 
     doctorDTO = new FormGroup( {
     name: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
@@ -39,9 +44,12 @@ export class SignupComponent implements OnInit {
       
         console.log(data);
         Swal.fire('Success', 'doctor is registered', 'success');
-       
+
+        this.doctor = Object.assign(this.doctor, this.doctorDTO.value);
+        localStorage.setItem('Doctors', JSON.stringify(this.doctor));
+        this.addDoctor(this.doctor);
      },
-    //logout to be implemented
+   
       (error) => {
         //error
         console.log(this.doctorDTO.value)
@@ -51,6 +59,17 @@ export class SignupComponent implements OnInit {
     )
     }
   
+  addDoctor(doctor: any) {
+    let doctors = [];
+    if (localStorage.getItem('Doctors')) {
+      doctors = JSON.parse(localStorage.getItem('Doctors')!);
+      doctors = [doctor, ...doctors];
+    } else {
+      doctors = [doctor];
+    }
+
+    localStorage.setItem('Doctors', JSON.stringify(doctors));
+  }
   
   
   
