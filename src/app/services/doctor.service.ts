@@ -30,15 +30,16 @@ export class DoctorService {
   }
 
 
+
+  
   addingDoctor(doctor: any) {
     let doctors = [];
     if (localStorage.getItem('Doctors')) {
-      doctors = JSON.parse(localStorage.getItem('Doctors')!);
+      doctors = JSON.parse(localStorage.getItem('Doctors')as string);
       doctors = [doctor, ...doctors];
     } else {
       doctors = [doctor];
-    }
-
+    }  
     localStorage.setItem('Doctors', JSON.stringify(doctors));
   }
 

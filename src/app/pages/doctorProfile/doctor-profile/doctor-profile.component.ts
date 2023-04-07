@@ -1,3 +1,5 @@
+import { DoctorService } from 'src/app/services/doctor.service';
+import { Doctor } from './../../doctor-class/doctor';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorProfileComponent implements OnInit {
 
+ 
   constructor() { }
 
   ngOnInit(): void {
+
+    
+
+
+
   }
 
 }
