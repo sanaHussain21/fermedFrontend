@@ -14,7 +14,9 @@ export class DoctorProfileComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.doctor = localStorage.getItem('formData');
+    //this.doctor = localStorage.getItem('formData'); this is working but i want other thing
+
+    
     
 
 
