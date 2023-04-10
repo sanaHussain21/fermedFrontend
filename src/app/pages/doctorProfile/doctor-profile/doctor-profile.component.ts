@@ -14,7 +14,7 @@ export class DoctorProfileComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.doctor = this.doctorService.getDoctorData();
+    this.doctor = localStorage.getItem('formData');
     
 
 

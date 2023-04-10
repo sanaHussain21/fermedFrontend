@@ -30,7 +30,7 @@ export class DoctorService {
   }
 
 
-  public getDoctorData() {
+  public DoctorData() {
     return this.http.get(`${baseUrl}/doctor/getDoctorDetails`)
   }
 

@@ -45,9 +45,10 @@ export class SignupComponent implements OnInit {
         console.log(data);
         Swal.fire('Success', 'doctor is registered', 'success');
 
-        this.doctor = Object.assign(this.doctor, this.doctorDTO.value);
-       
-        this.doctorService.addingDoctor(this.doctor);
+        //this.doctor = Object.assign(this.doctor, this.doctorDTO.value);
+        //this.doctorService.addingDoctor(this.doctor);
+
+        localStorage.setItem("formData", JSON.stringify(this.doctorDTO.value));
      },
    
       (error) => {
