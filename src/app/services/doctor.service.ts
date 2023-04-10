@@ -30,6 +30,15 @@ export class DoctorService {
   }
 
 
+  public getDoctorData() {
+    return this.http.get(`${baseUrl}/doctor/getDoctorDetails`)
+  }
+
+
+
+
+
+
 
   
   addingDoctor(doctor: any) {
