@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class DoctorProfileComponent implements OnInit {
 
   //[]
-  doctor:any = []; 
+  doctor:any = null; 
   constructor(private doctorService: DoctorService) { }
 
   ngOnInit(): void {
