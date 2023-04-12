@@ -79,11 +79,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
  
+
+  //for testing
+  
+
+
+
+
  
   /*
-
-
-
  {
     path: 'doctorProfile',
     component: DoctorProfileComponent,
