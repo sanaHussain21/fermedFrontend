@@ -10,15 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class DoctorProfileComponent implements OnInit {
 
   //[]
-  doctor:any = null; 
+  
   constructor(private doctorService: DoctorService) { }
 
   ngOnInit(): void {
 
     //this.doctor = localStorage.getItem('formData');  //this is working but i want other thing
 
-   
-    this.doctor = localStorage.getItem("formDataRerived")
     
     
 
