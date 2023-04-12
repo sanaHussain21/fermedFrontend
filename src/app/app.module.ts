@@ -33,6 +33,7 @@ import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcom
 import {MatTableModule} from '@angular/material/table';
 import { DoctorService } from './services/doctor.service';
 import { DoctorAppointmentComponent } from './pages/doctorAppointment/doctor-appointment/doctor-appointment.component';
+import { PatientSideNavBarComponent } from './components/patientSidenavbar/patient-side-nav-bar/patient-side-nav-bar.component';
 
 
 
@@ -54,6 +55,7 @@ import { DoctorAppointmentComponent } from './pages/doctorAppointment/doctor-app
     DoctorSidenavbarComponent,
     DoctorWelcomePageComponent,
     DoctorAppointmentComponent,
+    PatientSideNavBarComponent,
    
 
   
