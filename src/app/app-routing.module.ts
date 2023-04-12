@@ -14,6 +14,7 @@ import { DoctorProfileComponent } from './pages/doctorProfile/doctor-profile/doc
 import { DoctorSidenavbarComponent } from './components/doctorSidenavbar/doctor-sidenavbar/doctor-sidenavbar.component';
 import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcome-page/doctor-welcome-page.component';
 import { DoctorAppointmentComponent } from './pages/doctorAppointment/doctor-appointment/doctor-appointment.component';
+import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-welcome-page/patient-welcome-page.component';
 
 
 
@@ -71,7 +72,17 @@ const routes: Routes = [
   {
     path: 'patientDashboard',
     component: PatientDashboardComponent, canActivate:[AuthGuard],
-    pathMatch: 'full'
+    children: [
+      {
+        path: '',
+        component: PatientWelcomePageComponent,
+      }
+
+
+
+
+
+    ],
   },
   {
     path: 'patientLogin',

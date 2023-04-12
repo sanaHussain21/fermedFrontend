@@ -1,52 +1,14 @@
-
-<mat-sidenav-container>
-    <mat-sidenav mode="side" opened>
-        <h4>Menu</h4>
-
-        <!--Doctor avatar and naming-->
-        <img class="avatar" image-size src="../../../assets/patientAvatar.png">
-        <h4 class="name">Name Surname</h4>
-        
-
-        <mat-divider></mat-divider>
-        <!--Home button-->
-        <button mat-button class="menu-button">
-        <mat-icon>person</mat-icon>
-        <a>Profile</a>
-        </button>
-
-
-
-        <!--Get all appointments button-->
-        <button mat-button class="menu-button">
-            <mat-icon>receipt_long</mat-icon>
-            <span >Appointments</span>
-            </button>
-
-
-
-         <mat-divider></mat-divider>
-         <!--About button-->
-         <button mat-button class="menu-button">
-         <mat-icon>info</mat-icon>
-         <span>About</span>
-        </button>
-
-        
-
-          <!--Help button-->
-          <button mat-button class="menu-button">
-          <mat-icon>help</mat-icon>
-          <span>Help</span>
-            </button>
-
-
-
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <div class="content mat-elevation-z4">
-            Main content will be here
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">    
+            <app-patient-side-nav-bar></app-patient-side-nav-bar>
+            </div>
+            <div class="col-md-8">
+               <!--WITH THE HELP OF THIS COMPONENT WE LOAD OTHER COMPONENT IN HERE-->
+            <router-outlet></router-outlet>
+            </div>
         </div>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+    </div>
+</div>
 
