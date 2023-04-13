@@ -28,7 +28,13 @@ export class LoginComponent implements OnInit {
   loginDoctor(){
     console.log(this.doctor);
     this.doctorService.loginDoctor(this.doctor).subscribe(data => {
-      localStorage.setItem('data', JSON.stringify(this.doctor))
+      localStorage.setItem('LoginData', JSON.stringify(this.doctor))
+
+      
+      localStorage.setItem('DoctorData', JSON.stringify(this.doctor.name))
+
+
+
       Swal.fire('Success', 'Doctor is Logged in', 'success');
       this.router.navigate(['/doctorHome'])
     },
