@@ -31,7 +31,9 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('LoginData', JSON.stringify(this.doctor))
 
       
-      localStorage.setItem('DoctorData', JSON.stringify(this.doctor.name))
+      //for testing
+
+      
 
 
 
@@ -40,7 +42,16 @@ export class LoginComponent implements OnInit {
     },
       error => Swal.fire('Error', 'Sorry, insert the correct email and password', 'error'));
       
-}
+  }
+  
+
+
+
+
+
+
+
+
 
   Space(event: any) {
     if (event.target.selectionStart === 0 && event.code === "Space") {
