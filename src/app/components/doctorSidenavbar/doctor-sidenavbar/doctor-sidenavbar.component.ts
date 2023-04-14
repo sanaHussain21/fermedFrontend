@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctor-sidenavbar.component.css']
 })
 export class DoctorSidenavbarComponent implements OnInit {
+  
 
   constructor() { }
 

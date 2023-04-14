@@ -14,7 +14,7 @@ import { Doctor } from '../doctor-class/doctor';
 export class LoginComponent implements OnInit {
 
  //creating the object for doctor []
- doctor: Doctor = new Doctor();
+ doctor: any = new Doctor();
   
 
   
@@ -29,10 +29,14 @@ export class LoginComponent implements OnInit {
     console.log(this.doctor);
     this.doctorService.loginDoctor(this.doctor).subscribe(data => {
       localStorage.setItem('LoginData', JSON.stringify(this.doctor))
+    
 
+      //for testing
       
-      //calling retrivingDoctorDataFunction for testing
-     
+
+
+
+
       Swal.fire('Success', 'Doctor is Logged in', 'success');
       this.router.navigate(['/doctorHome'])
     },
@@ -40,7 +44,15 @@ export class LoginComponent implements OnInit {
       
   }
   
+
   
+
+
+
+
+
+
+
   Space(event: any) {
     if (event.target.selectionStart === 0 && event.code === "Space") {
       event.preventDefault();
@@ -55,3 +67,4 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('DoctorData', JSON.stringify(this.doctor))
     })
   }*/
+

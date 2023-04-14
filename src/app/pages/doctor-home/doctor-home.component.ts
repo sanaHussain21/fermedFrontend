@@ -12,22 +12,11 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 export class DoctorHomeComponent implements OnInit {
   
 
-
-  loggedinDoctor!: string;
-
   constructor() { 
     
   }
 
-
-
-
-
-
-
   ngOnInit(): void {
   }
 
-
- 
 }
