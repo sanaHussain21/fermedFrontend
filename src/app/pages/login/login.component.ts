@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 import { Doctor } from '../doctor-class/doctor';
 import baseUrl from 'src/app/services/helper';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
     
 
       //for testing
-    
+      
 
 
       Swal.fire('Success', 'Doctor is Logged in', 'success');
