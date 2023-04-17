@@ -5,6 +5,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2'
 import { Doctor } from '../doctor-class/doctor';
+import baseUrl from 'src/app/services/helper';
 
 @Component({
   selector: 'app-login',
@@ -32,9 +33,7 @@ export class LoginComponent implements OnInit {
     
 
       //for testing
-     
-
-
+    
 
 
       Swal.fire('Success', 'Doctor is Logged in', 'success');
