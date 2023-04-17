@@ -30,8 +30,8 @@ export class DoctorService {
   }
 
 
-  public doctorData() {
-    return this.http.get(`${baseUrl}/doctor/getDoctorDetails`)
+  public doctorData(doctor2: any) {
+    return this.http.post(`${baseUrl}/doctor/getDoctorDetails`, doctor2)
   }
 
 
