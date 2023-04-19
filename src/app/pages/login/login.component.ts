@@ -25,24 +25,29 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
+    loginDoctor(){
+      console.log(this.doctor);
+      this.doctorService.loginDoctor(this.doctor).subscribe(data => {
+        localStorage.setItem('LoginData', JSON.stringify(this.doctor))
+      
+  
+        //for testing
+        
+  
+  
+        Swal.fire('Success', 'Doctor is Logged in', 'success');
+        this.router.navigate(['/doctorHome'])
+      },
+        error => Swal.fire('Error', 'Sorry, insert the correct email and password', 'error'));
+        
+    }
+
+
+
+
   }
 
-  loginDoctor(){
-    console.log(this.doctor);
-    this.doctorService.loginDoctor(this.doctor).subscribe(data => {
-      localStorage.setItem('LoginData', JSON.stringify(this.doctor))
-    
-
-      //for testing
-      
-
-
-      Swal.fire('Success', 'Doctor is Logged in', 'success');
-      this.router.navigate(['/doctorHome'])
-    },
-      error => Swal.fire('Error', 'Sorry, insert the correct email and password', 'error'));
-      
-  }
+ 
   
 
   Space(event: any) {
@@ -51,6 +56,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
+}
+
+function loginDoctor() {
+  throw new Error('Function not implemented.');
 }
 /*//testing
   retrivingDoctorData() {
