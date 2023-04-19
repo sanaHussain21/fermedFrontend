@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
 
  //creating the object for doctor []
  doctor: any = new Doctor();
-  http: any;
-  
+ 
 
   
 
@@ -30,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
 
-  loginDoctor(_doctor: any){
+  loginDoctor(){
     console.log(this.doctor);
     this.doctorService.loginDoctor(this.doctor).subscribe(data => {
       localStorage.setItem('LoginData', JSON.stringify(this.doctor))
@@ -38,8 +37,6 @@ export class LoginComponent implements OnInit {
 
       //for testing
       
-
-
       Swal.fire('Success', 'Doctor is Logged in', 'success');
       this.router.navigate(['/doctorHome'])
     },
