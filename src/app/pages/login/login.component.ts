@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
 
-  loginDoctor(){
+  loginDoctor(_doctor: any){
     console.log(this.doctor);
     this.doctorService.loginDoctor(this.doctor).subscribe(data => {
       localStorage.setItem('LoginData', JSON.stringify(this.doctor))
