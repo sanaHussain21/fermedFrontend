@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
 
  //creating the object for doctor []
  doctor: any = new Doctor();
+  http: any;
   
 
   
@@ -26,11 +27,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
    
-
-
-
-
   }
+
 
   loginDoctor(){
     console.log(this.doctor);
@@ -48,6 +46,8 @@ export class LoginComponent implements OnInit {
       error => Swal.fire('Error', 'Sorry, insert the correct email and password', 'error'));
       
   }
+
+
   
 
   Space(event: any) {
