@@ -11,17 +11,34 @@ export class DoctorProfileComponent implements OnInit {
 
   //[]
   
-  constructor(private doctorService: DoctorService) { }
-
-  ngOnInit(): void {
-
-    //this.doctor = localStorage.getItem('formData');  //this is working but i want other thing
-
-    
-    
-
-
-
+  constructor(private doctorService: DoctorService) { 
+    this.getDoctorDetails();
   }
 
+  ngOnInit(): void {
+  }
+
+
+
+
+ getDoctorDetails(){
+   this.doctorService.doctorData().subscribe(
+     (resp) => { 
+       console.log("Got doctor details",resp);
+     },
+   (error) => {
+    console.log("Didn't get doctor details",error);
+    }
+
+   
+ )};
+  
+  
+  
+  
+  
+  
+  
 }
+
+
