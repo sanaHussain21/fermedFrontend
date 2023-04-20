@@ -47,6 +47,36 @@ export class LoginComponent implements OnInit {
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   Space(event: any) {
     if (event.target.selectionStart === 0 && event.code === "Space") {
       event.preventDefault();
@@ -55,9 +85,7 @@ export class LoginComponent implements OnInit {
 
 }
 
-function loginDoctor() {
-  throw new Error('Function not implemented.');
-}
+
 /*//testing
   retrivingDoctorData() {
     console.log(this.doctor);
