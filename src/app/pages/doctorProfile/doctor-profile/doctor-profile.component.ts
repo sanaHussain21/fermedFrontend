@@ -12,7 +12,8 @@ export class DoctorProfileComponent implements OnInit {
   //[]
   
   constructor(private doctorService: DoctorService) { 
-    this.getDoctorDetails();
+   
+   this.getDoctorDetails();
   }
 
   ngOnInit(): void {
@@ -32,7 +33,6 @@ export class DoctorProfileComponent implements OnInit {
 
    
  )};
-  
   
   
   
