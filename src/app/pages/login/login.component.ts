@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   loginDoctor(){
     console.log(this.doctor);
     this.doctorService.loginDoctor(this.doctor).subscribe(data => {
-      localStorage.setItem('DoctorLoginData', JSON.stringify(this.doctor))
+      localStorage.setItem('data', JSON.stringify(this.doctor))
     
 
       //for testing

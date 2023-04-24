@@ -46,13 +46,14 @@ export class NavbarComponent implements OnInit {
 
   //this loggindin function is needed to render the logout button visible only if the doctor is logged in
   loggedin() {
-    this.loggedinDoctor = localStorage.getItem('DoctorLoginData');
+    this.loggedinDoctor = localStorage.getItem('data');
     return this.loggedinDoctor;
     
   }
 
   onLogout() {
-    localStorage.removeItem('DoctorLoginData')
+    localStorage.removeItem('data')
+    
   }
 
 
