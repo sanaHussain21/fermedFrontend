@@ -1,4 +1,4 @@
-import { NavbarComponent } from './../../components/navbar/navbar.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { Router } from '@angular/router';
 import  Swal  from 'sweetalert2';
 import { PatientService } from 'src/app/patient-service/patient.service';
