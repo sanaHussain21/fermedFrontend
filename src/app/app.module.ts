@@ -37,6 +37,7 @@ import { PatientSideNavBarComponent } from './components/patientSidenavbar/patie
 import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-welcome-page/patient-welcome-page.component';
 import { PatientProfileComponent } from './pages/patientProfile/patient-profile/patient-profile.component';
 import { PatientAppointmentComponent } from './pages/patientAppointment/patient-appointment/patient-appointment.component';
+import { PatientNavbarComponent } from './components/patientNavbar/patient-navbar/patient-navbar.component';
 
 
 
@@ -62,6 +63,7 @@ import { PatientAppointmentComponent } from './pages/patientAppointment/patient-
     PatientWelcomePageComponent,
     PatientProfileComponent,
     PatientAppointmentComponent,
+    PatientNavbarComponent,
    
 
   

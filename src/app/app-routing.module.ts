@@ -100,49 +100,7 @@ const routes: Routes = [
     component: PatientLoginComponent,
     pathMatch: 'full'
   },
- 
-
-  //for testing
-  
-
-
-
-
- 
-  /*
- {
-    path: 'doctorProfile',
-    component: DoctorProfileComponent,
-    pathMatch: 'full'
-  }
-
-
-
-
-
-
-  //to implemented
-  {
-    path: 'doctorAppointmentDetails',
-    component: DoctorProfileComponent,
-    pathMatch: 'full'
-  },
-    //to implemented
-  {
-    path: 'doctorAbout',
-    component: DoctorProfileComponent,
-    pathMatch: 'full'
-  },
-    //to implemented
-  {
-    path: 'doctorHelp',
-    component: DoctorProfileComponent,
-    pathMatch: 'full'
-  },
-*/
-
-
-];
+ ];
 
 
 
