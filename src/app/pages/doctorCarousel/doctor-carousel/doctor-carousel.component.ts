@@ -14,6 +14,7 @@ interface carouselImages {
 })
 export class DoctorCarouselComponent implements OnInit {
   
+  
  @Input() images: carouselImages[] =  []
   @Input() indicators = true;
   @Input() autoSlide = false;
@@ -22,6 +23,7 @@ export class DoctorCarouselComponent implements OnInit {
   @Input() controls = true;
   selectedIndex = 0;
   onNextClick: any;
+ 
   
   
   
