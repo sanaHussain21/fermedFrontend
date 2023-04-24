@@ -14,17 +14,7 @@ export class DoctorHomeComponent implements OnInit {
   
   doctor = new Doctor();
 
-  images= [
-    {
-      imageSrc:'../../../assets/doctorImage.jpg',
-      imageAlt: 'doctorAvatar',
-    },
-    {
-      imageSrc:'../../../assets/doctorImage2.jpg',
-      imageAlt: 'doctorAvatar2',
-    }
-
-  ]
+  
 
 
 

@@ -1,3 +1,4 @@
+import { CanActivate } from '@angular/router';
 import  Swal  from 'sweetalert2';
 
 import { NgModule } from '@angular/core';
@@ -38,6 +39,7 @@ import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-
 import { PatientProfileComponent } from './pages/patientProfile/patient-profile/patient-profile.component';
 import { PatientAppointmentComponent } from './pages/patientAppointment/patient-appointment/patient-appointment.component';
 import { DoctorCarouselComponent } from './pages/doctorCarousel/doctor-carousel/doctor-carousel.component';
+import { NgbCarousel, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -90,7 +92,11 @@ import { DoctorCarouselComponent } from './pages/doctorCarousel/doctor-carousel/
     MatIconModule,
     MatListModule,
     MatTableModule,
- 
+    NgbModule,
+    
+
+   
+   
   ],
   providers: [
     DoctorService,

@@ -102,17 +102,6 @@ const routes: Routes = [
     component: PatientLoginComponent,
     pathMatch: 'full'
   },
-
-  //testing
-  {
-    path: 'doctorCarousel',
-    component: DoctorCarouselComponent,
-    pathMatch: 'full'
-}
-
-
-
-
  ];
 
 
