@@ -27,7 +27,7 @@ export class PatientLoginComponent implements OnInit {
   loginPatient(){
     console.log(this.patient);
     this.patientService.patientLogin(this.patient).subscribe(data => {
-      localStorage.setItem('data', JSON.stringify(this.patient))
+      localStorage.setItem('PatientLoginData', JSON.stringify(this.patient))
 
       Swal.fire('Success', 'Patient is Logged in', 'success');
       this.router.navigate(['/patientDashboard'])
