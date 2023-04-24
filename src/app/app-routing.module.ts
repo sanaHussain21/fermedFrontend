@@ -16,6 +16,7 @@ import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcom
 import { DoctorAppointmentComponent } from './pages/doctorAppointment/doctor-appointment/doctor-appointment.component';
 import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-welcome-page/patient-welcome-page.component';
 import { PatientProfileComponent } from './pages/patientProfile/patient-profile/patient-profile.component';
+import { PatientNavbarComponent } from './components/patientNavbar/patient-navbar/patient-navbar.component';
 
 
 
@@ -100,6 +101,16 @@ const routes: Routes = [
     component: PatientLoginComponent,
     pathMatch: 'full'
   },
+
+
+
+
+  {
+    path: 'patientNavbar',
+    component: PatientNavbarComponent,
+    pathMatch: 'full'
+  },
+
  ];
 
 
