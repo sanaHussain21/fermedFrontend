@@ -16,7 +16,7 @@ import { DoctorWelcomePageComponent } from './pages/doctor-welcome/doctor-welcom
 import { DoctorAppointmentComponent } from './pages/doctorAppointment/doctor-appointment/doctor-appointment.component';
 import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-welcome-page/patient-welcome-page.component';
 import { PatientProfileComponent } from './pages/patientProfile/patient-profile/patient-profile.component';
-import { DoctorCarouselComponent } from './pages/doctorCarousel/doctor-carousel/doctor-carousel.component';
+
 
 
 

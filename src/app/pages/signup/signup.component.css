@@ -1,10 +1,10 @@
 .full-width{
     width: 100%;
 }
-input[type=text], select {
+input[type=text] {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 10px 20px;
+    margin: 3px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -32,6 +32,7 @@ input[type=password], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
+  margin-top: 1px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;

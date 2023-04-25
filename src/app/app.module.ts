@@ -38,8 +38,8 @@ import { PatientSideNavBarComponent } from './components/patientSidenavbar/patie
 import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-welcome-page/patient-welcome-page.component';
 import { PatientProfileComponent } from './pages/patientProfile/patient-profile/patient-profile.component';
 import { PatientAppointmentComponent } from './pages/patientAppointment/patient-appointment/patient-appointment.component';
-import { DoctorCarouselComponent } from './pages/doctorCarousel/doctor-carousel/doctor-carousel.component';
-import { NgbCarousel, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
@@ -67,7 +67,7 @@ import { NgbCarousel, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PatientWelcomePageComponent,
     PatientProfileComponent,
     PatientAppointmentComponent,
-    DoctorCarouselComponent,
+   
    
    
 
@@ -92,7 +92,7 @@ import { NgbCarousel, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatIconModule,
     MatListModule,
     MatTableModule,
-    NgbModule,
+    NgbCarouselModule,
     
 
    
