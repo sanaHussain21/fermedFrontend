@@ -40,6 +40,7 @@ import { PatientProfileComponent } from './pages/patientProfile/patient-profile/
 import { PatientAppointmentComponent } from './pages/patientAppointment/patient-appointment/patient-appointment.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from './carousel/carousel.module';
+import { PatientCarouselModule } from './pages/patient-carousel/patient-carousel.module';
 
 
 
@@ -94,6 +95,7 @@ import { CarouselModule } from './carousel/carousel.module';
     MatListModule,
     MatTableModule,
     CarouselModule,
+    PatientCarouselModule,
     
 
    
