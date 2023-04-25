@@ -10,20 +10,20 @@ export class PatientWelcomePageComponent  {
   images = [
   
     {
-      imageSrc:'../../../assets/doctorImage.jpg',
-      imageAlt: 'doctorImage',
+      imageSrc:'../../../assets/patient2.jpg',
+      imageAlt: 'Patient1Image',
     },
     {
-      imageSrc:'../../../assets/doctorImage2.jpg',
-      imageAlt: 'doctorImage2',
+      imageSrc:'../../../assets/patient 3.jpg',
+      imageAlt: 'Patient2Image',
     },
     {
-      imageSrc:'../../../assets/doctorImage3.jpg',
-      imageAlt: 'doctorImage3',
+      imageSrc:'../../../assets/patient4.jpg',
+      imageAlt: 'Patient3Image',
     },
     {
-      imageSrc:'../../../assets/doctorImage4.jpg',
-      imageAlt: 'doctorImage4',
+      imageSrc:'../../../assets/patient5.jpg',
+      imageAlt: 'Patient4Image',
     }
 ]
 
