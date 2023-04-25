@@ -39,6 +39,7 @@ import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-
 import { PatientProfileComponent } from './pages/patientProfile/patient-profile/patient-profile.component';
 import { PatientAppointmentComponent } from './pages/patientAppointment/patient-appointment/patient-appointment.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from './carousel/carousel.module';
 
 
 
@@ -92,7 +93,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MatIconModule,
     MatListModule,
     MatTableModule,
-    NgbCarouselModule,
+    CarouselModule,
     
 
    
