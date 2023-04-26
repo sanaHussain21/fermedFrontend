@@ -3,14 +3,35 @@
     <div class="container">
         <div class="row">
             <div class="text-center">
-                <mat-card>
+              
                 <h1><b>WELCOME TO THE HOME PAGE</b></h1>
                 
+                    <!--SEARCH BAR-->
+                    <div class="container">
+                        
+                        <form>
+                         <input type="text" placeholder="Search...">
+                        
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    
+
+                    <!--Carousel Images-->
                       <app-carousel
                           [images]="images"
                           [autoSlide]="true">
                      </app-carousel>
-               </mat-card>
+              
             </div>
         </div>
     </div>

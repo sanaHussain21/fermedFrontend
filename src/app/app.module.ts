@@ -13,7 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatRadioModule} from '@angular/material/radio';
@@ -71,7 +71,8 @@ import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-
     PatientProfileComponent,
     PatientAppointmentComponent,
     MainHomePageComponent,
-   
+    
+
    
    
 
