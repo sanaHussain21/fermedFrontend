@@ -9,4 +9,12 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class MainHomePageModule { }
+export class MainHomePageModule { 
+
+
+
+
+
+
+  
+}
