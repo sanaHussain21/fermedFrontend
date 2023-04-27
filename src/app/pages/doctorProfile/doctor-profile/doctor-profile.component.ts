@@ -12,18 +12,22 @@ import baseUrl from 'src/app/patient-service/helper';
 export class DoctorProfileComponent implements OnInit {
 
   //[]
-  
+  doctorDeatils: any;
+
   constructor(private doctorService: DoctorService, private httpClient : HttpClient) { 
-   
+    this.doctorDeatils = [];
     
     
   }
 
   ngOnInit(): void {
+    this.getDoctorDetails();
  
   }
   getDoctorDetails() {
-    this.httpClient.get(`${baseUrl}/doctor/getDoctorDetails`)
+    this.httpClient.get(`${baseUrl}/doctor/getDoctorDetails`).subscribe((result: any) => {
+      this.doctorDeatils = result;
+    })
   }
 
 
