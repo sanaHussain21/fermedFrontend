@@ -30,4 +30,13 @@ export class PatientCreateAppointmentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
+
+  Space(event: any) {
+        if (event.target.selectionStart === 0 && event.code === "Space") {
+          event.preventDefault();
+        }
+      }
+
 }
