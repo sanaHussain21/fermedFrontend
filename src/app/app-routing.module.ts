@@ -93,7 +93,7 @@ const routes: Routes = [
       },
 
       {
-        path: 'CreateAppoitment',
+        path: 'createAppoitment',
         component:PatientCreateAppointmentComponent,
       },
 
