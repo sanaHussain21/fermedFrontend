@@ -1,18 +1,5 @@
 <mat-toolbar color="primary">
-  <!--<div class="container">
-    <img src="../../../assets/health.png" height="30" alt="">
-  </div>
-  <a mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-    <mat-icon *ngIf="!sidenav.opened">
-      eco
-    </mat-icon>
-    <mat-icon *ngIf="sidenav.opened">
-        close
-    </mat-icon>
-   </a> 
--->
 
-  <!--Website name and an icon-->
     <a 
     routerLink="/"
     mat-icon-button class="example-icon favorite-icon" aria-label="medical_tablet">
@@ -22,22 +9,41 @@
 
     
 
-
-    <span class="example-spacer"></span>
+<span class="example-spacer"></span>
+   
   
     
-    <!--this second redirect us to the multiuser page
-    <a routerLink="/multiuser" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"><mat-icon>group</mat-icon></a>
--->
 
-    <!--this third redirect us to the multiuser page as we logout-->
-    <!--(click)="onLogout()"-->
-    <a
-    routerLink="/multiuser" *ngIf="loggedin()"  (click)="onLogout()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     
 
+    
+
+    <div class="bootstrap-wrapper">
+      <div class="container">
+          <div class="row">
+              <div class="text-center">
+                      <!--SEARCH BAR-->
+                      <div class="container">
+                          
+                          <form>
+                           <input type="text" placeholder="Search for doctor, medicine...">
+                          
+                              <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                          </form>
+                      </div>
+              </div>
+          </div>
+      </div>
+    </div>     
+
+
+    <span class="example-spacer"></span>
+
+
+
+    <a
+    routerLink="/multiuser" *ngIf="loggedin()"  (click)="onLogout()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <span>Logout</span>
     </a>
-
 
   </mat-toolbar>
