@@ -25,6 +25,8 @@ export class PatientService {
 
 
   //calling create appointment API
-  
+  public createAppointment(appointment: any) {
+    return this.http.post(`${baseUrl}/appointment/createAppointment`,appointment)
+  }
 
 }

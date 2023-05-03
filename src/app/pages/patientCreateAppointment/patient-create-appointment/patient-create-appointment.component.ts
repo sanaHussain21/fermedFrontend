@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { PatientService } from 'src/app/patient-service/patient.service';
 
 @Component({
@@ -9,6 +10,22 @@ import { PatientService } from 'src/app/patient-service/patient.service';
 export class PatientCreateAppointmentComponent implements OnInit {
 
   constructor(private patienService: PatientService) { }
+
+  //AppointmentDTO
+
+  appointmentDTO = new FormGroup({
+    
+  });
+
+
+
+
+
+
+
+
+
+  
 
   ngOnInit(): void {
   }
