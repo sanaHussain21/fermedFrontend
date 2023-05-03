@@ -42,6 +42,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from './carousel/carousel.module';
 import { PatientCarouselModule } from './pages/patient-carousel/patient-carousel.module';
 import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-home-page.component';
+import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointment/patient-create-appointment/patient-create-appointment.component';
 
 
 
@@ -71,6 +72,7 @@ import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-
     PatientProfileComponent,
     PatientAppointmentComponent,
     MainHomePageComponent,
+    PatientCreateAppointmentComponent,
     
 
    
