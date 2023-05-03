@@ -24,4 +24,7 @@ export class PatientService {
   }
 
 
+  //calling create appointment API
+  
+
 }
