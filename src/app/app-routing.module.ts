@@ -17,6 +17,7 @@ import { DoctorAppointmentComponent } from './pages/doctorAppointment/doctor-app
 import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-welcome-page/patient-welcome-page.component';
 import { PatientProfileComponent } from './pages/patientProfile/patient-profile/patient-profile.component';
 import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-home-page.component';
+import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointment/patient-create-appointment/patient-create-appointment.component';
 
 
 
@@ -91,7 +92,10 @@ const routes: Routes = [
         component:PatientProfileComponent,
       },
 
-
+      {
+        path: 'CreateAppoitment',
+        component:PatientCreateAppointmentComponent,
+      },
 
 
     ],
