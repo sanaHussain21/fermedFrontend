@@ -25,15 +25,8 @@ input[type=text], select {
   
 .form-group{
   position: static;
-  width: 250px;
+  width: 390px;
+  margin-top: 20px;
 }
 
-input[type=password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+

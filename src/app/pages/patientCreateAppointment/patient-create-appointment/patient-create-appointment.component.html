@@ -1,5 +1,4 @@
-
-    <div class="bootstrap-wrapper">
+<div class="bootstrap-wrapper">
         <div class="container">
             <div class="row" style="margin-top: 20px;">
                 <div class="col-md-6 offset-md-3">
@@ -8,67 +7,71 @@
                            <img src="../../../assets/logo.png" height="90" alt="">
                        </div>
                            <h1 class="text-center"><i><b>Create Appointment</b></i></h1>
-                            <form [formGroup]="appointmentDTO" (ngSubmit)="formSubmit()">
+                            
 
-
-                                 <!--Patient  Name field  []    [(ngModel)]= "doctorDTO.name"-->
-                    <div class="row">
-                        <div class="col mb-5">
-                            <label for="name" class="form-lable">Name</label>
-                            <input  type="text" class="form-control" id="name" placeholder="Enter Name" (keydown)="Space($event)"  formControlName="name">
-                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
-                                Name field should not be empty!!!
-                            </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty)">
-                                Name must contain minimum 4 characters!!!
-                            </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
-                                Name should not start with number!
-                            </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['maxlength'] && (Name.touched || Name.dirty)">
-                                Name must contain maximum 15 characters!!!
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-                                  <!-- payment field  [] -->
-                                  <div class="row">
-                                    <div  class="col ps-5 mb-3">
-                                        <div class="m-1">Choose type of payment:</div>
-                                        
-                                                <div>
-                                                <input type="radio" name="payment" value="cash" formControlName="payment"> Cash
-                                                <input type="radio" name="payment" value="onlie" formControlName="payment"> Online
-                                            </div>
+                                <form [formGroup]="appointmentDTO" (ngSubmit)="formSubmit()">
+                                    <div class="form-group">
+                                        <label for="patientName" class="form-lable">Patient Name</label>
+                                      <input type="text" class="form-control" id="name" placeholder="Enter Patient Name" (keydown)="Space($event)"  formControlName="patientName">
+                                      <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['required'] && (Patient_Name.touched || Patient_Name.dirty)">
+                                        Name field should not be empty!!!
                                     </div>
-                                </div>
+                                    <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['minlength'] && (Patient_Name.touched || Patient_Name.dirty)">
+                                        Patient Name must contain minimum 4 characters!!!
+                                    </div>
+                                    <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['pattern'] && (Patient_Name.touched || Patient_Name.dirty)">
+                                        Patient Name should not start with number!
+                                    </div>
+                                    <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['maxlength'] && (Patient_Name.touched || Patient_Name.dirty)">
+                                        Patient Name must contain maximum 15 characters!!!
+                                    </div>
+                                    </div>
+                                   
 
-                                    <!--Date picker field-->
-                                    <mat-form-field appearance="fill">
-                                        <mat-label>Choose a date</mat-label>
-                                        <input matInput [matDatepicker]="picker">
-                                        <mat-hint>MM/DD/YYYY</mat-hint>
-                                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                                        <mat-datepicker #picker></mat-datepicker>
-                                      </mat-form-field>
+                                    <div class="form-group">
+
+                                         <!--Date picker field-->
+                                             <mat-form-field appearance="fill">
+                                                <mat-label>Choose a date</mat-label>
+                                                <input matInput [matDatepicker]="picker">
+                                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                                <mat-datepicker #picker></mat-datepicker>
+                                              </mat-form-field>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <mat-label>Choose type of payment</mat-label>
+                                        
+                                         <div>
+                                            <input type="radio" name="payment" value="cash" formControlName="payment"> Cash
+                                            <input type="radio" name="payment" value="onlie" formControlName="payment"> Online
+                                        </div>
+                           
+                                   </div>
+
+
+
+                                  
+                                    <!--
+                                    <div class="form-group form-check">
+                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
+                                    -->
+                                    <!--<button type="submit" class="btn btn-primary">Submit</button> -->
+                                  </form>
+
+
+
+                                   
                                       
                                     
-                            </form>
+                            
                     </mat-card>      
                                 
                 </div>
             </div>
         </div>
-    </div>
+</div>

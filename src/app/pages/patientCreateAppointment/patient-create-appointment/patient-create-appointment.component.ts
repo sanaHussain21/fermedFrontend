@@ -16,7 +16,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
   appointmentDTO = new FormGroup({
     payment: new FormControl("",[Validators.required]),
-    
+    patientName : new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(15), Validators.pattern("[a-zA-z].*")]),
   });
 
 
@@ -64,7 +64,12 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
   get Payment(): FormControl {
     return this.appointmentDTO.get("payment") as FormControl;
+  }
+  
+  get Patient_Name(): FormControl {
+    return this.appointmentDTO.get("patientName") as FormControl;
 }
+
 
 }
 
