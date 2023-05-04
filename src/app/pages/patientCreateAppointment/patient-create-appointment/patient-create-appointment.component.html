@@ -3,32 +3,23 @@
         <div class="container">
             <div class="row" style="margin-top: 20px;">
                 <div class="col-md-6 offset-md-3">
-            
-                    <div class="container text-center">
-                        <img src="../../../assets/logo.png" height="90" alt="">
-                    </div>
-                         <h1 class="text-center"><i><b>Create Appointment</b></i></h1>
-                         <form [formGroup]="appointmentDTO" (ngSubmit)="formSubmit()">
-                            <!-- telephone number field  [] -->
-                    <div class="row">
-                        <div class="col mb-5">
-                            <label for="telephone_number" class="form-lable">Telephone Number</label>
-                            <input  type="text" class="form-control"  placeholder="Enter Telephone Number"  (keydown)="Space($event)" id="telephone_number" formControlName="telephone_number">
-                            <div class="form-text text-danger" style="color: red" *ngIf=" Telephone_Number.errors?.['required'] && ( Telephone_Number.touched ||  Telephone_Number.dirty)">
-                                Telephone Number field should not be empty!!!
-                            </div>
-                           
-                            <div class="form-text text-danger" style="color: red" *ngIf="Telephone_Number.errors?.['pattern'] && (Telephone_Number.touched || Telephone_Number.dirty)">
-                                Telephone Number must contain 10 digits!!!
-                            </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Telephone_Number.errors?.['pattern'] && (Telephone_Number.touched || Telephone_Number.dirty)">
-                                Telephone Number must contain only numbers!!!
-                            </div>
-    
-                        </div>
-                    </div>
-
-                         </form>
+                       <div class="container text-center">
+                           <img src="../../../assets/logo.png" height="90" alt="">
+                       </div>
+                           <h1 class="text-center"><i><b>Create Appointment</b></i></h1>
+                              <form [formGroup]="appointmentDTO" (ngSubmit)="formSubmit()">
+                                  <!-- payment field  [] -->
+                                  <div class="row">
+                                    <div  class="col ps-5 mb-3">
+                                        <div class="m-1">Choose type of payment:</div>
+                                        
+                                                <div>
+                                                <input type="radio" name="payment" value="cash" formControlName="payment"> Cash
+                                                <input type="radio" name="payment" value="onlie" formControlName="payment"> Online
+                                            </div>
+                                    </div>
+                                </div>
+                              </form>
                 </div>
             </div>
         </div>

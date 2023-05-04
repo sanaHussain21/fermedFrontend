@@ -58,6 +58,13 @@ export class PatientCreateAppointmentComponent implements OnInit {
         if (event.target.selectionStart === 0 && event.code === "Space") {
           event.preventDefault();
         }
-      }
+  }
+  
+
+
+  get Payment(): FormControl {
+    return this.appointmentDTO.get("payment") as FormControl;
+}
 
 }
+
