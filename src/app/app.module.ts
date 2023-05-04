@@ -44,6 +44,7 @@ import { PatientCarouselModule } from './pages/patient-carousel/patient-carousel
 import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-home-page.component';
 import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointment/patient-create-appointment/patient-create-appointment.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
@@ -103,7 +104,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     PatientCarouselModule,
     NgbModule,
     MatDatepickerModule,
-
+    MatFormFieldModule,
+    MatNativeDateModule,
    
    
   ],

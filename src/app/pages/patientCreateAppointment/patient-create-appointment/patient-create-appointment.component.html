@@ -1,13 +1,47 @@
-<mat-card>
+
     <div class="bootstrap-wrapper">
         <div class="container">
             <div class="row" style="margin-top: 20px;">
                 <div class="col-md-6 offset-md-3">
+                    <mat-card>
                        <div class="container text-center">
                            <img src="../../../assets/logo.png" height="90" alt="">
                        </div>
                            <h1 class="text-center"><i><b>Create Appointment</b></i></h1>
                             <form [formGroup]="appointmentDTO" (ngSubmit)="formSubmit()">
+
+
+                                 <!--Patient  Name field  []    [(ngModel)]= "doctorDTO.name"-->
+                    <div class="row">
+                        <div class="col mb-5">
+                            <label for="name" class="form-lable">Name</label>
+                            <input  type="text" class="form-control" id="name" placeholder="Enter Name" (keydown)="Space($event)"  formControlName="name">
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
+                                Name field should not be empty!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty)">
+                                Name must contain minimum 4 characters!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
+                                Name should not start with number!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['maxlength'] && (Name.touched || Name.dirty)">
+                                Name must contain maximum 15 characters!!!
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
 
                                   <!-- payment field  [] -->
                                   <div class="row">
@@ -22,11 +56,19 @@
                                 </div>
 
                                     <!--Date picker field-->
-                                  
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Choose a date</mat-label>
+                                        <input matInput [matDatepicker]="picker">
+                                        <mat-hint>MM/DD/YYYY</mat-hint>
+                                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                      </mat-form-field>
+                                      
                                     
                             </form>
+                    </mat-card>      
+                                
                 </div>
             </div>
         </div>
     </div>
-</mat-card>
