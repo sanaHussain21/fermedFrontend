@@ -43,7 +43,7 @@ import { CarouselModule } from './carousel/carousel.module';
 import { PatientCarouselModule } from './pages/patient-carousel/patient-carousel.module';
 import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-home-page.component';
 import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointment/patient-create-appointment/patient-create-appointment.component';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -102,7 +102,7 @@ import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointm
     CarouselModule,
     PatientCarouselModule,
     NgbModule,
-    
+    MatDatepickerModule,
 
    
    

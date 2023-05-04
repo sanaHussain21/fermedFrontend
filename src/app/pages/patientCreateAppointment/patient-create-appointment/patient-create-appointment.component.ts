@@ -35,7 +35,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
   formSubmit(){
         
     //createDoctor: coming from doctorSerivce
-      this.patientService.addPatient(this.appointmentDTO.value).subscribe(
+      this.patientService.createAppointment(this.appointmentDTO.value).subscribe(
         (data) => {
         
           console.log(data);
