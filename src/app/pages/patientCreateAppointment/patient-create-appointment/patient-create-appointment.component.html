@@ -8,7 +8,27 @@
                         <img src="../../../assets/logo.png" height="90" alt="">
                     </div>
                          <h1 class="text-center"><i><b>Create Appointment</b></i></h1>
-                        
+                         <form [formGroup]="appointmentDTO" (ngSubmit)="formSubmit()">
+                            <!-- telephone number field  [] -->
+                    <div class="row">
+                        <div class="col mb-5">
+                            <label for="telephone_number" class="form-lable">Telephone Number</label>
+                            <input  type="text" class="form-control"  placeholder="Enter Telephone Number"  (keydown)="Space($event)" id="telephone_number" formControlName="telephone_number">
+                            <div class="form-text text-danger" style="color: red" *ngIf=" Telephone_Number.errors?.['required'] && ( Telephone_Number.touched ||  Telephone_Number.dirty)">
+                                Telephone Number field should not be empty!!!
+                            </div>
+                           
+                            <div class="form-text text-danger" style="color: red" *ngIf="Telephone_Number.errors?.['pattern'] && (Telephone_Number.touched || Telephone_Number.dirty)">
+                                Telephone Number must contain 10 digits!!!
+                            </div>
+                            <div class="form-text text-danger" style="color: red" *ngIf="Telephone_Number.errors?.['pattern'] && (Telephone_Number.touched || Telephone_Number.dirty)">
+                                Telephone Number must contain only numbers!!!
+                            </div>
+    
+                        </div>
+                    </div>
+
+                         </form>
                 </div>
             </div>
         </div>
