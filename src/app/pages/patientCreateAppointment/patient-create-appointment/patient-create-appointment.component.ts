@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PatientService } from 'src/app/patient-service/patient.service';
+import { DoctorService } from 'src/app/services/doctor.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,8 +10,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./patient-create-appointment.component.css']
 })
 export class PatientCreateAppointmentComponent implements OnInit {
+  DoctorList: any;
 
-  constructor(private patientService: PatientService) { }
+  constructor(private doctorService: DoctorService, private patientService: PatientService) { }
 
   //AppointmentDTO
 
@@ -31,7 +33,13 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
   ngOnInit(): void {
 
+    //getting doctor list
+    this.doctorService.getDoctorList().subscribe((data: any) => {
+      this.DoctorList = data;
+    })
     
+  
+
   }
 
   formSubmit(){
