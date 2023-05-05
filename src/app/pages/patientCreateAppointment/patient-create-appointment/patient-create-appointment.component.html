@@ -57,7 +57,11 @@
                                     <div>
                                         <select name="Doctor" class="form-control">
                                         <option>--Choose Doctor--</option>
-                                            
+                                        <option *ngFor="let doc of DoctorList">
+                                            {{doc.name}} 
+                                            <!-- This is working but one mistake-->
+                                        </option>
+                                     
                                        
                                         </select>
                                     </div>
