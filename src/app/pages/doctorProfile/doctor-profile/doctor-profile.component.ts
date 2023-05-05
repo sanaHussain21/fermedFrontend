@@ -20,9 +20,9 @@ export class DoctorProfileComponent implements OnInit {
  
 
   ngOnInit(): void {
-    this.doctorService.loginDoctor(this.doctor).subscribe(res => {
-      this.doctorDetails = res;
-   })
+    //this.doctorService.loginDoctor(this.doctor).subscribe(res => {
+     // this.doctorDetails = res;
+   //})
   }
  
 
