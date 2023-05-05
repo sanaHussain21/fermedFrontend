@@ -15,7 +15,7 @@ export class DoctorProfileComponent implements OnInit {
   doctorDetails: any;
   doctor =  new Doctor();
 
-  constructor(private doctorService: DoctorService, private _httpClient: HttpClient) { }
+  constructor(private doctorService: DoctorService) { }
   
  
 
@@ -23,6 +23,11 @@ export class DoctorProfileComponent implements OnInit {
     //this.doctorService.loginDoctor(this.doctor).subscribe(res => {
      // this.doctorDetails = res;
    //})
+    
+    this.doctorService.doctorData().subscribe((data: any) => {
+      this.doctorDetails = data;
+     })
+    
   }
  
 
@@ -46,5 +51,3 @@ export class DoctorProfileComponent implements OnInit {
   
   
 }
-
-
