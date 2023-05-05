@@ -58,8 +58,8 @@
                                         <select name="Doctor" class="form-control">
                                         <option>--Choose Doctor--</option>
                                         <option *ngFor="let doc of DoctorList">
-                                            {{doc.name}} 
-                                            <!-- This is working but one mistake-->
+                                            {{doc.name}} {{doc.surname}}
+                                            <!--COUDL WORK FOR DOCTOR PROFILE AS WELL-->
                                         </option>
                                      
                                        
