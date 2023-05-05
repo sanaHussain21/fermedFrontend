@@ -30,6 +30,8 @@ export class PatientCreateAppointmentComponent implements OnInit {
   
 
   ngOnInit(): void {
+
+    
   }
 
   formSubmit(){
