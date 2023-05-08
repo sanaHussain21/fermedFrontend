@@ -20,7 +20,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
     payment: new FormControl("",[Validators.required]),
     patientName : new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(15), Validators.pattern("[a-zA-z].*")]),
     time: new FormControl("", [Validators.required]),
-    
+    matDatepicker : new FormControl("", [Validators.required]),
     
   });
 
