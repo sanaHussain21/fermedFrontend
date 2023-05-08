@@ -13,6 +13,8 @@
                                     <div class="form-group">
                                         <label for="patientName" class="form-lable">Patient Name</label>
                                       <input type="text" class="form-control" id="name" placeholder="Enter Patient Name" (keydown)="Space($event)"  formControlName="patientName">
+
+                                      <!--
                                       <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['required'] && (Patient_Name.touched || Patient_Name.dirty)">
                                         Name field should not be empty!!!
                                     </div>
@@ -25,6 +27,8 @@
                                     <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['maxlength'] && (Patient_Name.touched || Patient_Name.dirty)">
                                         Patient Name must contain maximum 15 characters!!!
                                     </div>
+                                        -->
+
                                     </div>
                                    
 
@@ -101,14 +105,15 @@
                                     </div>
                                     -->
                                     <!--<button type="submit" class="btn btn-primary">Submit</button> -->
-                                  </form>
-
-
-
-                                   
-                                      
-                                    
-                            
+                                  
+                                
+                                
+                                    <div class="container text-center">
+                                        <button  type="submit" mat-raised-button color="primary">Register</button>
+                                        <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+                                    </div>
+                                
+                                </form>   
                     </mat-card>      
                                 
                 </div>
