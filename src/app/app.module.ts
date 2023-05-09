@@ -45,7 +45,11 @@ import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-
 import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointment/patient-create-appointment/patient-create-appointment.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 
 
 
@@ -109,6 +113,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatNativeDateModule,
     BrowserAnimationsModule,
+   
+   
  
    
   ],
