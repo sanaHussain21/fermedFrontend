@@ -48,6 +48,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
+
+
+
 
 
 
@@ -113,7 +117,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatNativeDateModule,
     BrowserAnimationsModule,
-   
+    DateTimePickerModule,
    
  
    
