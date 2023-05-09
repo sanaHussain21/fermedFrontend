@@ -14,7 +14,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
   constructor(private doctorService: DoctorService, private patientService: PatientService) { }
 
-  //AppointmentDTO
+  //AppointmentDTO[]
 
   appointmentDTO = new FormGroup({
     payment: new FormControl("",[Validators.required]),
