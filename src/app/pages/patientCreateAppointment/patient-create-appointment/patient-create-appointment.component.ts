@@ -18,9 +18,9 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
   appointmentDTO = new FormGroup({
     payment: new FormControl("",[Validators.required]),
-    patientName : new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(15), Validators.pattern("[a-zA-z].*")]),
+    patientName : new FormControl("", [Validators.required]),
     time: new FormControl("", [Validators.required]),
-    matDatepicker : new FormControl("", [Validators.required]),
+    date : new FormControl("", [Validators.required]),
     
   });
 
@@ -36,7 +36,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
   ngOnInit(): void {
 
-    //getting doctor list
+    //this function returns doctor list in select box
     this.doctorService.getDoctorList().subscribe((data: any) => {
       this.DoctorList = data;
     })
