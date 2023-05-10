@@ -34,14 +34,6 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
 
 
-
-
-
-
-
-
-  
-
   ngOnInit(): void {
 
     //this function returns doctor list in select box
