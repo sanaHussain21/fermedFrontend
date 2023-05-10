@@ -30,7 +30,9 @@ export class PatientService {
   }
 
   //calling create appointment API
-  
+  public getAppointmentData() {
+    return this.http.get(`${baseUrl}/appointment/`)
+  }
 
 
 }

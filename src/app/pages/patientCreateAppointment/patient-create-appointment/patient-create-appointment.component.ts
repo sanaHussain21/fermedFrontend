@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class PatientCreateAppointmentComponent implements OnInit {
   DoctorList: any;
+  appointmentList: any;
   ChangeDoctor(e: any) { 
     console.log(e.target.value)
 
@@ -44,6 +45,11 @@ export class PatientCreateAppointmentComponent implements OnInit {
     this.doctorService.getDoctorList().subscribe((data: any) => {
       this.DoctorList = data;
     })
+
+    this.patientService.getAppointmentData().subscribe((data: any) => {
+      this.appointmentList =  data;
+    })
+   
     
   
 
