@@ -101,7 +101,7 @@
                                     <div>
                                         <select name="Doctor" (change)="ChangeDoctor($event)" class="form-control" formControlName="doctorName">
                                         <option>--Select Doctor--</option>
-                                        <option [value]="doc.ID_DOC" *ngFor="let doc of DoctorList">
+                                        <option *ngFor="let doc of DoctorList">
                                             {{doc.name}} {{doc.surname}}
                                             <!--COUDL WORK FOR DOCTOR PROFILE AS WELL-->
                                         </option>
