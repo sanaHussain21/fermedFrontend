@@ -11,6 +11,10 @@ import Swal from 'sweetalert2';
 })
 export class PatientCreateAppointmentComponent implements OnInit {
   DoctorList: any;
+  ChangeDoctor(e: any) { 
+    console.log(e.target.value)
+
+  }
 
   constructor(private doctorService: DoctorService, private patientService: PatientService) { }
 
@@ -21,7 +25,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
     patientName : new FormControl("", [Validators.required]),
     time: new FormControl("", [Validators.required]),
     date : new FormControl("", [Validators.required]),
-    
+    doctorName : new FormControl("", [Validators.required]),
   });
 
 

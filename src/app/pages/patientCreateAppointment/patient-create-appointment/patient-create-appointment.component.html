@@ -99,9 +99,9 @@
                                    <div class="form-group">
                                     <mat-label>Choose Doctor</mat-label>
                                     <div>
-                                        <select name="Doctor" class="form-control">
+                                        <select name="Doctor" (change)="ChangeDoctor($event)" class="form-control" formControlName="doctorName">
                                         <option>--Select Doctor--</option>
-                                        <option *ngFor="let doc of DoctorList">
+                                        <option [value]="doc.ID_DOC" *ngFor="let doc of DoctorList">
                                             {{doc.name}} {{doc.surname}}
                                             <!--COUDL WORK FOR DOCTOR PROFILE AS WELL-->
                                         </option>
