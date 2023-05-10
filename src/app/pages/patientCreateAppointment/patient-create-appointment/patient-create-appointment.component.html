@@ -96,13 +96,39 @@
                                    </div>
                 -->
 
-                                   <div class="form-group">
+
+                                        <!--
+                                             <div class="form-group">
                                     <mat-label>Choose Doctor</mat-label>
                                     <div>
-                                        <select name="Doctor" (change)="ChangeDoctor($event)" class="form-control" formControlName="doctorName">
+                                        <select name="AppointmentDoctorList" (change)="ChangeDoctor($event)" class="form-control" formControlName="doctorName">
                                         <option>--Select Doctor--</option>
                                         <option *ngFor="let doc of DoctorList">
                                             {{doc.name}} {{doc.surname}}
+                                            COUDL WORK FOR DOCTOR PROFILE AS WELL
+
+                                            []
+                               
+                                        </option>
+                                     
+                                       
+                                    </select>
+                                </div>
+                               </div> -->
+                                       
+
+
+
+
+
+
+                                   <div class="form-group">
+                                    <mat-label>Choose Doctor</mat-label>
+                                    <div>
+                                        <select name="DoctorList" (change)="ChangeDoctor($event)" class="form-control" formControlName="doctorName">
+                                        <option>--Select Doctor--</option>
+                                        <option  [value]="doc.id_doctor"   *ngFor="let doc of DoctorList">
+                                        {{doc.name}} {{doc.surname}}
                                             <!--COUDL WORK FOR DOCTOR PROFILE AS WELL-->
                                         </option>
                                      
