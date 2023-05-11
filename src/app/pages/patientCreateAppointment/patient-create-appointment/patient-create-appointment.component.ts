@@ -32,6 +32,10 @@ export class PatientCreateAppointmentComponent implements OnInit {
     time: new FormControl("", [Validators.required]),
     date: new FormControl("", [Validators.required]),
     doctorName: new FormControl("", [Validators.required]),
+
+
+
+
   });
 
 
@@ -49,10 +53,6 @@ export class PatientCreateAppointmentComponent implements OnInit {
       this.appointmentList =  data;
     })
        */
-   
-    
-  
-
   }
 
   formSubmit(){
