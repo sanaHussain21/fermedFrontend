@@ -48,16 +48,8 @@ export class PatientCreateAppointmentComponent implements OnInit {
     this.patientService.getAppointmentData().subscribe((data: any) => {
       this.appointmentList =  data;
     })
+       */
    
-   
-    
-    var converted_date = new Date(this.full_date);
-
-    var date = converted_date.toLocaleDateString();
-    var moment = converted_date.toLocaleTimeString();
-    console.log(date);
-    console.log(moment);
-    */
     
   
 
