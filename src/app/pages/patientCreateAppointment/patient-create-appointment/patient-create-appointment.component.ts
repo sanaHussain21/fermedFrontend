@@ -1,3 +1,4 @@
+import { throwMatDuplicatedDrawerError } from '@angular/material/sidenav';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PatientService } from 'src/app/patient-service/patient.service';
@@ -31,10 +32,6 @@ export class PatientCreateAppointmentComponent implements OnInit {
     time: new FormControl("", [Validators.required]),
     date: new FormControl("", [Validators.required]),
     doctorName: new FormControl("", [Validators.required]),
-    
-
-    
-   
   });
 
 
@@ -102,6 +99,16 @@ export class PatientCreateAppointmentComponent implements OnInit {
   
   get Patient_Name(): FormControl {
     return this.appointmentDTO.get("patientName") as FormControl;
+}
+get Time(): FormControl {
+  return this.appointmentDTO.get("time") as FormControl;
+}
+get Date(): FormControl {
+  return this.appointmentDTO.get("date") as FormControl;
+}
+
+get Doctor_Name(): FormControl {
+  return this.appointmentDTO.get("doctorName") as FormControl;
 }
 
 
