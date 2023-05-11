@@ -34,7 +34,7 @@
 
                                     <div class="form-group">
 
-                                         <!--Date picker field-->
+                                         <!--Date picker field
                                              <mat-form-field appearance="fill">
                                                 <mat-label>Choose a date</mat-label>
                                                 <input matInput [matDatepicker]="picker" formControlName="date">
@@ -44,7 +44,13 @@
                                             </mat-form-field>
                                               <br> <br>
                                             <mat-label>Choose time</mat-label>
-                                        
+                                        -->
+                                        <label>Choose a date</label>
+                                        <input type="date" formControlName="date">
+
+
+
+
                                             <div>
                                                     <input type="time" name="time" value="time" formControlName="time">   
                                             </div>
@@ -57,8 +63,14 @@
                                    </div>
                             -->
 
+                            <!--Testing date without matdatepicke
+                            <div class="form-group">
+                                 <label>Choose a date</label>
+                                <input type="date" formControlName="date">
 
 
+                            </div>
+                                -->
 
 
 
