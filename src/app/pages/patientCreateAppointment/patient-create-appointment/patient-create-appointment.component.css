@@ -51,3 +51,8 @@ input[type=number], select {
 
 
 
+::ng-deep .mat-calendar{
+  background: linear-gradient(45deg, rgb(191, 241, 191), white) ;
+}
+
+

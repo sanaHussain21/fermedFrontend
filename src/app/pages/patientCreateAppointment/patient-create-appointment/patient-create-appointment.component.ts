@@ -12,24 +12,29 @@ import Swal from 'sweetalert2';
 export class PatientCreateAppointmentComponent implements OnInit {
   DoctorList: any;
   appointmentList: any;
-  SelectedValue: any;
+  
 
 
   ChangeDoctor(e: any) { 
     console.log(e.target.value)
-    this.SelectedValue = e.target.value
+    
   }
 
   constructor(private doctorService: DoctorService, private patientService: PatientService) { }
 
+  
   //AppointmentDTO[]
 
   appointmentDTO = new FormGroup({
-    payment: new FormControl("",[Validators.required]),
-    patientName : new FormControl("", [Validators.required]),
+    payment: new FormControl("", [Validators.required]),
+    patientName: new FormControl("", [Validators.required]),
     time: new FormControl("", [Validators.required]),
-    date : new FormControl("", [Validators.required]),
-    doctorName : new FormControl("", [Validators.required]),
+    date: new FormControl("", [Validators.required]),
+    doctorName: new FormControl("", [Validators.required]),
+    
+
+    
+   
   });
 
 
@@ -42,10 +47,20 @@ export class PatientCreateAppointmentComponent implements OnInit {
      
     })
 
+/*
     this.patientService.getAppointmentData().subscribe((data: any) => {
       this.appointmentList =  data;
     })
    
+   
+    
+    var converted_date = new Date(this.full_date);
+
+    var date = converted_date.toLocaleDateString();
+    var moment = converted_date.toLocaleTimeString();
+    console.log(date);
+    console.log(moment);
+    */
     
   
 
