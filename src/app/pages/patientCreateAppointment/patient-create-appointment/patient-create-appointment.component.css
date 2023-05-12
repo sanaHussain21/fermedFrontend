@@ -27,6 +27,10 @@ input[type=text], select {
   position: static;
   width: 390px;
   margin-top: 20px;
+
+  .mat-form-field{
+    width: 100%;
+  }
 }
 
 input[type=time], select {

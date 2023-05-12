@@ -1,3 +1,7 @@
+
+
+
+
 import { throwMatDuplicatedDrawerError } from '@angular/material/sidenav';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -15,7 +19,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
   appointmentList: any;
   
 
-
+//WITH TIS FUNCTION WE GET DOCTORS NAME AND SURNME
   ChangeDoctor(e: any) { 
     console.log(e.target.value)
     
@@ -58,6 +62,10 @@ export class PatientCreateAppointmentComponent implements OnInit {
   formSubmit(){
         
     //createDoctor: coming from doctorSerivce
+    //  let appointmentJson = JSON.parse(JSON.stringify(this.appointmentDTO.value));
+
+    //console.log( appointmentJson);
+
       this.patientService.createAppointment(this.appointmentDTO.value).subscribe(
         (data) => {
         
