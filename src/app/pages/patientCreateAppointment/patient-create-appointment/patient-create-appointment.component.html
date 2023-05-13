@@ -33,10 +33,10 @@
 
                                     </div>
                                    
-
+ <!-- 
                                     <div class="form-group">
 
-                                     <!-- 
+                                    
                                              <mat-form-field appearance="outline">
                                                 <mat-label>Choose a date</mat-label>
                                                 <input matInput [matDatepicker]="picker" formControlName="date">
@@ -44,7 +44,7 @@
                                                 <mat-datepicker-toggle matIconSuffix [for]="picker" format="dd-MM-yyyy"></mat-datepicker-toggle>
                                                 <mat-datepicker #picker></mat-datepicker>
                                             </mat-form-field>
-                                             -->
+                                            
                                         
                                        
                                         <label>Choose a date</label>
@@ -58,13 +58,8 @@
                                                     <input type="time" name="time" value="time" formControlName="time">   
                                             </div>
                                     </div>
+ -->
 
-
-                                    <!--
-                                   <div class="container">
-                                    <ejs-datetimepicker></ejs-datetimepicker>
-                                   </div>
-                            -->
 
                             <!--Testing date without matdatepicke
                             <div class="form-group">
@@ -75,7 +70,13 @@
                             </div>
                                 -->
 
+                                
 
+                                <div class="form-group">
+                                       <label>Choose Date/time</label>
+                                       <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="datetime" placeholder="Insert Date and Time" class="md-input" formControlName="dateTime">
+
+                                </div>
 
 
 
