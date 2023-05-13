@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewAppointmentServiceService } from 'src/app/services/view-appointment-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-doctor-appointment',
@@ -32,9 +34,19 @@ export class DoctorAppointmentComponent implements OnInit {
 
   ]
 
-  constructor() { }
+  constructor(private  _appointment: ViewAppointmentServiceService) { }
 
   ngOnInit(): void {
-  }
+    this._appointment.appointments().subscribe((data: any) => {
+      //success
+      this.appointments = data;
+      console.log(this.appointments);
+    },
+      //error
+      (error: any) => {
+        console.log(error);
+        Swal.fire('Error', 'Something went wrong', 'error')
+      });
 
+  }
 }
