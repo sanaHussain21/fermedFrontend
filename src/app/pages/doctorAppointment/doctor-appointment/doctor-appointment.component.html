@@ -2,45 +2,30 @@
 
     <h1>Doctor Appointments With Patient
     </h1>
-    <mat-list-item *ngFor="let appoint of appointments">
-
-        <div mat-line>{{appoint.patientName}} - {{appoint.datetime}}</div>
-        <br>
-        <mat-divider></mat-divider>
-
-    </mat-list-item>
 
     <!--creating table to display appointments details-->
     <table class="table">
         <thead>
           <tr>
             <th scope="col">Patient Id</th>
-            <th scope="col">Patient Name</th>
-            <th scope="col">Patient Last Name</th>
+            <th scope="col">Name Surname</th>
             <th scope="col">Payment</th>
             <th scope="col">Appointment Date-Time</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let appoint of appointments">
             <!--<th scope="row">1</th>-->
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>{{appoint.patientId}}</td>
+            <td>{{appoint.patientName}}</td>
+            <td>{{appoint.payment}}</td>
+            <td>{{appoint.datetime}}</td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          
         </tbody>
+        <div class="container text-center">
+            <button  type="submit" mat-raised-button color="primary">Register</button>
+        </div>
       </table>
 
 
