@@ -1,7 +1,25 @@
 <mat-card>
 
-    <h1>Doctor Appointments Details</h1>
-    
+    <h1>Doctor Appointments With Patient
+    </h1>
+    <mat-list-item *ngFor="let appoint of appointments">
+
+        <div mat-line>{{appoint.patientName}} - {{appoint.datetime}}</div>
+        <br>
+        <mat-divider></mat-divider>
+
+    </mat-list-item>
+
+    <!--creating table to display appointments details-->
+
+
+
+
+
+
+
+
+
 
 </mat-card>
 
