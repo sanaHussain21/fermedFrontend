@@ -9,24 +9,25 @@
           <tr>
             <th scope="col">Patient Id</th>
             <th scope="col">Name Surname</th>
-            <th scope="col">Payment</th>
+            <th scope="col">Type of Payment</th>
             <th scope="col">Appointment Date-Time</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let appoint of appointments">
             <!--<th scope="row">1</th>-->
-            <td>{{appoint.patientId}}</td>
-            <td>{{appoint.patientName}}</td>
-            <td>{{appoint.payment}}</td>
-            <td>{{appoint.datetime}}</td>
-          </tr>
+            <!--id_appointment,id_doc,patient_id,payment,time_date-->
+                 <td>{{appoint.patient_id}}</td>
+                 <td></td>
+                 <td>{{appoint.payment}}</td>
+                 <td>{{appoint.time_date}}</td>
+                 <!--<td><button type="button" class="btn btn-info">edit <mat-icon color="green">edit</mat-icon></button></td>-->
+            </tr>
+         
           
         </tbody>
 
-        <div class="container text-center margintop20">
-            <button  type="submit" mat-raised-button color="primary">Update</button>
-        </div>
+        
 
       </table>
 
