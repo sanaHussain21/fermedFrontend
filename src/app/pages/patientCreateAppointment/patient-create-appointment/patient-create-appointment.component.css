@@ -25,7 +25,7 @@ input[type=text], select {
   
 .form-group{
   position: static;
-  width: 390px;
+  width: 100%;
   margin-top: 20px;
 
   .mat-form-field{

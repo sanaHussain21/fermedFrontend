@@ -25,7 +25,9 @@ input[type=text], select {
   
 .form-group{
   position: static;
-  width: 250px;
+  width: 100%;
+  margin-bottom: 10px;
+  
 }
 
 input[type=password], select {

@@ -13,50 +13,51 @@
                 <form [formGroup]="doctorDTO" (ngSubmit)="formSubmit()">
                    
                     <!-- Name field  []    [(ngModel)]= "doctorDTO.name"-->
-                    <div class="row">
-                        <div class="col mb-5">
+                    <div class="form-group">
+                        
+                        
                             <label for="name" class="form-lable">Name</label>
                             <input  type="text" class="form-control" id="name" placeholder="Enter Name" (keydown)="Space($event)"  formControlName="name">
-                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
+                            <div class="alert alert-danger" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
                                 Name field should not be empty!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty)">
+                            <div class="alert alert-danger" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty)">
                                 Name must contain minimum 4 characters!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
+                            <div class="alert alert-danger" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
                                 Name should not start with number!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Name.errors?.['maxlength'] && (Name.touched || Name.dirty)">
+                            <div class="alert alert-danger" *ngIf="Name.errors?.['maxlength'] && (Name.touched || Name.dirty)">
                                 Name must contain maximum 15 characters!!!
                             </div>
 
+                        
                         </div>
-                    </div>
 
                     <!--Surname field-->
-                    <div class="row">
-                        <div class="col mb-5">
+                    <div class="form-group">
+                       
                             <label for="surname" class="form-lable">Surname</label>
                             <input  type="text" class="form-control"  placeholder="Enter Surname"  (keydown)="Space($event)" id="surname" formControlName="surname">
-                            <div class="form-text text-danger" style="color: red" *ngIf="Surname.errors?.['required'] && (Surname.touched || Surname.dirty)">
+                            <div class="alert alert-danger" *ngIf="Surname.errors?.['required'] && (Surname.touched || Surname.dirty)">
                                 Surname field should not be empty!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Surname.errors?.['minlength'] && (Surname.touched || Surname.dirty)">
+                            <div class="alert alert-danger" *ngIf="Surname.errors?.['minlength'] && (Surname.touched || Surname.dirty)">
                                 Surname must contain minimum 4 characters!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Surname.errors?.['pattern'] && (Surname.touched || Surname.dirty)">
+                            <div class="alert alert-danger" *ngIf="Surname.errors?.['pattern'] && (Surname.touched || Surname.dirty)">
                                 Surname should not start with number!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Surname.errors?.['maxlength'] && (Surname.touched || Surname.dirty)">
+                            <div class="alert alert-danger" *ngIf="Surname.errors?.['maxlength'] && (Surname.touched || Surname.dirty)">
                                 Surname must contain maximum 15 characters!!!
                             </div>
-                        </div>
+                        
                     </div>
 
 
                     <!--Gender field-->
-                <div class="row">
-                    <div  class="col ps-5 mb-3">
+                <div class="form-group">
+                   
                         <div class="m-1">Gender</div>
                         
                             <select name="gender" id="gender" formControlName="gender">
@@ -64,7 +65,7 @@
                                 <option value="female">Female</option>
                                
                             </select>
-                    </div>
+                  
                 </div>
 
 
@@ -74,10 +75,10 @@
                         <div class="col mb-5">
                             <label for="email" class="form-lable">Email</label> 
                             <input  type="text" class="form-control"  placeholder="Enter Email" (keydown)="Space($event)" id="email" formControlName="email">
-                            <div class="form-text text-danger" style="color: red" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+                            <div class="alert alert-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
                                 Email field should not be empty!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+                            <div class="alert alert-danger" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
                                 Email is invalid!!!
                             </div>
                         </div>
@@ -91,16 +92,16 @@
                         <div class="col mb-5">
                             <label for="password" class="form-lable">Password</label>
                             <input  type="password" class="form-control" id="password" placeholder="Enter Password" (keydown)="Space($event)"  formControlName="password">
-                            <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">
+                            <div class="alert alert-danger" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">
                                 Password field should not be empty!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['minlength'] && (Password.touched || Password.dirty)">
+                            <div class="alert alert-danger" *ngIf="Password.errors?.['minlength'] && (Password.touched || Password.dirty)">
                                 Password must contain minimum 4 characters!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['maxlength'] && (Password.touched || Password.dirty)">
+                            <div class="alert alert-danger" *ngIf="Password.errors?.['maxlength'] && (Password.touched || Password.dirty)">
                                 Password must contain maximum 15 characters!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Password.errors?.['pattern'] && (Password.touched || Password.dirty)">
+                            <div class="alert alert-danger" *ngIf="Password.errors?.['pattern'] && (Password.touched || Password.dirty)">
                              Allowed characters [-,_]
                             </div>        
                         </div>
@@ -113,16 +114,16 @@
                         <div class="col mb-5">
                             <label for="username" class="form-lable">Username</label>
                             <input   type="text" class="form-control" id="username" placeholder="Enter Username" (keydown)="Space($event)"  formControlName="username">
-                            <div class="form-text text-danger" style="color: red" *ngIf="Username.errors?.['required'] && (Username.touched || Username.dirty)">
+                            <div class="alert alert-danger" *ngIf="Username.errors?.['required'] && (Username.touched || Username.dirty)">
                                 Username field should not be empty!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Username.errors?.['minlength'] && (Username.touched || Username.dirty)">
+                            <div class="alert alert-danger" *ngIf="Username.errors?.['minlength'] && (Username.touched || Username.dirty)">
                                 Username must contain minimum 4 characters!!!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Username.errors?.['pattern'] && (Username.touched || Username.dirty)">
+                            <div class="alert alert-danger" *ngIf="Username.errors?.['pattern'] && (Username.touched || Username.dirty)">
                                 Username should not start with number!
                             </div>
-                            <div class="form-text text-danger" style="color: red" *ngIf="Username.errors?.['maxlength'] && (Username.touched || Username.dirty)">
+                            <div class="alert alert-danger" *ngIf="Username.errors?.['maxlength'] && (Username.touched || Username.dirty)">
                                 Username must contain maximum 15 characters!!!
                             </div>
 
@@ -134,7 +135,7 @@
                       
                         <!--Button for reset-->
                       <div class="container text-center">
-                        <button type="submit" mat-raised-button color="primary">Register</button>
+                        <button type="submit" [disabled]="doctorDTO.invalid" mat-raised-button color="primary">Register</button>
                         <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
                     </div>
                     <br>

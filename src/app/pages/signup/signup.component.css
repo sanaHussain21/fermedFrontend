@@ -22,11 +22,16 @@ input[type=text] {
     cursor: pointer;
   }
   
+  .form-group{
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
   
-.form-group{
-  position: static;
-  width: 250px;
-}
+    .mat-form-field{
+      width: 100%;
+    }
+  }
 
 input[type=password], select {
   width: 100%;

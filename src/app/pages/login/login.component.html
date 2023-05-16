@@ -12,8 +12,8 @@
                 <form  (ngSubmit)="loginDoctor()">
                     
                     <!--Email field-->                     
-                     <div class="row">                       
-                        <div class="col mb-5">                           
+                     <div class="form-group">                       
+                                                  
                             <label for="email" class="form-lable">Email</label>                            
                             <input  type="text"
                             [(ngModel)]="doctor.email" 
@@ -27,9 +27,9 @@
                             email="true"
                             #Email="ngModel"
                             >                                       
-                        </div>
+                       
                         <!--VALIDATING EMAIL FOR LOGIN-->
-                        <div class="error"  *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">Email field should not be empty!!!</div> 
+                        <div class="error"  *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)" class="alert alert-danger">Email field should not be empty!!!</div> 
                         <div class="error"  *ngIf="Email.errors?.pattern">Email address pattern is invalid</div>
                         
                    
@@ -39,8 +39,8 @@
                   
                     <!--Password field-->
 
-                    <div class="row">
-                        <div class="col mb-5">
+                    <div class="form-group">
+                        
                             <label for="password" class="form-lable">Password</label>
                             <input  type="password"   
                             [(ngModel)]="doctor.password" 
@@ -55,13 +55,13 @@
                             maxlength="15"
                             pattern="^(?=.*[-,_]).{8,15}$">
                             
-                            <div class="error" *ngIf="password.errors && (password.dirty || password.touched)"class="alert alert-danger">
+                            <div class="error" *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
                                 <div class="error" [hidden]="!password.errors['required']">Password is required</div>
                                 <div class="error" [hidden]="!password.errors['minlength']">Password must have minimum 8 characters and maximum 15 characters</div>
                                 <div class="error" [hidden]="!password.errors['maxlength']">Password must have maximum 15 characters long.</div>
                                 <div class="error" [hidden]="!password.errors['pattern']">Password allowed special characters (-,_).</div>
                             </div>
-                        </div>
+            
                     </div>
                     
 
