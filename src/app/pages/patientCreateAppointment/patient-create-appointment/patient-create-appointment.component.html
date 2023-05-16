@@ -155,9 +155,10 @@
                                         {{doc.name}} {{doc.surname}} {{doc.id_doctor}}
                                             <!--COUDL WORK FOR DOCTOR PROFILE AS WELL-->
                                         </option>
-                                     
-                                       
                                         </select>
+                                        <span class="help-block" class="form-text text-danger" style="color: red"  *ngIf="Doctor_Name.errors?.['required'] && (Doctor_Name.touched || Doctor_Name.dirty)">
+                                            Doctor selection required
+                                        </span>
                                     </div>
                                    </div>
 

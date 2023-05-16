@@ -105,6 +105,7 @@ if(this.appointmentDTO.value === null) {
     if (this.appointmentDTO.valid) {
       this.patientService.createAppointment(this.appointmentDTO.value).subscribe(res => {
         Swal.fire('Success', 'Appointment created successfuly', 'success');
+        console.log(res) //showing us the response that we got from our form 
       });
     } else {
       Swal.fire('Error', 'Please enter correct data','error')
