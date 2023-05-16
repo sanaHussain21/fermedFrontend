@@ -59,7 +59,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
        */
   }
 
-  formSubmit(){
+
         
     //createDoctor: coming from doctorSerivce
     //  let appointmentJson = JSON.parse(JSON.stringify(this.appointmentDTO.value));
@@ -84,11 +84,8 @@ if(this.appointmentDTO.value === null) {
        }
     } */
 
-
-
-
-
-      this.patientService.createAppointment(this.appointmentDTO.value).subscribe(
+/**
+ *  this.patientService.createAppointment(this.appointmentDTO.value).subscribe(
         
         (data) => {
         
@@ -103,6 +100,15 @@ if(this.appointmentDTO.value === null) {
           Swal.fire('Error', 'Something went wrong','error')
         }
       )
+ */
+  formSubmit() {
+    if (this.appointmentDTO.valid) {
+      this.patientService.createAppointment(this.appointmentDTO.value).subscribe(res => {
+        Swal.fire('Success', 'Appointment created successfuly', 'success');
+      });
+    } else {
+      Swal.fire('Error', 'Please enter correct data','error')
+    }
   }
 
 

@@ -15,7 +15,9 @@
                                     <div class="form-group">
                                         <label for="patientName" class="form-lable">Patient Name</label>
                                       <input type="text" class="form-control" id="name" placeholder="Enter Patient Name" (keydown)="Space($event)"  formControlName="patientName">
-
+                                      <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['required'] && (Patient_Name.touched || Patient_Name.dirty)">
+                                       Patient Name field should not be empty!!!
+                                    </div>
                                       <!--
                                       <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['required'] && (Patient_Name.touched || Patient_Name.dirty)">
                                         Name field should not be empty!!!
@@ -75,7 +77,9 @@
                                 <div class="form-group">
                                        <label>Choose Date/time</label>
                                        <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="datetime" placeholder="Insert Date and Time" class="md-input" formControlName="dateTime">
-
+                                       <div class="form-text text-danger" style="color: red" *ngIf="Date_Time.errors?.['required'] && (Date_Time.touched || Date_Time.dirty)">
+                                        Date and Time field should not be empty!!!
+                                     </div>
                                 </div>
 
 
@@ -92,6 +96,9 @@
 
                                         <div>
                                             <input type="number" name="payment" value="cash" formControlName="payment"> 
+                                            <div class="form-text text-danger" style="color: red" *ngIf="Payment.errors?.['required'] && (Payment.touched || Payment.dirty)">
+                                                Enter a cost of appointment!!!
+                                             </div>
                                         </div>
 
                                    </div>
@@ -139,10 +146,11 @@
 
 
                                    <div class="form-group">
-                                    <mat-label>Choose Doctor</mat-label>
+                                    <mat-label class="control-lable">Choose Doctor</mat-label>
                                     <div>
-                                        <select name="DoctorList" (change)="ChangeDoctor($event)" class="form-control" formControlName="doctorName">
+                                        <select name="DoctorList" (change)="ChangeDoctor($event)" class="form-control" formControlName="doctorName" required="Must insert">
                                         <option>--Select Doctor--</option>
+                                        
                                         <option  [value]="doc.id_doctor" *ngFor="let doc of DoctorList">
                                         {{doc.name}} {{doc.surname}} {{doc.id_doctor}}
                                             <!--COUDL WORK FOR DOCTOR PROFILE AS WELL-->
