@@ -20,8 +20,8 @@ export class PatientCreateAppointmentComponent implements OnInit {
   
 
 //WITH TIS FUNCTION WE GET DOCTORS NAME AND SURNME
-  ChangeDoctor(e: any) { 
-    console.log(e.target.value)
+  ChangeDoctor( doctorId: any) { 
+    console.log("selected doctor id:", doctorId.target.value)
     
   }
 
@@ -66,7 +66,30 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
     //console.log( appointmentJson);
 
+
+
+/*
+if(this.appointmentDTO.value === null) {
+       (error: any) => {
+          //error
+          console.log(this.appointmentDTO.value)
+          //alert('Something went wrong');
+          Swal.fire('Error', 'Something went wrong','error')
+        }
+    } else {
+      (data : any) => {
+        
+          console.log(data);
+          Swal.fire('Success', 'Appointment created successfuly', 'success');
+       }
+    } */
+
+
+
+
+
       this.patientService.createAppointment(this.appointmentDTO.value).subscribe(
+        
         (data) => {
         
           console.log(data);
