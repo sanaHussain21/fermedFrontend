@@ -30,6 +30,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
   
   //AppointmentDTO[]
 
+
   appointmentDTO = new FormGroup({
     payment: new FormControl("", [Validators.required]),
     patient_id: new FormControl("", [Validators.required]),

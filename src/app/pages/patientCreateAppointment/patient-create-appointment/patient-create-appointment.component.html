@@ -90,18 +90,22 @@
 
 
 
-                                    <div class="form-group">
+                                    
 
-                                        <mat-label>Choose type of payment</mat-label>
 
-                                        <div>
-                                            <input type="number" name="payment" value="cash" formControlName="payment"> 
-                                            <div class="form-text text-danger" style="color: red" *ngIf="Payment.errors?.['required'] && (Payment.touched || Payment.dirty)">
-                                                Enter a cost of appointment!!!
-                                             </div>
+                                   <div class="form-group">
+
+                                    <mat-label>Choose type of payment</mat-label>
+                                    <div>
+                                         <div>
+                                            <input type="radio" name="payment" value="cash" formControlName="payment"> Cash
+                                            <input type="radio" name="payment" value="onlie" formControlName="payment"> Online
                                         </div>
-
-                                   </div>
+                                        <span class="help-block" class="form-text text-danger" style="color: red"  *ngIf="Payment.errors?.['required'] && (Payment.touched || Payment.dirty)">
+                                            Choose of one the payment method!!!
+                                        </span>
+                                    </div>
+                               </div>
 
 
 
@@ -174,7 +178,7 @@
                                 
                                 
                                     <div class="container text-center">
-                                        <button  type="submit" mat-raised-button color="primary">Register</button>
+                                        <button  type="submit" [disabled]="appointmentDTO.invalid" mat-raised-button color="primary">Register</button>
                                         <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
                                     </div>
                                 
