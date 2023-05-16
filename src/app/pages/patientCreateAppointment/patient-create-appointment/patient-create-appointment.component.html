@@ -14,7 +14,7 @@
                                 <form [formGroup]="appointmentDTO" (ngSubmit)="formSubmit()">
                                     <div class="form-group">
                                         <label for="patientName" class="form-lable">Patient Name</label>
-                                      <input type="text" class="form-control" id="name" placeholder="Enter Patient Name" (keydown)="Space($event)"  formControlName="patientName">
+                                      <input type="text" class="form-control" id="name" placeholder="Enter Patient Name" (keydown)="Space($event)"  formControlName="patient_id">
                                       <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['required'] && (Patient_Name.touched || Patient_Name.dirty)">
                                        Patient Name field should not be empty!!!
                                     </div>
@@ -76,7 +76,7 @@
 
                                 <div class="form-group">
                                        <label>Choose Date/time</label>
-                                       <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="datetime" placeholder="Insert Date and Time" class="md-input" formControlName="dateTime">
+                                       <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="time_date" class="md-input" formControlName="time_date">
                                        <div class="form-text text-danger" style="color: red" *ngIf="Date_Time.errors?.['required'] && (Date_Time.touched || Date_Time.dirty)">
                                         Date and Time field should not be empty!!!
                                      </div>
@@ -148,7 +148,7 @@
                                    <div class="form-group">
                                     <mat-label class="control-lable">Choose Doctor</mat-label>
                                     <div>
-                                        <select name="DoctorList" (change)="ChangeDoctor($event)" class="form-control" formControlName="doctorName" required="Must insert">
+                                        <select name="DoctorList" (change)="ChangeDoctor($event)" class="form-control" formControlName="id_doc" required="Must insert">
                                         <option>--Select Doctor--</option>
                                         
                                         <option  [value]="doc.id_doctor" *ngFor="let doc of DoctorList">

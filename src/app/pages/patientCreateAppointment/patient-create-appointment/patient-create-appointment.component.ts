@@ -32,11 +32,11 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
   appointmentDTO = new FormGroup({
     payment: new FormControl("", [Validators.required]),
-    patientName: new FormControl("", [Validators.required]),
+    patient_id: new FormControl("", [Validators.required]),
     //time: new FormControl("", [Validators.required]),
     //date: new FormControl("", [Validators.required]),
-    doctorName: new FormControl("", [Validators.required]),
-    dateTime: new FormControl("", [Validators.required]),
+    id_doc: new FormControl("", [Validators.required]),
+    time_date: new FormControl("", [Validators.required]),
 
 
 
@@ -105,7 +105,7 @@ if(this.appointmentDTO.value === null) {
     if (this.appointmentDTO.valid) {
       this.patientService.createAppointment(this.appointmentDTO.value).subscribe(res => {
         Swal.fire('Success', 'Appointment created successfuly', 'success');
-        console.log(res) //showing us the response that we got from our form 
+        console.log(res) //showing us the response that we got from out form 
       });
     } else {
       Swal.fire('Error', 'Please enter correct data','error')
@@ -128,7 +128,7 @@ if(this.appointmentDTO.value === null) {
   }
   
   get Patient_Name(): FormControl {
-    return this.appointmentDTO.get("patientName") as FormControl;
+    return this.appointmentDTO.get("patient_id") as FormControl;
 }
 /*
 get Time(): FormControl {
@@ -140,12 +140,12 @@ get Date(): FormControl {
 */
   get Date_Time(): FormControl {
     
-    return this.appointmentDTO.get("dateTime") as FormControl;
+    return this.appointmentDTO.get("time_date") as FormControl;
    }
 
 
 get Doctor_Name(): FormControl {
-  return this.appointmentDTO.get("doctorName") as FormControl;
+  return this.appointmentDTO.get("id_doc") as FormControl;
 }
 
 
