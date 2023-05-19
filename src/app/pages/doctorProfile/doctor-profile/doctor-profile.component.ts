@@ -29,8 +29,14 @@ export class DoctorProfileComponent implements OnInit {
      })
     */
     
-    //to get doctor data 
+    //to get doctor data
     
+    /*
+     * 1- first we have to take the login doctor email 
+     * 2- we have to see if the given email from backend and the email given from front-end are the same
+     * 3- if they are same and we have to display data of that particular doctor and same for the patient.
+     */
+
   }
  
 
