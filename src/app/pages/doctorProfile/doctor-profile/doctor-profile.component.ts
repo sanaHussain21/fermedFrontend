@@ -23,10 +23,13 @@ export class DoctorProfileComponent implements OnInit {
     //this.doctorService.loginDoctor(this.doctor).subscribe(res => {
      // this.doctorDetails = res;
    //})
-    
+    /*
     this.doctorService.doctorData().subscribe((data: any) => {
       this.doctorDetails = data;
      })
+    */
+    
+    //to get doctor data 
     
   }
  
