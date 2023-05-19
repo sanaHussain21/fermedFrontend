@@ -21,7 +21,7 @@ export class DoctorAppointmentComponent implements OnInit {
     
 
   ]
-
+  
   constructor(private  _appointment: ViewAppointmentServiceService) { }
 
   ngOnInit(): void {
@@ -35,6 +35,5 @@ export class DoctorAppointmentComponent implements OnInit {
         console.log(error);
         Swal.fire('Error', 'Something went wrong', 'error')
       });
-
   }
 }
