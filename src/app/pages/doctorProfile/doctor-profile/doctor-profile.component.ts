@@ -28,7 +28,7 @@ export class DoctorProfileComponent implements OnInit {
       this.doctorDetails = data;
      })
     */
-    
+
     //to get doctor data
     
     /*
