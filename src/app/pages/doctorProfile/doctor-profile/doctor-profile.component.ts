@@ -37,10 +37,12 @@ export class DoctorProfileComponent implements OnInit {
      * 3- if they are same and we have to display data of that particular doctor and same for the patient.
      */
 
+    //TESTING
+
+  
+     
   }
  
-
-
 /*
  getDoctorDetails(){
    this.doctorService.doctorData().subscribe(
@@ -54,9 +56,5 @@ export class DoctorProfileComponent implements OnInit {
    
  )};
   */
-  
-  
-  
-  
-  
+
 }
