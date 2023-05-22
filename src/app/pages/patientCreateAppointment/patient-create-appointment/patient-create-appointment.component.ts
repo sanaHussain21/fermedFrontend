@@ -21,7 +21,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
 //WITH TIS FUNCTION WE GET DOCTORS NAME AND SURNME
   ChangeDoctor( doctorId: any) { 
-    console.log("selected doctor id:", doctorId.target.value)
+   //console.log("selected doctor id:", doctorId.target.value)
     
   }
 
@@ -106,7 +106,7 @@ if(this.appointmentDTO.value === null) {
     if (this.appointmentDTO.valid) {
       this.patientService.createAppointment(this.appointmentDTO.value).subscribe(res => {
         Swal.fire('Success', 'Appointment created successfuly', 'success');
-        console.log(res) //showing us the response that we got from out form 
+     
       });
     } else {
       Swal.fire('Error', 'Please enter correct data','error')

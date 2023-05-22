@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
   loginDoctor() {
     //we are getting doctor data in the -> this.doctor
-    console.log(this.doctor);
+    //console.log(this.doctor);
     this.doctorService.loginDoctor(this.doctor).subscribe(data => {
       localStorage.setItem('data', JSON.stringify(this.doctor))
       
