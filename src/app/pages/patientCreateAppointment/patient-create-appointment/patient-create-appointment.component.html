@@ -154,7 +154,7 @@
                                         <option>--Select Doctor--</option>
                                         
                                         <option  [value]="doc.id_doctor" *ngFor="let doc of DoctorList">
-                                        {{doc.name}} {{doc.surname}} {{doc.id_doctor}}
+                                        {{doc.name}} {{doc.surname}}
                                             <!--COUDL WORK FOR DOCTOR PROFILE AS WELL-->
                                         </option>
                                         </select>
@@ -177,9 +177,9 @@
                                     -->
                                   
                                 
-                                
+                                <!---->
                                     <div class="container text-center">
-                                        <button  type="submit"  mat-raised-button color="primary">Register</button>
+                                        <button  type="submit"  [disabled]="appointmentDTO.invalid" mat-raised-button color="primary">Register</button>
                                         <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
                                     </div>
                                 
