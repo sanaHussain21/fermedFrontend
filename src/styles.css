@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
 /*@import 'ngx-toastr/toastr'; -> has been added recently for testing*/
 @import 'ngx-toastr/toastr';
+@import "~bootstrap-icons/font/bootstrap-icons";
 
 
 html, body { 

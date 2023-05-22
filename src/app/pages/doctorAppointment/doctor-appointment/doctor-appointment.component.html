@@ -11,6 +11,7 @@
             <th scope="col">Name Surname</th>
             <th scope="col">Type of Payment</th>
             <th scope="col">Appointment Date-Time</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -21,7 +22,16 @@
                  <td></td>
                  <td>{{appoint.payment}}</td>
                  <td>{{appoint.time_date}}</td>
-                 <!--<td><button type="button" class="btn btn-info">edit <mat-icon color="green">edit</mat-icon></button></td>-->
+                 <td>
+                  <button class="btn btn-sm btn-warning">
+                    <i class="fa fa-edit"></i>Edit</button>
+
+                  <button class="btn btn-sm btn-danger">
+                    <i class="bi bi-x"></i>Delete</button>
+
+
+                </td>
+                
             </tr>
          
           
