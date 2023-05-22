@@ -8,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PatientService } from 'src/app/patient-service/patient.service';
 import { DoctorService } from 'src/app/services/doctor.service';
 import Swal from 'sweetalert2';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-patient-create-appointment',
@@ -25,7 +26,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
     
   }
 
-  constructor(private doctorService: DoctorService, private patientService: PatientService) { }
+  constructor(private doctorService: DoctorService, private patientService: PatientService, private toastr: ToastrService) { }
 
   
   //AppointmentDTO[]
@@ -105,11 +106,14 @@ if(this.appointmentDTO.value === null) {
   formSubmit() {
     if (this.appointmentDTO.valid) {
       this.patientService.createAppointment(this.appointmentDTO.value).subscribe(res => {
-        Swal.fire('Success', 'Appointment created successfuly', 'success');
-     
+        //Swal.fire('Success', 'Appointment created successfuly', 'success');
+     //new SUCCESS ALERT
+        this.toastr.success('Appointment created successfuly', 'Success')
+
       });
     } else {
-      Swal.fire('Error', 'Please enter correct data','error')
+      //Swal.fire('Error', 'Please enter correct data','error')
+      this.toastr.error('Please enter correct data', 'Error')
     }
   }
 

@@ -49,7 +49,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
-
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -97,7 +97,6 @@ import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
@@ -120,8 +119,13 @@ import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
     MatNativeDateModule,
     BrowserAnimationsModule,
     DateTimePickerModule,
-   
- 
+    //ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-right',
+      progressBar: true,
+      preventDuplicates: true,
+    }),
    
   ],
   providers: [
