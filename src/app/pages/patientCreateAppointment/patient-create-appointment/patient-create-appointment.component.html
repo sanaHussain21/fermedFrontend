@@ -150,7 +150,7 @@
                                    <div class="form-group">
                                     <mat-label class="control-lable">Choose Doctor</mat-label>
                                     <div>
-                                        <select name="DoctorList" (change)="ChangeDoctor($event)" class="form-control" formControlName="id_doc" required="Must insert">
+                                        <select name="DoctorList" (change)="ChangeDoctor($event)" class="form-control" formControlName="id_doc">
                                         <option>--Select Doctor--</option>
                                         
                                         <option  [value]="doc.id_doctor" *ngFor="let doc of DoctorList">
@@ -176,6 +176,17 @@
                                         [disabled]="appointmentDTO.invalid"
                                     -->
                                   
+
+                                    <!--TO BE IMPLEMENTED-->
+                                    <div class="form-group">
+                                        <mat-label class="control-lable">Choosed Doctor Department</mat-label>
+                                        <input type="text" name="choosedDoctorDepartment" placeholder="Patient Choosed Doctor Department">
+                                    </div>
+
+
+
+
+
                                 
                                 <!---->
                                     <div class="container text-center">
