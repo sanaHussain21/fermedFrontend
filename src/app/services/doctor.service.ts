@@ -34,6 +34,10 @@ export class DoctorService {
     return this.http.get(`${baseUrl}/doctor/getDoctorDetails`)
   }
 
+  //return doctor department list
+  public getDoctorDepartmentList() {
+    return this.http.get(`${baseUrl}/typeOfDoctor/listTypeOfDoctors`)
+  }
 
 
 

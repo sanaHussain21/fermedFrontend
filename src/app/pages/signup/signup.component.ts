@@ -15,7 +15,17 @@ import Swal from 'sweetalert2'
 })
 export class SignupComponent implements OnInit {
 
-  doctor: any = {}; //we are gonna store form information in this variable
+  doctor: any = {}; //we are gonna store form information in this variableù
+  DoctorDepartmentList: any; //to store type of doctor in this variable
+  
+
+
+  //WITH ThIS FUNCTION WE GET DOCTORS department name 
+  ChangeDoctorDepartment( typeOfDoctorId: any) { 
+    //console.log("selected doctor id:", doctorId.target.value)
+   }
+
+
 
   constructor(private doctorService: DoctorService) { }
 
@@ -28,9 +38,17 @@ export class SignupComponent implements OnInit {
     email:new FormControl("", [Validators.required, Validators.email]),
     password: new FormControl("", [Validators.required, Validators.minLength(8),Validators.maxLength(15), Validators.pattern("^(?=.*[-,_]).{8,15}$")]),
     username: new FormControl("", [Validators.required, Validators.minLength(4),Validators.maxLength(15) , Validators.pattern("[a-zA-z].*")]),
- });
+    id_type_of_doctor: new FormControl("", [Validators.required]),
+    });
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    
+    //this function returns doctor department list in select box
+    this.doctorService.getDoctorDepartmentList().subscribe((data: any) => {
+      this.DoctorDepartmentList = data;
+     
+    })
+   }
   
 
 
@@ -88,6 +106,9 @@ export class SignupComponent implements OnInit {
   
    get Username(): FormControl {
     return this.doctorDTO.get("username") as FormControl;
+  }
+  get DoctorDepartment(): FormControl {
+    return this.doctorDTO.get("id_type_of_doctor") as FormControl;
   }
  
   Space(event: any) {

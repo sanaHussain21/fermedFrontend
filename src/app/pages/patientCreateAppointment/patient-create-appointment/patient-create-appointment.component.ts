@@ -20,7 +20,7 @@ export class PatientCreateAppointmentComponent implements OnInit {
   appointmentList: any;
   
 
-//WITH TIS FUNCTION WE GET DOCTORS NAME AND SURNME
+//WITH ThIS FUNCTION WE GET DOCTORS NAME AND SURNME
   ChangeDoctor( doctorId: any) { 
    //console.log("selected doctor id:", doctorId.target.value)
     
