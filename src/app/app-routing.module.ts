@@ -18,6 +18,7 @@ import { PatientWelcomePageComponent } from './pages/patientWelcomePage/patient-
 import { PatientProfileComponent } from './pages/patientProfile/patient-profile/patient-profile.component';
 import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-home-page.component';
 import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointment/patient-create-appointment/patient-create-appointment.component';
+import { PatientViewAppointmentComponent } from './pages/patientViewAppointment/patient-view-appointment/patient-view-appointment.component';
 
 
 
@@ -96,6 +97,10 @@ const routes: Routes = [
         path: 'createAppointment',
         component:PatientCreateAppointmentComponent,
       },
+      {
+        path: 'patientViewAppointment',
+        component:PatientViewAppointmentComponent,
+      }
 
 
     ],
