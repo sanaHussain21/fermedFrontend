@@ -34,5 +34,11 @@ export class PatientService {
     return this.http.get(`${baseUrl}/appointment/`)
   }
 
+ //calling get all patients list  API
+  public getAllPatientsList() {
+    return this.http.get(`${baseUrl}/appointment/getAllPatientsList`)
+  }
+
+
 
 }

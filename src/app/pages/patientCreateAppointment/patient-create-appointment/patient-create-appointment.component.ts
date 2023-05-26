@@ -17,6 +17,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class PatientCreateAppointmentComponent implements OnInit {
   DoctorList: any;
+  PatientList: any;
   appointmentList: any;
   
 
@@ -56,8 +57,9 @@ export class PatientCreateAppointmentComponent implements OnInit {
 
 
     //this function return patient list in the select box
-
-
+    this.patientService.getAllPatientsList().subscribe((data: any) => {
+      this.PatientList = data;
+   })
 
 
 
