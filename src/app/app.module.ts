@@ -51,6 +51,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { ToastrModule } from 'ngx-toastr';
 import { PatientViewAppointmentComponent } from './pages/patientViewAppointment/patient-view-appointment/patient-view-appointment.component';
+import { DoctorUpdateAppointmentComponent } from './pages/doctorUpdateAppointment/doctor-update-appointment/doctor-update-appointment.component';
 
 
 
@@ -88,6 +89,7 @@ import { PatientViewAppointmentComponent } from './pages/patientViewAppointment/
     MainHomePageComponent,
     PatientCreateAppointmentComponent,
     PatientViewAppointmentComponent,
+    DoctorUpdateAppointmentComponent,
     
 
    
