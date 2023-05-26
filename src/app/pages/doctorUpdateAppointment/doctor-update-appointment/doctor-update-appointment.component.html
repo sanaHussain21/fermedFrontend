@@ -1,1 +1,70 @@
-<h1>HEY the UPDATE APPOINTMENT IS WORKING</h1>
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            
+                <mat-card>
+                   <div class="container text-center">
+                       <img src="../../../assets/logo.png" height="90" alt="">
+                   </div>
+                       <h1 class="text-center"><i><b>Update Patient Appointment</b></i></h1>
+                        
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="patientName" class="form-lable">Patient Name</label>
+                                  
+                                </div>
+                               
+                                <div class="form-group">
+                                   <label>Choose Date/time</label>
+                                   <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="time_date" class="md-input" formControlName="time_date">
+                             
+                                  
+                                 </div>
+                            
+
+                               <div class="form-group">
+
+                                <mat-label>Choose type of payment</mat-label>
+                                    <div>
+                                        <div>
+                                            <input type="radio" name="payment" value="cash" formControlName="payment"> Cash
+                                            <input type="radio" name="payment" value="online" formControlName="payment"> Online
+                                        </div>    
+                                  
+                                     </div>
+                                </div>
+
+
+                               <div class="form-group">
+                                <mat-label class="control-lable">Choose Doctor</mat-label>
+                                <div>
+                                   
+                                    <option>--Select Doctor--</option>               
+                                     
+                                </div>
+                               </div>
+
+                              
+                            
+
+                              
+                                <div class="form-group">
+                                    <mat-label class="control-lable">Choosed Doctor Department</mat-label>
+                                    <input type="text" name="choosedDoctorDepartment" placeholder="Patient Choosed Doctor Department">
+                                </div>
+
+
+                                <div class="container text-center">
+                                    <button  type="submit" mat-raised-button color="primary">Update</button>
+                                    <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+                                </div>
+                            
+                            </form>   
+                </mat-card>      
+                            
+            </div>
+        </div>
+    </div>
+
+
