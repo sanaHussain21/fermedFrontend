@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { PopupService } from '@ng-bootstrap/ng-bootstrap/util/popup';
+import { DoctorSidenavbarComponent } from 'src/app/components/doctorSidenavbar/doctor-sidenavbar/doctor-sidenavbar.component';
 import { ViewAppointmentServiceService } from 'src/app/services/view-appointment-service.service';
 import Swal from 'sweetalert2';
+import { DoctorUpdateAppointmentComponent } from '../../doctorUpdateAppointment/doctor-update-appointment/doctor-update-appointment.component';
 
 @Component({
   selector: 'app-doctor-appointment',
   templateUrl: './doctor-appointment.component.html',
-  styleUrls: ['./doctor-appointment.component.css']
+  styleUrls: ['./doctor-appointment.component.css'],
+  
 })
 export class DoctorAppointmentComponent implements OnInit {
 
@@ -21,8 +27,8 @@ export class DoctorAppointmentComponent implements OnInit {
     
 
   ]
-  
-  constructor(private  _appointment: ViewAppointmentServiceService) { }
+
+  constructor(private  _appointment: ViewAppointmentServiceService, public dialog: MatDialog, private router:Router) { }
 
   ngOnInit(): void {
     this._appointment.appointments().subscribe((data: any) => {
@@ -36,4 +42,12 @@ export class DoctorAppointmentComponent implements OnInit {
         Swal.fire('Error', 'Something went wrong', 'error')
       });
   }
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(DoctorUpdateAppointmentComponent);
+    //this.router.navigate(['/doctorUpdateAppointment'])
+  }
+
+
+
+
 }
