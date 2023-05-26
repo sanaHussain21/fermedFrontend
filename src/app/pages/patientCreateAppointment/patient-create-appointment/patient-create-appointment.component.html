@@ -10,13 +10,20 @@
                             
 
                                 <form [formGroup]="appointmentDTO" (ngSubmit)="formSubmit()">
-                                    <div class="form-group">
-                                        <label for="patientName" class="form-lable">Patient Name</label>
-                                      <input type="text" class="form-control" id="name" placeholder="Enter Patient Name" (keydown)="Space($event)"  formControlName="patient_id">
-                                      <div class="form-text text-danger" style="color: red" *ngIf="Patient_Name.errors?.['required'] && (Patient_Name.touched || Patient_Name.dirty)">
-                                       Patient Name field should not be empty!!!
-                                    </div>
 
+
+                                    <div class="form-group">
+                                       <mat-label class="control-lable">Patient Name</mat-label>
+                                        <div>
+                                            <select name="PatientList" (change)="ChangeDoctor($event)" class="form-control" formControlName="patient_id">
+                                               <option>--Select Your Name From This List--</option> 
+                                               <option  [value]="patient.id_patient" *ngFor="let patient of PatientList">
+                                                 {{patient.name}} {{patient.surname}} ({{patient.id_patient}})
+                                               </option>
+                                              
+                                            </select>
+                                            
+                                        </div>
                                     </div>
                                    
                                     <!-- 
