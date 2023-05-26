@@ -54,6 +54,16 @@ export class PatientCreateAppointmentComponent implements OnInit {
      
     })
 
+
+    //this function return patient list in the select box
+
+
+
+
+
+
+
+
 /*
     this.patientService.getAppointmentData().subscribe((data: any) => {
       this.appointmentList =  data;
