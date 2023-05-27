@@ -45,13 +45,20 @@ export class DoctorAppointmentComponent implements OnInit {
       //error
       (error: any) => {
         console.log(error);
-        Swal.fire('Error', 'Something went wrong', 'error')
+        Swal.fire('Error', 'Something went wrong while loading  appointmetnts  ', 'error')
       });
     
-    
+    /*
     //testing display patient name
-  
-    
+    this._patientService.getSinglePatient().subscribe((data: any) => {
+      this.appointments = data;
+    },
+    //error
+    (error: any) => {
+      console.log(error);
+      Swal.fire('Error', 'Something went wrong while loading  single patient', 'error')
+    });
+    */
     
     
   }

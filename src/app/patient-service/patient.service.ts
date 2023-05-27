@@ -39,6 +39,11 @@ export class PatientService {
     return this.http.get(`${baseUrl}/appointment/getAllPatientsList`)
   }
 
+  //getting signle patient
+  public getSinglePatient() {
+    return this.http.get(`${baseUrl}/patient/getSinglePatient/{id_patient}`)
+  }
+
 
 
 }
