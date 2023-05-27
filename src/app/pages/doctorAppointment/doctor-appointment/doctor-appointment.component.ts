@@ -1,3 +1,4 @@
+import { PatientService } from './../../../patient-service/patient.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -33,7 +34,7 @@ export class DoctorAppointmentComponent implements OnInit {
 
   ]
 
-  constructor(private  _appointment: ViewAppointmentServiceService, public dialog: MatDialog, private router:Router) { }
+  constructor(private  _appointment: ViewAppointmentServiceService, public dialog: MatDialog, private router:Router, private _patientService: PatientService) { }
 
   ngOnInit(): void {
     this._appointment.appointments().subscribe((data: any) => {
@@ -46,6 +47,13 @@ export class DoctorAppointmentComponent implements OnInit {
         console.log(error);
         Swal.fire('Error', 'Something went wrong', 'error')
       });
+    
+    
+    //testing display patient name
+  
+    
+    
+    
   }
   //this function is needed to update patient appointment in a pop up
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
