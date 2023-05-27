@@ -22,7 +22,12 @@ export class DoctorAppointmentComponent implements OnInit {
       time_date: '',
       payment: '',
       patient_id: '',
-      id_doc: ''
+      id_doc: '',
+      //patient name should be displayed in this variable -> (name) 
+      name: '', 
+      //patient surname should be displayed in this varibale -> (surname)
+      surname: ''
+      
     },
     
 
@@ -42,6 +47,7 @@ export class DoctorAppointmentComponent implements OnInit {
         Swal.fire('Error', 'Something went wrong', 'error')
       });
   }
+  //this function is needed to update patient appointment in a pop up
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(DoctorUpdateAppointmentComponent);
     //this.router.navigate(['/doctorUpdateAppointment'])
