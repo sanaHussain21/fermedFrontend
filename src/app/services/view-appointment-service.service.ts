@@ -14,10 +14,7 @@ export class ViewAppointmentServiceService {
     return this._httpClient.get(`${baseUrl}/appointment/`)
   }
 
-  //Testing getting signle patient
-  public getSinglePatient() {
-    return this._httpClient.get(`${baseUrl}/patient/getSinglePatient/{id_patient}`)
-  }
+ 
   
 
 
