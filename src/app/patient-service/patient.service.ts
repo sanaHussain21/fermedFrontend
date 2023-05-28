@@ -43,6 +43,7 @@ export class PatientService {
   public getSinglePatient() {
     return this.http.get(`${baseUrl}/patient/getSinglePatient/{id_patient}`)
   }
+  
 
 
 

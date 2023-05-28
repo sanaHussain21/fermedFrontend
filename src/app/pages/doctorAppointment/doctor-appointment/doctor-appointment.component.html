@@ -7,6 +7,7 @@
     <table class="table">
         <thead>
           <tr>
+            
             <th scope="col">Patient Id</th>
             <th scope="col">Name Surname</th>
             <th scope="col">Type of Payment</th>
@@ -17,8 +18,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let appoint of appointments">
-            <!--<th scope="row">1</th>-->
-            <!--id_appointment,id_doc,patient_id,payment,time_date-->
+                  <td></td>
                  <td>{{appoint.patient_id}}</td>
                  <td></td>
                  <td>{{appoint.payment}}</td>

@@ -40,7 +40,7 @@ export class DoctorAppointmentComponent implements OnInit {
     this._appointment.appointments().subscribe((data: any) => {
       //success
       this.appointments = data;
-      //console.log(this.appointments);
+      console.log(this.appointments);
     },
       //error
       (error: any) => {
