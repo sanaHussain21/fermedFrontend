@@ -16,7 +16,7 @@ import { DoctorUpdateAppointmentComponent } from '../../doctorUpdateAppointment/
 })
 export class DoctorAppointmentComponent implements OnInit {
 
-  //will have all appointment stored in this array
+  //will have all appointment stored in this array []
   appointments = [
     {
       id_appointment: '',
@@ -24,13 +24,14 @@ export class DoctorAppointmentComponent implements OnInit {
       payment: '',
       patient_id: '',
       id_doc: '',
+      /** 
       //patient name should be displayed in this variable -> (name) 
       name: '', 
       //patient surname should be displayed in this varibale -> (surname)
       surname: ''
-      
+      */
     },
-    
+  
 
   ]
 
@@ -50,7 +51,7 @@ export class DoctorAppointmentComponent implements OnInit {
     
     /*
     //testing display patient name
-    this._patientService.getSinglePatient().subscribe((data: any) => {
+    this._patientService.getAllPatientsList.subscribe((data: any) => {
       this.appointments = data;
     },
     //error
