@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-all-patients.component.css']
 })
 export class ViewAllPatientsComponent implements OnInit {
+   //will have all list of patients stored in this array []
 
   constructor() { }
 
