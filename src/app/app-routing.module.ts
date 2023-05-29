@@ -20,6 +20,7 @@ import { MainHomePageComponent } from './pages/mainHomePage/main-home-page/main-
 import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointment/patient-create-appointment/patient-create-appointment.component';
 import { PatientViewAppointmentComponent } from './pages/patientViewAppointment/patient-view-appointment/patient-view-appointment.component';
 import { DoctorUpdateAppointmentComponent } from './pages/doctorUpdateAppointment/doctor-update-appointment/doctor-update-appointment.component';
+import { ViewAllPatientsComponent } from './pages/viewAllPatients/view-all-patients/view-all-patients.component';
 
 
 
@@ -78,6 +79,10 @@ const routes: Routes = [
         path: 'doctorUpdateAppointment',
         component: DoctorUpdateAppointmentComponent,
       },
+      {
+        path: 'viewAllPatients',
+        component: ViewAllPatientsComponent,
+      }
       
       
     ],
