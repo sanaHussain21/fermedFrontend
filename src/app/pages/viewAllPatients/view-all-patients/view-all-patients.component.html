@@ -14,22 +14,16 @@
             <th scope="col">Email</th>
           </tr>
         </thead>
+        <tbody>
+            <tr *ngFor="let allPatients of listOfPatients">
+                <td>{{allPatients.id_patient}}</td>
+                <td>{{allPatients.name}}</td>
+                <td>{{allPatients.surname}}</td>
+                <td>{{allPatients.codice_fiscale}}</td>
+                <td>{{allPatients.telephone_number}}</td>
+                <td>{{allPatients.email}}</td>
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </tr>
+        </tbody>
     </table>
 </mat-card>

@@ -24,29 +24,25 @@ export class DoctorAppointmentComponent implements OnInit {
       payment: '',
       patient_id: '',
       id_doc: '',
-      /** 
-      //patient name should be displayed in this variable -> (name) 
-      name: '', 
-      //patient surname should be displayed in this varibale -> (surname)
-      surname: ''
-      */
+     
+    
     },
   
 
   ]
 
-  constructor(private  _appointment: ViewAppointmentServiceService, public dialog: MatDialog, private router:Router, private _patientService: PatientService) { }
+  constructor(private  _appointment: ViewAppointmentServiceService, public dialog: MatDialog, private router:Router) { }
 
   ngOnInit(): void {
     this._appointment.appointments().subscribe((data: any) => {
       //success
       this.appointments = data;
-      console.log(this.appointments);
+      //console.log(this.appointments);
     },
       //error
       (error: any) => {
         console.log(error);
-        Swal.fire('Error', 'Something went wrong while loading  appointmetnts  ', 'error')
+        Swal.fire('Error', 'Something went wrong while loading appointmetnts', 'error')
       });
     
     /*
