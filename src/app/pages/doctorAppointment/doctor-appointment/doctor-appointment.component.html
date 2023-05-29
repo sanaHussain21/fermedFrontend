@@ -9,7 +9,6 @@
           <tr>
             
             <th scope="col">Patient Id</th>
-            <th scope="col">Name Surname</th>
             <th scope="col">Type of Payment</th>
             <th scope="col">Appointment Date-Time</th>
             <th scope="col">Action</th>
@@ -20,7 +19,6 @@
           <tr *ngFor="let appoint of appointments">
                   
                  <td>{{appoint.patient_id}}</td>
-                 <td></td>
                  <td>{{appoint.payment}}</td>
                  <td>{{appoint.time_date}}</td>
                  <td>
