@@ -75,10 +75,7 @@ const routes: Routes = [
         path: 'doctorAppointment',
         component: DoctorAppointmentComponent,
       },
-      {
-        path: 'doctorUpdateAppointment',
-        component: DoctorUpdateAppointmentComponent,
-      },
+    
       {
         path: 'viewAllPatients',
         component: ViewAllPatientsComponent,
@@ -86,9 +83,10 @@ const routes: Routes = [
       
       
     ],
+   
     
   },
-
+  
 
   {
     path: 'patientDashboard',
@@ -116,7 +114,12 @@ const routes: Routes = [
 
     ],
   },
-
+  
+  //TESTING
+  {
+      path: 'doctorUpdateAppointment/:id_appuntamento',
+      component: DoctorUpdateAppointmentComponent,
+    },
 
   {
     path: 'patientLogin',

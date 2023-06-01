@@ -7,6 +7,7 @@ import { DoctorSidenavbarComponent } from 'src/app/components/doctorSidenavbar/d
 import { ViewAppointmentServiceService } from 'src/app/services/view-appointment-service.service';
 import Swal from 'sweetalert2';
 import { DoctorUpdateAppointmentComponent } from '../../doctorUpdateAppointment/doctor-update-appointment/doctor-update-appointment.component';
+import { AppointmentClass } from '../../appointmentClass/appointment-class';
 
 @Component({
   selector: 'app-doctor-appointment',
@@ -17,20 +18,20 @@ import { DoctorUpdateAppointmentComponent } from '../../doctorUpdateAppointment/
 export class DoctorAppointmentComponent implements OnInit {
 
   //will have all appointment stored in this array []
+
+  appointments: AppointmentClass[] = [];
+
+  /** 
   appointments = [
     {
-      id_appuntamento: '',
+      id_appuntamento: "",
       time_date: '',
       payment: '',
       patient_id: '',
-      id_doc: '',
-     
-    
+      id_doc: '',  
     },
-  
-
   ]
-
+*/
   constructor(private  _appointment: ViewAppointmentServiceService, public dialog: MatDialog, private router:Router) { }
 
   ngOnInit(): void {
@@ -59,13 +60,17 @@ export class DoctorAppointmentComponent implements OnInit {
     
     
   }
+  /**
   //this function is needed to update patient appointment in a pop up
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(DoctorUpdateAppointmentComponent);
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id_appuntamento: number): void {
+    this.dialog.open(['doctorUpdateAppointment', id_appuntamento]);
     //this.router.navigate(['/doctorUpdateAppointment'])
   }
 
-
-
-
+   */
+  updateAppointment(id_appuntamento: number) {
+    this.router.navigate(['doctorUpdateAppointment', id_appuntamento])
+    
+    
+  }
 }

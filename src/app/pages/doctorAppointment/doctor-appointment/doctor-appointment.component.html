@@ -3,8 +3,10 @@
     <h1>Doctor Appointments With Patient
     </h1>
 
-    <!--creating table to display appointments details-->
-    <table class="table">
+    <!--creating table to display appointments details
+   
+    -->
+    <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">Appointment Id</th>
@@ -22,9 +24,9 @@
                  <td>{{appoint.payment}}</td>
                  <td>{{appoint.time_date}}</td>
                  <td>
-                  <!--Testing-->
-                  <button class="btn btn-sm btn-warning"(click)="openDialog('1000ms', '1000ms')"><i class="fa fa-edit"></i>Edit</button>
-                  <button class="btn btn-sm btn-danger"> <i class="bi bi-trash"></i>Delete</button>
+                  <!--Testing--> 
+                  <button class="btn btn-sm btn-warning"  (click) = "updateAppointment(appoint.id_appuntamento)"><i class="fa fa-edit"></i>Edit</button>
+                  <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>Delete</button>
                 </td> 
               <!--SHOULD WORK FOR FUTURE USE: -> <td>{{appoint.id_doc}}</td>--> 
                 

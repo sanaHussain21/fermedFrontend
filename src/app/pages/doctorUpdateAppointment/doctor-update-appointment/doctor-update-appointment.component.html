@@ -1,12 +1,14 @@
 <div class="bootstrap-wrapper">
     <div class="container">
         <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3">
                 <mat-card>
+                 <button routerLink="/doctorHome/doctorAppointment" ><i class="bi bi-arrow-left"></i></button>
                    <div class="container text-center">
                        <img src="../../../assets/logo.png" height="90" alt="">
                    </div>
                        <h1 class="text-center"><i><b>Update Patient Appointment</b></i></h1>
-                            <form>
+                      <form>
                                 <div class="form-group">
                                    <label>Change Appointmnet Date And Time</label>
                                    <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="time_date" class="md-input" formControlName="time_date">
@@ -29,9 +31,8 @@
                                 </div>
                             
                             </form>   
-                </mat-card>               
+                </mat-card>   
+            </div>            
             </div>
         </div>
     </div>
-
-
