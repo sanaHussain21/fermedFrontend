@@ -3,15 +3,17 @@
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-6 offset-md-3">
                 <mat-card>
-                 <button routerLink="/doctorHome/doctorAppointment"  mat-raised-button color="primary"><i class="bi bi-arrow-left"></i></button>
+                
+                 <button routerLink="/doctorHome/doctorAppointment" mat-raised-button color="primary"><i class="bi bi-arrow-left"></i></button>
                    <div class="container text-center">
                        <img src="../../../assets/logo.png" height="90" alt="">
                    </div>
                        <h1 class="text-center"><i><b>Update Patient Appointment</b></i></h1>
+                       <!--[formGroup]="appointmentDTO" (ngSubmit)="formSubmit()-->
                       <form>
                                 <div class="form-group">
                                    <label>Change Appointmnet Date And Time</label>
-                                   <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="time_date" class="md-input" formControlName="time_date">
+                                   <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="time_date" class="md-input" >
                                 </div>
 
                                 <div class="form-group">
@@ -19,8 +21,8 @@
                                     <mat-label>Change type of payment</mat-label>
                                     <div>
                                          <div>
-                                            <input type="radio" name="payment" value="cash" formControlName="payment"> Cash
-                                            <input type="radio" name="payment" value="online" formControlName="payment"> Online
+                                            <input type="radio" name="payment" value="cash" > Cash
+                                            <input type="radio" name="payment" value="online"> Online
                                         </div>
                                     </div>
                                </div>
