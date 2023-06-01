@@ -14,6 +14,11 @@ export class ViewAppointmentServiceService {
     return this._httpClient.get(`${baseUrl}/appointment/`)
   }
 
+  //update patient Appointment
+  public updateAppointment(id_appuntamento: number, appointmentDTO: any) {
+    return this._httpClient.put(`${baseUrl}/appointment/updateAppointment`)
+  }
+
  
   
 

@@ -1,33 +1,35 @@
 <div class="bootstrap-wrapper">
     <div class="container">
         <div class="row" style="margin-top: 20px;">
-            
                 <mat-card>
                    <div class="container text-center">
                        <img src="../../../assets/logo.png" height="90" alt="">
                    </div>
                        <h1 class="text-center"><i><b>Update Patient Appointment</b></i></h1>
-                        
-
                             <form>
-                                
-                               
                                 <div class="form-group">
-                                   <label>Update Appointmnet Date And Time</label>
+                                   <label>Change Appointmnet Date And Time</label>
                                    <input mdc-datetime-picker="" date="true" time="true" type="datetime-local" id="time_date" class="md-input" formControlName="time_date">
                                 </div>
 
-                             
-                            
+                                <div class="form-group">
+
+                                    <mat-label>Change type of payment</mat-label>
+                                    <div>
+                                         <div>
+                                            <input type="radio" name="payment" value="cash" formControlName="payment"> Cash
+                                            <input type="radio" name="payment" value="online" formControlName="payment"> Online
+                                        </div>
+                                    </div>
+                               </div>
 
                                 <div class="container text-center">
-                                    <button  type="submit" mat-raised-button color="primary">Update</button>
+                                    <button  type="submit" mat-raised-button color="primary" >Update</button>
                                     <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
                                 </div>
                             
                             </form>   
-                </mat-card>      
-                            
+                </mat-card>               
             </div>
         </div>
     </div>
