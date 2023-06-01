@@ -19,7 +19,7 @@ export class DoctorAppointmentComponent implements OnInit {
   //will have all appointment stored in this array []
   appointments = [
     {
-      id_appointment: '',
+      id_appointmento: '',
       time_date: '',
       payment: '',
       patient_id: '',
