@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import baseUrl from './helper';
+import { AppointmentClass } from '../pages/appointmentClass/appointment-class';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +15,12 @@ export class ViewAppointmentServiceService {
     return this._httpClient.get(`${baseUrl}/appointment/`)
   }
 
+  /** 
   //update patient Appointment
-  public updateAppointment(id_appuntamento: number, appointmentDTO: any) {
+  public updateAppointment(id_appuntamento: number, appointment: AppointmentClass) {
     return this._httpClient.put(`${baseUrl}/appointment/updateAppointment`)
   }
-
+*/
  
   
 
