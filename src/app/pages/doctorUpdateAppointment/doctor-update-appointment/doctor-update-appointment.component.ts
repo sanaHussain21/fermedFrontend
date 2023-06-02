@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import Swal from 'sweetalert2';
 import { ApplyStylesModifier } from '@popperjs/core/lib/modifiers/applyStyles';
 import { AppointmentClass } from '../../appointmentClass/appointment-class';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-doctor-update-appointment',
@@ -13,28 +14,26 @@ import { AppointmentClass } from '../../appointmentClass/appointment-class';
 })
 export class DoctorUpdateAppointmentComponent implements OnInit {
 
-  id_appuntamento!: number;
+  
   appointments: AppointmentClass = new AppointmentClass();
+  //[]
 
-  constructor(private _appointmentService: ViewAppointmentServiceService,  private router:Router) { }
-
+  constructor(private _appointmentService: ViewAppointmentServiceService, private router: Router) { }
+  
+ 
+  
   ngOnInit(): void {
-    
-  }
- /** 
-  formSubmit() {
-    //success
-    this._appointmentService.updateAppointment(this.id_appuntamento, this.appointments).subscribe(data => {
-      console.log(this.id_appuntamento, this.appointments)
-      //this.goToAllAppointmentList();
-    },
-    error => console.log(error));
-    
-  }
-*/
-  goToAllAppointmentList() {
-    this.router.navigate(['/doctorHome/doctorAppointment']); 
+ 
   }
 
   
+  
+  
+  
+ 
+
+
+
+  
+ 
 }

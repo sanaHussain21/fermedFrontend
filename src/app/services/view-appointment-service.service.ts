@@ -4,11 +4,13 @@ import baseUrl from './helper';
 import { AppointmentClass } from '../pages/appointmentClass/appointment-class';
 import { Observable } from 'rxjs';
 import { TimeMaskPlaceholder } from '@syncfusion/ej2-angular-calendars';
+import { NumberInput } from '@angular/cdk/coercion';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ViewAppointmentServiceService {
+  id_appuntamento?: number;
 
   constructor(private _httpClient: HttpClient) { }
 
@@ -23,12 +25,17 @@ export class ViewAppointmentServiceService {
     return this._httpClient.put(`${baseUrl}/appointment/updateAppointment/${id_appuntamento}`, appointments);
   }
 
- /*
-  updateAppointment(id_appuntamento: number, appointments: AppointmentClass) {
-    return this._httpClient.put(`${baseUrl}/appointment/updateAppointment`): Observable<Object>
+  //get id
+  getId(getId_appuntamento?: number) {
+    this.id_appuntamento = getId_appuntamento;
   }
-  
- */
+
+
+
+  //get appointment by id
+  public getAppointmentById():Observable<Object> {
+    return this._httpClient.get<Object>(`${baseUrl}/appointment/getAppointmentById/${this.id_appuntamento}`);
+  }
 
 
 
