@@ -69,6 +69,7 @@ export class DoctorAppointmentComponent implements OnInit {
 
    */
   updateAppointment(id_appuntamento: number) {
+    //console.log(id_appuntamento)
     this.router.navigate(['doctorUpdateAppointment', id_appuntamento])
     
     

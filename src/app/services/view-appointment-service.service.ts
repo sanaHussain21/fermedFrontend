@@ -17,13 +17,13 @@ export class ViewAppointmentServiceService {
     return this._httpClient.get(`${baseUrl}/appointment/`)
   }
 
-  /*
+ 
   //update patient appointment
   updateAppointment(id_appuntamento: number, appointments: AppointmentClass): Observable<Object>{
     return this._httpClient.put(`${baseUrl}/appointment/updateAppointment/${id_appuntamento}`, appointments);
   }
 
-
+ /*
   updateAppointment(id_appuntamento: number, appointments: AppointmentClass) {
     return this._httpClient.put(`${baseUrl}/appointment/updateAppointment`): Observable<Object>
   }

@@ -21,16 +21,17 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  /** 
+ /** 
   formSubmit() {
     //success
     this._appointmentService.updateAppointment(this.id_appuntamento, this.appointments).subscribe(data => {
-      this.goToAllAppointmentList();
+      console.log(this.id_appuntamento, this.appointments)
+      //this.goToAllAppointmentList();
     },
     error => console.log(error));
     
-  }*/
-
+  }
+*/
   goToAllAppointmentList() {
     this.router.navigate(['/doctorHome/doctorAppointment']); 
   }
