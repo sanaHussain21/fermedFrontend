@@ -38,8 +38,8 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
       console.log(result)
       this.editAppointment = new FormGroup({
         patient_id: new FormControl(result['patient_id']),
-        time_date: new FormControl(),
-        payment: new FormControl()
+        time_date: new FormControl(result['time_date']),
+        payment: new FormControl(result['payment'])
       })
     })
 
@@ -48,11 +48,13 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
 
 
 //update appointment 
-  
+
     updateAppointment() {
-    this._appointmentService.updateAppointment(this.router.snapshot.params.id_appuntamento, this.editAppointment.value).subscribe((result: any) => {
+      this._appointmentService.updateAppointment(this.router.snapshot.params.id_appuntamento, this.editAppointment.value).subscribe((result: any) => {
+    
       console.log(result, "appointment update successfully!! :)")
-    })
+      }
+      )
   }
 
 
