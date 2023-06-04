@@ -75,7 +75,7 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
   */
   
   
-  
+  /** 
   
   get Patient_Name(): FormControl {
     return this.editAppointment.get("patient_id") as FormControl;
@@ -96,7 +96,7 @@ get Id_appuntamento(): FormControl {
   return this.editAppointment.get("id_appuntamento") as FormControl;
 }
 
-
+*/
 
 
   
