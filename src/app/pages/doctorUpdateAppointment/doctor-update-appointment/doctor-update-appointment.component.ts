@@ -51,9 +51,11 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
 
     updateAppointment() {
       this._appointmentService.updateAppointment(this.router.snapshot.params.id_appuntamento, this.editAppointment.value).subscribe((result: any) => {
-    
+    console.log("the result: ", result)
       console.log(result, "appointment update successfully!! :)")
-      }
+      },
+        error => console.error("the error is ", error)
+      
       )
   }
 
