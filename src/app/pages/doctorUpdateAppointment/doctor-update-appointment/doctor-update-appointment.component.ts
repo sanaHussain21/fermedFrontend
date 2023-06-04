@@ -23,7 +23,8 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
   editAppointment = new FormGroup({
     patient_id: new FormControl(''),
     time_date: new FormControl(''),
-    payment: new FormControl('')
+    payment: new FormControl(''),
+    id_appuntamento: new FormControl('')
   })
   
   
@@ -39,7 +40,8 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
       this.editAppointment = new FormGroup({
         patient_id: new FormControl(result['patient_id']),
         time_date: new FormControl(result['time_date']),
-        payment: new FormControl(result['payment'])
+        payment: new FormControl(result['payment']),
+        id_appuntamento: new FormControl(result['id_appuntamento'])
       })
     })
 
@@ -72,7 +74,26 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
   
   
   
+  
+  get Patient_Name(): FormControl {
+    return this.editAppointment.get("patient_id") as FormControl;
+}
+
+  get Date_Time(): FormControl {
+    
+    return this.editAppointment.get("time_date") as FormControl;
+   }
+
+
+get Payment(): FormControl {
+    return this.editAppointment.get("payment") as FormControl;
+  }
+
  
+get Id_appuntamento(): FormControl {
+  return this.editAppointment.get("id_appuntamento") as FormControl;
+}
+
 
 
 
