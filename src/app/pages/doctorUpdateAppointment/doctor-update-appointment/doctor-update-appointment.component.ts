@@ -26,6 +26,7 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
     payment: new FormControl(''),
     id_appuntamento: new FormControl('')
   })
+  alert: boolean = false;
   
   
   constructor(private _appointmentService: ViewAppointmentServiceService, private router: ActivatedRoute, private _router: Router) { }
@@ -34,19 +35,17 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
   
   ngOnInit(): void { 
    
-    console.log(this.router.snapshot.params.id_appuntamento)
+    //console.log(this.router.snapshot.params.id_appuntamento)
     this._appointmentService.getAppointmentById(this.router.snapshot.params.id_appuntamento).subscribe((result: any) => {
-      console.log(result)
+      //console.log(result)
       this.editAppointment = new FormGroup({
         patient_id: new FormControl(result['patient_id']),
         time_date: new FormControl(result['time_date']),
         payment: new FormControl(result['payment']),
-        id_appuntamento: new FormControl(result['id_appuntamento']),       
+        id_appuntamento: new FormControl(result['id_appuntamento']),
       })
-      console.log("DATA THAT WE ARE GETTING IN THE EDITAPPOINTMENT: -> ",this.editAppointment.value)
-    })
-
- 
+      //console.log("DATA THAT WE ARE GETTING IN THE EDITAPPOINTMENT: -> ", this.editAppointment.value)
+    }) 
   }
 
 
@@ -55,16 +54,22 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
    
     updateAppointment() {
       this._appointmentService.updateAppointment(this.router.snapshot.params.id_appuntamento, this.editAppointment.value).subscribe((result: any) => {
-      console.log("the result: ", result)
-        console.log(result, "appointment update successfully!! :)")
+      //console.log("the result: ", result)
+        //console.log(result, "appointment update successfully!! :)")
+        //  this.alert = true
         this._router.navigate(['/doctorHome/doctorAppointment'])
+        
       },
         error => console.error("the error is ", error)
       
-      )
+      )}
+  
+
+ /*alert is working, but as i am redirecting the doctor to the list of appointment, that's why i am not gonna use
+  closeAlert() {
+    this.alert = false;
   }
-
-
+*/
 
   
   

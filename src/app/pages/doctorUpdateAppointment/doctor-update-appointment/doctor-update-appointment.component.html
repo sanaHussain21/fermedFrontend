@@ -10,14 +10,18 @@
                    </div>
                        <h1 class="text-center"><i><b>Update Patient Appointment</b></i></h1>
                        <!--[formGroup]="appointmentDTO" (ngSubmit)="formSubmit()-->
-                       <div *ngIf="alert" class="alert alert-success" role="alert">
-                        <strong>Success!</strong>Patient Appointment Updated Successfully!
-                        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="alert" >
+
+                   
+                       <!-- WORKING PERFECTLY  but as i am redirecting the doctor to the list of appointment, that's why i am not gonna use
+                        
+                       <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Success!</strong> Patient Appointment Updated Successfully!
+                        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close" >
                         <span aria-hidden="true">&times;</span>
                         </button>
                        </div>
-
-
+                        -->
+                       
 
 
                       <form [formGroup]="editAppointment" >

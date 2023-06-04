@@ -78,7 +78,7 @@ export class DoctorAppointmentComponent implements OnInit {
 */
   //this function redirect us to the update appointment page with the appointment id
   updateAppointmentRecord(id_appuntamento?: number) {
-    console.log("appuntamento id = ", id_appuntamento)
+    //console.log("appuntamento id = ", id_appuntamento)
   this.router.navigate(['doctorUpdateAppointment', id_appuntamento])
 }
 
