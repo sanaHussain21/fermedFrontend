@@ -19,7 +19,7 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
   
   appointments: AppointmentClass = new AppointmentClass();
   //[]
-/** */
+
   editAppointment = new FormGroup({
     patient_id: new FormControl(''),
     time_date: new FormControl(''),
@@ -28,7 +28,7 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
   })
   
   
-  constructor(private _appointmentService: ViewAppointmentServiceService, private router: ActivatedRoute) { }
+  constructor(private _appointmentService: ViewAppointmentServiceService, private router: ActivatedRoute, private _router: Router) { }
   
  
   
@@ -52,53 +52,23 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
 
 //update appointment 
 
-  /** 
+   
     updateAppointment() {
       this._appointmentService.updateAppointment(this.router.snapshot.params.id_appuntamento, this.editAppointment.value).subscribe((result: any) => {
-    console.log("the result: ", result)
-      console.log(result, "appointment update successfully!! :)")
+      console.log("the result: ", result)
+        console.log(result, "appointment update successfully!! :)")
+        this._router.navigate(['/doctorHome/doctorAppointment'])
       },
         error => console.error("the error is ", error)
       
       )
   }
-*/
 
 
-  /** 
-  updateAppointment(id_appuntamento?: number) {
-    console.log(this.appointments);
-    this._appointmentService.updateAppointmentById(this.appointments).subscribe();
-    this.router.navigate(['/doctorHome/doctorAppointment'])
-    
-  }
-  */
+
   
   
-  /** 
-  
-  get Patient_Name(): FormControl {
-    return this.editAppointment.get("patient_id") as FormControl;
-}
-
-  get Date_Time(): FormControl {
-    
-    return this.editAppointment.get("time_date") as FormControl;
-   }
-
-
-get Payment(): FormControl {
-    return this.editAppointment.get("payment") as FormControl;
-  }
-
  
-get Id_appuntamento(): FormControl {
-  return this.editAppointment.get("id_appuntamento") as FormControl;
-}
-
-*/
-
-
   
  
 }

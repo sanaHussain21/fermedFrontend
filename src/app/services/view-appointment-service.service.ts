@@ -42,7 +42,7 @@ export class ViewAppointmentServiceService {
 
   //update appointment
   updateAppointment(id_appuntamento: number, data: any) {
-    return this._httpClient.put(`${baseUrl}/appointment/updateAppointment${id_appuntamento}`, data)
+    return this._httpClient.put(`${baseUrl}/appointment/updateAppointment/${id_appuntamento}`, data)
   
 }
   
