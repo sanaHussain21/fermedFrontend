@@ -41,8 +41,9 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
         patient_id: new FormControl(result['patient_id']),
         time_date: new FormControl(result['time_date']),
         payment: new FormControl(result['payment']),
-        id_appuntamento: new FormControl(result['id_appuntamento'])
+        id_appuntamento: new FormControl(result['id_appuntamento']),       
       })
+      console.log("DATA THAT WE ARE GETTING IN THE EDITAPPOINTMENT: -> ",this.editAppointment.value)
     })
 
  
@@ -51,6 +52,7 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
 
 //update appointment 
 
+  /** 
     updateAppointment() {
       this._appointmentService.updateAppointment(this.router.snapshot.params.id_appuntamento, this.editAppointment.value).subscribe((result: any) => {
     console.log("the result: ", result)
@@ -60,7 +62,7 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
       
       )
   }
-
+*/
 
 
   /** 
