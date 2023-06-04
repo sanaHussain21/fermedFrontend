@@ -40,12 +40,16 @@ export class ViewAppointmentServiceService {
 
   
 
-  //update appointment
+  //update appointment by id
   updateAppointment(id_appuntamento: number, data: any) {
     return this._httpClient.put(`${baseUrl}/appointment/updateAppointment/${id_appuntamento}`, data)
   
 }
   
+  //delete appointment by id
+  deleteAppointmentById(id_appuntamento: number) {
+    return this._httpClient.delete(`${baseUrl}/appointment/deleteAppointmentById/${id_appuntamento}`)
+  }
 
 
   }

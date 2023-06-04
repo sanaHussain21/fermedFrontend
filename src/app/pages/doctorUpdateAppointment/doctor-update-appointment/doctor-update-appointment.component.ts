@@ -8,6 +8,7 @@ import { AppointmentClass } from '../../appointmentClass/appointment-class';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { formatDate } from '@angular/common';
+import { ResourceLoader } from '@angular/compiler';
 
 @Component({
   selector: 'app-doctor-update-appointment',
@@ -71,6 +72,7 @@ export class DoctorUpdateAppointmentComponent implements OnInit {
   }
 */
 
+  
   
   
  
