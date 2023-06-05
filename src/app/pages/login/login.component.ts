@@ -1,11 +1,8 @@
-import { DoctorService } from './../../services/doctor.service';
-import { group } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { Doctor } from '../doctor-class/doctor';
-import baseUrl from 'src/app/services/helper';
+import { DoctorService } from './../../services/doctor.service';
 
 
 @Component({
@@ -28,12 +25,12 @@ export class LoginComponent implements OnInit {
    
   }
 
-
-  loginDoctor() {
+  /**
+   * loginDoctor() {
     //we are getting doctor data in the -> this.doctor
     //console.log(this.doctor);
     this.doctorService.loginDoctor(this.doctor).subscribe(data => {
-      localStorage.setItem('data', JSON.stringify(this.doctor))
+      localStorage.setItem('data', JSON.stringify(data))
       
       //console.log("Doctor email :", this.doctor.email)
       
@@ -46,7 +43,32 @@ export class LoginComponent implements OnInit {
       error => Swal.fire('Error', 'Sorry, insert the correct email and password', 'error'));
       
   }
+   */
+  loginDoctor() {
+    this.doctorService.loginDoctor(this.doctor).subscribe(
+      response => {
+        if (response) {
+          localStorage.setItem('data', JSON.stringify(response)); // Assuming the response contains the doctor data
+          Swal.fire('Success', 'Doctor is logged in', 'success');
+          this.router.navigate(['/doctorHome']);
+        } else {
+          Swal.fire('Error', 'Invalid email or password', 'error');
+        }
+      },
+      error => {
+        Swal.fire('Error', 'An error occurred during login', 'error');
+      }
+    );
+  }
+  
 
+
+
+
+
+
+
+  
 
   Space(event: any) {
     if (event.target.selectionStart === 0 && event.code === "Space") {
