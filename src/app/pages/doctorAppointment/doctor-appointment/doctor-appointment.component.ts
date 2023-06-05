@@ -23,18 +23,9 @@ export class DoctorAppointmentComponent implements OnInit {
 
   appointments: AppointmentClass[] = [];
   public collection: any;
+  alert: boolean = false;
 
-  /** 
-  appointments = [
-    {
-      id_appuntamento: "",
-      time_date: '',
-      payment: '',
-      patient_id: '',
-      id_doc: '',  
-    },
-  ]
-*/
+  
   constructor(private  _appointment: ViewAppointmentServiceService, public dialog: MatDialog, private router:Router, private routerActive: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -50,47 +41,19 @@ export class DoctorAppointmentComponent implements OnInit {
         Swal.fire('Error', 'Something went wrong while loading appointmetnts', 'error')
       });
     
-    /*
-    //testing display patient name
-    this._patientService.getAllPatientsList.subscribe((data: any) => {
-      this.appointments = data;
-    },
-    //error
-    (error: any) => {
-      console.log(error);
-      Swal.fire('Error', 'Something went wrong while loading  single patient', 'error')
-    });
-    */
+ 
     
- //update appointment by i
+ //delete appointment by id
     this._appointment.appointments().subscribe((result) => {
       this.collection = result;
-      console.log(this.collection)
+      //console.log(this.collection)
     })
 
 
-
-
-
-    
     
   }
-  /**
-  //this function is needed to update patient appointment in a pop up
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id_appuntamento: number): void {
-    this.dialog.open(['doctorUpdateAppointment', id_appuntamento]);
-    //this.router.navigate(['/doctorUpdateAppointment'])
-  }
+  
 
-   */
-  /**
-  updateAppointmentRecord(id_appuntamento?: number) {
-    console.log("appuntamento id = ", id_appuntamento)
-    this._appointment.getId(id_appuntamento)
-     this.router.navigate(['doctorUpdateAppointment'])
-    
-  }
-*/
   //this function redirect us to the update appointment page with the appointment id
   updateAppointmentRecord(id_appuntamento?: number) {
     //console.log("appuntamento id = ", id_appuntamento)
@@ -106,30 +69,21 @@ export class DoctorAppointmentComponent implements OnInit {
 
   }
   
-/**
- * //delete appointment by id
-  deleteAppointmentById() { 
-    //if (confirm('Are you sure you wanna delete this appointment?'))
-    console.log("the id passed here is : ", this.routerActive.snapshot.params.id_appuntamento)
-    console.log("button clicked")
-      this._appointment.deleteAppointmentById(this.routerActive.snapshot.params.id_appuntamento)
-      //console.log("APPOINTMENT DELETED SUCCESSFULL ID : ", result)
-        .subscribe((response: any) => { 
-          alert("APPOINTMENT DELETED SUCCESSFULL");
-           console.log("APPOINTMENT DELETED SUCCESSFULL : ", response)
-        //console.log("the id is:", id_appuntamento)
-      })
-  }
- */
+
 
 
   //delete appointment by id
   deleteAppointmentById(appoint: any) { 
     this.collection.splice(appoint.id_appuntamento, 1)
     this._appointment.deleteAppointmentById(appoint).subscribe((result) => {
+      this.alert = true
       console.log("Appointment deleted successfully!! :)", result)
+
     })
   }
 
 
+  closeAlert() {
+    this.alert = false;
+  }
 }
