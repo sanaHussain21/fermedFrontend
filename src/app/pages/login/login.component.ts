@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/doctorHome']);
         } else {
           // Invalid email or password
-          Swal.fire('Error', 'Invalid email or password 1', 'error');
+          Swal.fire('Error', 'Invalid email or password ', 'error');
           this.router.navigate(['/login']);
         }
       },
@@ -71,7 +71,7 @@ export class LoginComponent implements OnInit {
       },
       () => {
         // Complete handling code...
-        Swal.fire('Error', 'Invalid email or password 2', 'error');
+        Swal.fire('Error', 'Invalid email or password ', 'error');
         this.router.navigate(['/login']);
       }
     );
