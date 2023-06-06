@@ -13,7 +13,9 @@ import { DoctorService } from './../../services/doctor.service';
 export class LoginComponent implements OnInit {
 
  //creating the object for doctor []
- doctor: any = new Doctor();
+  doctor: any = new Doctor();
+  email: any;
+  password: any;
  
 
   
@@ -44,22 +46,33 @@ export class LoginComponent implements OnInit {
       
   }
    */
+
+
+
   loginDoctor() {
+    console.log(this.doctor); // Log the doctor object
     this.doctorService.loginDoctor(this.doctor).subscribe(
       response => {
-        if (response) {
-          localStorage.setItem('data', JSON.stringify(response)); // Assuming the response contains the doctor data
+        console.log(response); // Log the response to the console
+        if (response && response.email === this.doctor.email && response.password === this.doctor.password) {
+          // Successful login
+          localStorage.setItem('data', JSON.stringify(response));
           Swal.fire('Success', 'Doctor is logged in', 'success');
           this.router.navigate(['/doctorHome']);
         } else {
+          // Invalid email or password
           Swal.fire('Error', 'Invalid email or password', 'error');
         }
       },
       error => {
+        // Error handling code...
         Swal.fire('Error', 'An error occurred during login', 'error');
       }
     );
   }
+  
+  
+  
   
 
 
