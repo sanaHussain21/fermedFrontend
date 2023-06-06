@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Doctor } from '../doctor-class/doctor';
 import { DoctorService } from './../../services/doctor.service';
-
+import { DoctorResponse } from './doctor-response';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   doctor: any = new Doctor();
   email: any;
   password: any;
+  DoctorResponce: any;
+  
  
 
   
@@ -47,16 +49,15 @@ export class LoginComponent implements OnInit {
   }
    */
 
-
-
   loginDoctor() {
     console.log(this.doctor); // Log the doctor object
     this.doctorService.loginDoctor(this.doctor).subscribe(
-      response => {
-        console.log(response); // Log the response to the console
-        if (response && response.email === this.doctor.email && response.password === this.doctor.password) {
+      (response) => {
+        const typedResponse = response as DoctorResponse; // Type assertion
+        console.log(typedResponse); // Log the response to the console
+        if (typedResponse && typedResponse.email === this.doctor.email && typedResponse.password === this.doctor.password) {
           // Successful login
-          localStorage.setItem('data', JSON.stringify(response));
+          localStorage.setItem('data', JSON.stringify(typedResponse));
           Swal.fire('Success', 'Doctor is logged in', 'success');
           this.router.navigate(['/doctorHome']);
         } else {
@@ -70,6 +71,8 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+  
+  
   
   
   
