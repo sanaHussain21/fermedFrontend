@@ -48,7 +48,6 @@ export class LoginComponent implements OnInit {
       
   }
    */
-
   loginDoctor() {
     console.log(this.doctor); // Log the doctor object
     this.doctorService.loginDoctor(this.doctor).subscribe(
@@ -62,15 +61,23 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/doctorHome']);
         } else {
           // Invalid email or password
-          Swal.fire('Error', 'Invalid email or password', 'error');
+          Swal.fire('Error', 'Invalid email or password 1', 'error');
+          this.router.navigate(['/login']);
         }
       },
       error => {
         // Error handling code...
         Swal.fire('Error', 'An error occurred during login', 'error');
+      },
+      () => {
+        // Complete handling code...
+        Swal.fire('Error', 'Invalid email or password 2', 'error');
+        this.router.navigate(['/login']);
       }
     );
   }
+  
+  
   
   
   
