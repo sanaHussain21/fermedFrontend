@@ -48,8 +48,11 @@ export class LoginComponent implements OnInit {
       
   }
    */
-  loginDoctor() {
-    console.log(this.doctor); // Log the doctor object
+
+
+  /** this code is working, but it is not letting me enter to the doctorHome page eventhough i insert the correct email and password
+   *  loginDoctor() {
+    //console.log(this.doctor); // Log the doctor object
     this.doctorService.loginDoctor(this.doctor).subscribe(
       (response) => {
         const typedResponse = response as DoctorResponse; // Type assertion
@@ -59,11 +62,8 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('data', JSON.stringify(typedResponse));
           Swal.fire('Success', 'Doctor is logged in', 'success');
           this.router.navigate(['/doctorHome']);
-        } else {
-          // Invalid email or password
-          Swal.fire('Error', 'Invalid email or password 1', 'error');
-          this.router.navigate(['/login']);
         }
+
       },
       error => {
         // Error handling code...
@@ -71,11 +71,42 @@ export class LoginComponent implements OnInit {
       },
       () => {
         // Complete handling code...
-        Swal.fire('Error', 'Invalid email or password 2', 'error');
+        Swal.fire('Error', 'Bad Credentials email and password', 'error');
         this.router.navigate(['/login']);
       }
     );
   }
+   
+   */
+
+  loginDoctor() {
+    console.log(this.doctor);
+  this.doctorService.loginDoctor(this.doctor).subscribe(
+    (response) => {
+      const typedResponse = response as DoctorResponse; // Type assertion
+      console.log(typedResponse); // Log the response to the console
+      if (typedResponse && typedResponse.email === this.doctor.email && typedResponse.password === this.doctor.password) {
+        // Successful login
+        localStorage.setItem('data', JSON.stringify(typedResponse));
+        Swal.fire('Success', 'Doctor is logged in', 'success').then(() => {
+          this.router.navigate(['/doctorHome']); // Redirect to the doctorHome page
+        });
+      } else {
+        // Invalid credentials
+        Swal.fire('Error', 'Invalid email or password 1', 'error');
+      }
+    },
+    error => {
+      // Error handling code...
+      Swal.fire('Error', 'An error occurred during login', 'error');
+    },
+    () => {
+      // Complete handling code...
+      Swal.fire('Error', 'Invalid email or password 2', 'error');
+    }
+  );
+}
+
   
   
   
