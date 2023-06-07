@@ -81,32 +81,32 @@ export class LoginComponent implements OnInit {
 
   loginDoctor() {
     console.log(this.doctor);
-  this.doctorService.loginDoctor(this.doctor).subscribe(
-    (response) => {
-      const typedResponse = response as DoctorResponse; // Type assertion
-      console.log(typedResponse); // Log the response to the console
-      if (typedResponse && typedResponse.email === this.doctor.email && typedResponse.password === this.doctor.password) {
-        // Successful login
-        localStorage.setItem('data', JSON.stringify(typedResponse));
-        Swal.fire('Success', 'Doctor is logged in', 'success').then(() => {
-          this.router.navigate(['/doctorHome']); // Redirect to the doctorHome page
-        });
-      } else {
-        // Invalid credentials
-        Swal.fire('Error', 'Invalid email or password 1', 'error');
+    this.doctorService.loginDoctor({ email: this.doctor.email, password: this.doctor.password }).subscribe(
+      (response) => {
+        const typedResponse = response as unknown as DoctorResponse; // Type assertion
+        console.log(typedResponse); // Log the response to the console
+        if (typedResponse && typedResponse.email === this.doctor.email && typedResponse.password === this.doctor.password) {
+          // Successful login
+          localStorage.setItem('data', JSON.stringify(typedResponse));
+          Swal.fire('Success', 'Doctor is logged in', 'success').then(() => {
+            this.router.navigate(['/doctorHome']); // Redirect to the doctorHome page
+          });
+        } else {
+          // Invalid credentials
+          Swal.fire('Error', 'Invalid email or password 1', 'error');
+        }
+      },
+      error => {
+        // Error handling code...
+        Swal.fire('Error', 'An error occurred during login', 'error');
+      },
+      () => {
+        // Complete handling code...
+        Swal.fire('Error', 'Invalid email or password 2', 'error');
       }
-    },
-    error => {
-      // Error handling code...
-      Swal.fire('Error', 'An error occurred during login', 'error');
-    },
-    () => {
-      // Complete handling code...
-      Swal.fire('Error', 'Invalid email or password 2', 'error');
-    }
-  );
-}
-
+    );
+  }
+  
   
   
   
