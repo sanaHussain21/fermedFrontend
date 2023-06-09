@@ -93,19 +93,27 @@ export class LoginComponent implements OnInit {
           });
         } else {
           // Invalid credentials
-          Swal.fire('Error', 'Invalid email or password 1', 'error');
+          Swal.fire('Error', 'Invalid email or password', 'error');
         }
       },
-      error => {
-        // Error handling code...
+      (error) => {
+        // Error handling code
         Swal.fire('Error', 'An error occurred during login', 'error');
       },
       () => {
-        // Complete handling code...
-        Swal.fire('Error', 'Invalid email or password 2', 'error');
+        // Completion handling code
+        Swal.fire('Error', 'Invalid email or password', 'error');
+        // You can choose to keep the user on the login page or clear the form
+        // To keep the user on the login page, you don't need to add any code here
+        // To clear the form, you can reset the 'this.doctor' object or clear the form fields
       }
     );
   }
+  
+
+  
+  
+  
   
   
   

@@ -1,4 +1,6 @@
 export interface DoctorResponse {
+        loginSuccess: boolean;
+        loggedIn: DoctorResponse;
     
         email: string;
         password: string;

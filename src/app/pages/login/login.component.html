@@ -30,7 +30,7 @@
                        
                         <!--VALIDATING EMAIL FOR LOGIN-->
                         <div class="error"  *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)" class="alert alert-danger">Email field should not be empty!!!</div> 
-                        <div class="error"  *ngIf="Email.errors?.pattern">Email address pattern is invalid</div>
+                        <div class="error"  *ngIf="Email.errors?.pattern" class="alert alert-danger">Email address pattern is invalid</div>
                         
                    
                     </div>
