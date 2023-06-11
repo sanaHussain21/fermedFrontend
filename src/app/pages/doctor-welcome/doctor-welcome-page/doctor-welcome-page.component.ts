@@ -9,6 +9,9 @@ import { DoctorService } from 'src/app/services/doctor.service';
 })
 export class DoctorWelcomePageComponent {
 
+  //[]
+  localStorageResult: string | null | undefined;
+  result: string | null = '' ;
   /** 
   images = [
   
@@ -31,11 +34,29 @@ export class DoctorWelcomePageComponent {
 ]
 */
   
-  constructor(private doctorService: DoctorService) { }
+  constructor(private doctorService: DoctorService) {
+    
+   }
 
 
   ngOnInit(): void { 
-   localStorage.getItem('email')
+  
   }
+
+  /** 
+  getSaveData() {
+    this.localStorageResult = localStorage.getItem("email")
+    if (this.localStorageResult === null) {
+      this.result = [];
+    }
+    else {
+      this.result =JSON.parse(this.localStorageResult)
+    }
+    return this.result
+  }
+ */ 
+
+ 
+
 }
 
