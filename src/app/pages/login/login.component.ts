@@ -96,6 +96,8 @@ export class LoginComponent implements OnInit {
             // Successful login
             localStorage.setItem('data', JSON.stringify(typedResponse));
             Swal.fire('Success', 'Doctor is logged in', 'success');
+            
+
             this.router.navigate(['/doctorHome']);
           } else {
             // Incorrect email or password
