@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorWelcomePageComponent {
 
+  /** 
   images = [
   
     {
@@ -26,6 +27,8 @@ export class DoctorWelcomePageComponent {
       imageAlt: 'doctorImage4',
     }
 ]
-
+*/
+  
+  
 }
 
