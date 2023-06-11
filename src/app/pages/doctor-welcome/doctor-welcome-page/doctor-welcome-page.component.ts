@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { throwToolbarMixedModesError } from '@angular/material/toolbar';
 import { DoctorService } from 'src/app/services/doctor.service';
 
 @Component({
@@ -34,7 +35,7 @@ export class DoctorWelcomePageComponent {
 
 
   ngOnInit(): void { 
-    //loading doctor Details
+   localStorage.getItem('email')
   }
 }
 
