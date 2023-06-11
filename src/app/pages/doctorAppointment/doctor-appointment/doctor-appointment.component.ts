@@ -77,7 +77,7 @@ export class DoctorAppointmentComponent implements OnInit {
     this.collection.splice(appoint.id_appuntamento, 1)
     this._appointment.deleteAppointmentById(appoint).subscribe((result) => {
       this.alert = true
-      console.log("Appointment deleted successfully!! :)", result)
+      //console.log("Appointment deleted successfully!! :)", result)
 
     })
   }

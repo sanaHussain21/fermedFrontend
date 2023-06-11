@@ -80,35 +80,42 @@ export class LoginComponent implements OnInit {
    */
 
   loginDoctor() {
-    console.log(this.doctor);
-    this.doctorService.loginDoctor({ email: this.doctor.email, password: this.doctor.password }).subscribe(
+    console.log("this.doctor object:", this.doctor); // Log the doctor object to verify email and password values
+  
+    this.doctorService.loginDoctor(this.doctor).subscribe(
       (response) => {
-        const typedResponse = response as unknown as DoctorResponse; // Type assertion
-        console.log(typedResponse); // Log the response to the console
-        if (typedResponse && typedResponse.email === this.doctor.email && typedResponse.password === this.doctor.password) {
-          // Successful login
-          localStorage.setItem('data', JSON.stringify(typedResponse));
-          Swal.fire('Success', 'Doctor is logged in', 'success').then(() => {
-            this.router.navigate(['/doctorHome']); // Redirect to the doctorHome page
-          });
+        console.log("Response from API:", response); // Log the response from the API
+  
+        const typedResponse = response as DoctorResponse; // Type assertion
+  
+        console.log("Typed response object:", typedResponse); // Log the typed response object
+  
+        if (typedResponse) {
+          // Check if the response is not null or undefined
+          if (typedResponse.email === this.doctor.email && typedResponse.password === this.doctor.password) {
+            // Successful login
+            localStorage.setItem('data', JSON.stringify(typedResponse));
+            Swal.fire('Success', 'Doctor is logged in', 'success');
+            this.router.navigate(['/doctorHome']);
+          } else {
+            // Incorrect email or password
+            Swal.fire('Error', 'Incorrect email or password', 'error');
+            this.router.navigate(['/login']);
+          }
         } else {
-          // Invalid credentials
-          Swal.fire('Error', 'Invalid email or password', 'error');
+          // Null or undefined response
+          Swal.fire('Error', 'An error occurred during login', 'error');
+          this.router.navigate(['/login']);
         }
       },
-      (error) => {
-        // Error handling code
+      error => {
+        console.log("Error:", error); // Log the error
         Swal.fire('Error', 'An error occurred during login', 'error');
-      },
-      () => {
-        // Completion handling code
-        Swal.fire('Error', 'Invalid email or password', 'error');
-        // You can choose to keep the user on the login page or clear the form
-        // To keep the user on the login page, you don't need to add any code here
-        // To clear the form, you can reset the 'this.doctor' object or clear the form fields
+        this.router.navigate(['/login']);
       }
     );
   }
+  
   
 
   
