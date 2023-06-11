@@ -31,5 +31,8 @@ export class DoctorWelcomePageComponent {
 */
   
   constructor(private doctorService: DoctorService) { }
+
+
+  ngOnInit(): void { }
 }
 
