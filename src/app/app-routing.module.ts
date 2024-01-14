@@ -21,6 +21,7 @@ import { PatientCreateAppointmentComponent } from './pages/patientCreateAppointm
 import { PatientViewAppointmentComponent } from './pages/patientViewAppointment/patient-view-appointment/patient-view-appointment.component';
 import { DoctorUpdateAppointmentComponent } from './pages/doctorUpdateAppointment/doctor-update-appointment/doctor-update-appointment.component';
 import { ViewAllPatientsComponent } from './pages/viewAllPatients/view-all-patients/view-all-patients.component';
+import { HelpDoctorComponent } from './pages/help-doctor/help-doctor.component';
 
 
 
@@ -79,7 +80,13 @@ const routes: Routes = [
       {
         path: 'viewAllPatients',
         component: ViewAllPatientsComponent,
+      },
+      
+      {
+        path: 'doctorHelpPage',
+        component: HelpDoctorComponent,
       }
+      
       
       
     ],

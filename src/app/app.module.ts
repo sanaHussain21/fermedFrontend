@@ -54,6 +54,7 @@ import { PatientViewAppointmentComponent } from './pages/patientViewAppointment/
 import { DoctorUpdateAppointmentComponent } from './pages/doctorUpdateAppointment/doctor-update-appointment/doctor-update-appointment.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ViewAllPatientsComponent } from './pages/viewAllPatients/view-all-patients/view-all-patients.component';
+import { HelpDoctorComponent } from './pages/help-doctor/help-doctor.component';
  
 
 
@@ -92,6 +93,7 @@ import { ViewAllPatientsComponent } from './pages/viewAllPatients/view-all-patie
     PatientViewAppointmentComponent,
     DoctorUpdateAppointmentComponent,
     ViewAllPatientsComponent,
+    HelpDoctorComponent,
     
 
    
