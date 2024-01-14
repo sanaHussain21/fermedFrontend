@@ -1,6 +1,8 @@
+import { LoginComponent } from './../../login/login.component';
 import { Component, OnInit } from '@angular/core';
 import { throwToolbarMixedModesError } from '@angular/material/toolbar';
 import { DoctorService } from 'src/app/services/doctor.service';
+import { Doctor } from '../../doctor-class/doctor';
 
 @Component({
   selector: 'app-doctor-welcome-page',
@@ -9,6 +11,7 @@ import { DoctorService } from 'src/app/services/doctor.service';
 })
 export class DoctorWelcomePageComponent {
 
+  
   //[]
   localStorageResult: string | null | undefined;
   result: string | null = '' ;
