@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpDoctorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private) { }
 
   ngOnInit(): void {
   }

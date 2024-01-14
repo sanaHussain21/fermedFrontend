@@ -86,9 +86,6 @@ const routes: Routes = [
         path: 'doctorHelpPage',
         component: HelpDoctorComponent,
       }
-      
-      
-      
     ],
    
     
